@@ -1,0 +1,1682 @@
+{
+    "rarity_weights": {
+        "common": 60,
+        "rare": 25,
+        "epic": 12,
+        "legendary": 3
+    },
+    "rewards": [
+        {
+            "id": "dmg_10",
+            "name": "Força Bruta",
+            "rarity": "common",
+            "description": "+10% de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.1
+                }
+            ]
+        },
+        {
+            "id": "hp_10",
+            "name": "Couro Reforçado",
+            "rarity": "common",
+            "description": "+10 HP máximo.",
+            "effects": [
+                {
+                    "type": "max_hp",
+                    "value": 10
+                }
+            ]
+        },
+        {
+            "id": "heal_30",
+            "name": "Poção Menor",
+            "rarity": "common",
+            "description": "Recupera 30% do HP máximo.",
+            "effects": [
+                {
+                    "type": "heal_pct",
+                    "value": 0.3
+                }
+            ]
+        },
+        {
+            "id": "energy_15",
+            "name": "Centelha",
+            "rarity": "common",
+            "description": "+15% de energia ganha.",
+            "effects": [
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.15
+                }
+            ]
+        },
+        {
+            "id": "slow_8",
+            "name": "Grilhões Leves",
+            "rarity": "common",
+            "description": "Inimigos atacam 8% mais devagar.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.08
+                }
+            ]
+        },
+        {
+            "id": "chain_20",
+            "name": "Corrente de Fogo",
+            "rarity": "rare",
+            "description": "+20% de dano de chain.",
+            "effects": [
+                {
+                    "type": "chain_damage_pct",
+                    "value": 0.2
+                }
+            ]
+        },
+        {
+            "id": "hp_25",
+            "name": "Armadura de Ferro",
+            "rarity": "rare",
+            "description": "+25 HP máximo.",
+            "effects": [
+                {
+                    "type": "max_hp",
+                    "value": 25
+                }
+            ]
+        },
+        {
+            "id": "boom5_3",
+            "name": "Pólvora",
+            "rarity": "rare",
+            "description": "Match 5+ explode: destrói 3 blocos extras.",
+            "effects": [
+                {
+                    "type": "explosion_match5",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "energy_30",
+            "name": "Cristal de Mana",
+            "rarity": "rare",
+            "description": "+30% de energia ganha.",
+            "effects": [
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.3
+                }
+            ]
+        },
+        {
+            "id": "cost_20",
+            "name": "Foco Mental",
+            "rarity": "rare",
+            "description": "Habilidade custa 20% menos energia.",
+            "effects": [
+                {
+                    "type": "ability_cost_pct",
+                    "value": -0.2
+                }
+            ]
+        },
+        {
+            "id": "chain_boom",
+            "name": "Reação em Cadeia",
+            "rarity": "epic",
+            "min_floor": 3,
+            "description": "Chains x2+ explodem: destroem 4 blocos extras.",
+            "effects": [
+                {
+                    "type": "explosion_chain",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "id": "dmg_30",
+            "name": "Fúria Sangrenta",
+            "rarity": "epic",
+            "min_floor": 3,
+            "description": "+30% de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.3
+                }
+            ]
+        },
+        {
+            "id": "steal_5",
+            "name": "Sede de Sangue",
+            "rarity": "epic",
+            "min_floor": 3,
+            "description": "Cura 5% do dano causado.",
+            "effects": [
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.05
+                }
+            ]
+        },
+        {
+            "id": "boom5_6",
+            "name": "Detonação",
+            "rarity": "epic",
+            "min_floor": 3,
+            "description": "Match 5+ explode: destrói 6 blocos extras.",
+            "effects": [
+                {
+                    "type": "explosion_match5",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "id": "regen_1",
+            "name": "Pele Regenerativa",
+            "rarity": "epic",
+            "min_floor": 3,
+            "description": "Recupera 1 HP por segundo.",
+            "effects": [
+                {
+                    "type": "regen_per_sec",
+                    "value": 1.0
+                }
+            ]
+        },
+        {
+            "id": "legend_chain",
+            "name": "Chain Perpétuo",
+            "rarity": "legendary",
+            "min_floor": 5,
+            "description": "Todas as chains começam em x2.",
+            "effects": [
+                {
+                    "type": "chain_start",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "id": "legend_time",
+            "name": "Relógio Quebrado",
+            "rarity": "legendary",
+            "min_floor": 5,
+            "description": "Inimigos 30% mais lentos e habilidade 40% mais barata.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.3
+                },
+                {
+                    "type": "ability_cost_pct",
+                    "value": -0.4
+                }
+            ]
+        },
+        {
+            "id": "legend_storm",
+            "name": "Tempestade",
+            "rarity": "legendary",
+            "min_floor": 5,
+            "description": "Match 5+ e chains explodem: 6 blocos extras em cada.",
+            "effects": [
+                {
+                    "type": "explosion_match5",
+                    "value": 6
+                },
+                {
+                    "type": "explosion_chain",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "id": "legend_vamp",
+            "name": "Vampiro",
+            "rarity": "legendary",
+            "min_floor": 5,
+            "description": "Cura 12% do dano causado e +15% de dano.",
+            "effects": [
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.12
+                },
+                {
+                    "type": "damage_pct",
+                    "value": 0.15
+                }
+            ]
+        },
+        {
+            "id": "n_atk_c1",
+            "name": "Golpe Firme",
+            "rarity": "common",
+            "category": "ataque",
+            "description": "+12% de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.12
+                }
+            ]
+        },
+        {
+            "id": "n_atk_r1",
+            "name": "Fio Cortante",
+            "rarity": "rare",
+            "category": "ataque",
+            "description": "+22% de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.22
+                }
+            ]
+        },
+        {
+            "id": "n_atk_e1",
+            "name": "Sede de Batalha",
+            "rarity": "epic",
+            "category": "ataque",
+            "description": "+40% de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.4
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_chain_c1",
+            "name": "Ritmo de Combate",
+            "rarity": "common",
+            "category": "ataque",
+            "description": "+12% de dano de chain.",
+            "effects": [
+                {
+                    "type": "chain_damage_pct",
+                    "value": 0.12
+                }
+            ]
+        },
+        {
+            "id": "n_chain_e1",
+            "name": "Furacão",
+            "rarity": "epic",
+            "category": "ataque",
+            "description": "+40% de dano de chain.",
+            "effects": [
+                {
+                    "type": "chain_damage_pct",
+                    "value": 0.4
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_def_c1",
+            "name": "Escudo de Madeira",
+            "rarity": "common",
+            "category": "defesa",
+            "description": "Ataques do inimigo causam 5% menos dano.",
+            "effects": [
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.05
+                }
+            ]
+        },
+        {
+            "id": "n_def_r1",
+            "name": "Escudo de Aço",
+            "rarity": "rare",
+            "category": "defesa",
+            "description": "Ataques do inimigo causam 10% menos dano.",
+            "effects": [
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.1
+                }
+            ]
+        },
+        {
+            "id": "n_def_e1",
+            "name": "Muralha",
+            "rarity": "epic",
+            "category": "defesa",
+            "description": "Ataques do inimigo causam 18% menos dano.",
+            "effects": [
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.18
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_def_l1",
+            "name": "Pele de Dragão",
+            "rarity": "legendary",
+            "category": "defesa",
+            "description": "Ataques do inimigo causam 25% menos dano e +20 HP máximo.",
+            "effects": [
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.25
+                },
+                {
+                    "type": "max_hp",
+                    "value": 20
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "n_hp_c1",
+            "name": "Vigor",
+            "rarity": "common",
+            "category": "vida",
+            "description": "+15 HP máximo.",
+            "effects": [
+                {
+                    "type": "max_hp",
+                    "value": 15
+                }
+            ]
+        },
+        {
+            "id": "n_hp_r1",
+            "name": "Coração Forte",
+            "rarity": "rare",
+            "category": "vida",
+            "description": "+35 HP máximo.",
+            "effects": [
+                {
+                    "type": "max_hp",
+                    "value": 35
+                }
+            ]
+        },
+        {
+            "id": "n_hp_e1",
+            "name": "Vitalidade",
+            "rarity": "epic",
+            "category": "vida",
+            "description": "+60 HP máximo e recupera 20% da vida.",
+            "effects": [
+                {
+                    "type": "max_hp",
+                    "value": 60
+                },
+                {
+                    "type": "heal_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_crit_c1",
+            "name": "Olho Atento",
+            "rarity": "common",
+            "category": "crítico",
+            "description": "8% de chance de crítico (dano x1.5).",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.08
+                }
+            ]
+        },
+        {
+            "id": "n_crit_r1",
+            "name": "Golpe Certeiro",
+            "rarity": "rare",
+            "category": "crítico",
+            "description": "15% de chance de crítico e críticos causam +20% a mais.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.15
+                },
+                {
+                    "type": "crit_damage_pct",
+                    "value": 0.2
+                }
+            ]
+        },
+        {
+            "id": "n_crit_e1",
+            "name": "Mestre dos Críticos",
+            "rarity": "epic",
+            "category": "crítico",
+            "description": "20% de chance de crítico e críticos causam +50% a mais.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.2
+                },
+                {
+                    "type": "crit_damage_pct",
+                    "value": 0.5
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_crit_l1",
+            "name": "Sorte do Apostador",
+            "rarity": "legendary",
+            "category": "crítico",
+            "description": "30% de chance de crítico e críticos causam +50% a mais.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.3
+                },
+                {
+                    "type": "crit_damage_pct",
+                    "value": 0.5
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "n_ab_c1",
+            "name": "Mente Clara",
+            "rarity": "common",
+            "category": "habilidade",
+            "description": "Habilidade custa 10% menos energia.",
+            "effects": [
+                {
+                    "type": "ability_cost_pct",
+                    "value": -0.1
+                }
+            ]
+        },
+        {
+            "id": "n_ab_c2",
+            "name": "Carga Inicial",
+            "rarity": "common",
+            "category": "habilidade",
+            "description": "Ganha 40 de energia agora.",
+            "effects": [
+                {
+                    "type": "energy",
+                    "value": 40
+                }
+            ]
+        },
+        {
+            "id": "n_ab_r1",
+            "name": "Poder Concentrado",
+            "rarity": "rare",
+            "category": "habilidade",
+            "description": "Habilidades causam +30% de dano.",
+            "effects": [
+                {
+                    "type": "ability_power_pct",
+                    "value": 0.3
+                }
+            ]
+        },
+        {
+            "id": "n_ab_e1",
+            "name": "Maestria",
+            "rarity": "epic",
+            "category": "habilidade",
+            "description": "Habilidades causam +60% de dano e +15% de energia ganha.",
+            "effects": [
+                {
+                    "type": "ability_power_pct",
+                    "value": 0.6
+                },
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_cd_c1",
+            "name": "Correntes Frouxas",
+            "rarity": "common",
+            "category": "cooldown",
+            "description": "Inimigos atacam 6% mais devagar.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.06
+                }
+            ]
+        },
+        {
+            "id": "n_cd_r1",
+            "name": "Tempo Lento",
+            "rarity": "rare",
+            "category": "cooldown",
+            "description": "Inimigos atacam 14% mais devagar.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.14
+                }
+            ]
+        },
+        {
+            "id": "n_cd_e1",
+            "name": "Congelar o Tempo",
+            "rarity": "epic",
+            "category": "cooldown",
+            "description": "Inimigos atacam 22% mais devagar.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.22
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_boom_c1",
+            "name": "Faísca",
+            "rarity": "common",
+            "category": "especial",
+            "description": "Match 5+ explode: destrói 2 blocos extras.",
+            "effects": [
+                {
+                    "type": "explosion_match5",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "id": "n_boom_r1",
+            "name": "Estilhaços",
+            "rarity": "rare",
+            "category": "especial",
+            "description": "Chains x2+ explodem: destroem 3 blocos extras.",
+            "effects": [
+                {
+                    "type": "explosion_chain",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "n_boom_e1",
+            "name": "Supernova",
+            "rarity": "epic",
+            "category": "especial",
+            "description": "Match 5+ e chains explodem: 5 blocos extras em cada.",
+            "effects": [
+                {
+                    "type": "explosion_match5",
+                    "value": 5
+                },
+                {
+                    "type": "explosion_chain",
+                    "value": 5
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "n_chain_l1",
+            "name": "Eco Infinito",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "Chains começam em x2 e causam +20% de dano de chain.",
+            "effects": [
+                {
+                    "type": "chain_start",
+                    "value": 1
+                },
+                {
+                    "type": "chain_damage_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "n_heal_c1",
+            "name": "Bandagem",
+            "rarity": "common",
+            "category": "cura",
+            "description": "Recupera 20% do HP máximo.",
+            "effects": [
+                {
+                    "type": "heal_pct",
+                    "value": 0.2
+                }
+            ]
+        },
+        {
+            "id": "n_heal_r1",
+            "name": "Poção Maior",
+            "rarity": "rare",
+            "category": "cura",
+            "description": "Recupera 50% do HP máximo.",
+            "effects": [
+                {
+                    "type": "heal_pct",
+                    "value": 0.5
+                }
+            ]
+        },
+        {
+            "id": "n_regen_c1",
+            "name": "Ervas Medicinais",
+            "rarity": "common",
+            "category": "regeneração",
+            "description": "Recupera 0.5 HP por segundo.",
+            "effects": [
+                {
+                    "type": "regen_per_sec",
+                    "value": 0.5
+                }
+            ]
+        },
+        {
+            "id": "n_regen_r1",
+            "name": "Fonte Viva",
+            "rarity": "rare",
+            "category": "regeneração",
+            "description": "Recupera 1.5 HP por segundo.",
+            "effects": [
+                {
+                    "type": "regen_per_sec",
+                    "value": 1.5
+                }
+            ]
+        },
+        {
+            "id": "n_regen_e1",
+            "name": "Árvore da Vida",
+            "rarity": "epic",
+            "category": "regeneração",
+            "description": "Recupera 2.5 HP por segundo e +20 HP máximo.",
+            "effects": [
+                {
+                    "type": "regen_per_sec",
+                    "value": 2.5
+                },
+                {
+                    "type": "max_hp",
+                    "value": 20
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "n_floorheal_r1",
+            "name": "Acampamento",
+            "rarity": "rare",
+            "category": "cura",
+            "description": "Ao vencer um andar, recupera 15% a mais de vida.",
+            "effects": [
+                {
+                    "type": "floor_heal_pct",
+                    "value": 0.15
+                }
+            ]
+        },
+        {
+            "id": "n_steal_r1",
+            "name": "Mordida Vital",
+            "rarity": "rare",
+            "category": "cura",
+            "description": "Cura 4% do dano causado.",
+            "effects": [
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.04
+                }
+            ]
+        },
+        {
+            "id": "n_steal_l1",
+            "name": "Sanguessuga Real",
+            "rarity": "legendary",
+            "category": "cura",
+            "description": "Cura 15% do dano causado.",
+            "effects": [
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "n_low_r1",
+            "name": "Último Fôlego",
+            "rarity": "rare",
+            "category": "condicional",
+            "description": "Com menos de 30% de vida, causa +50% de dano.",
+            "effects": [
+                {
+                    "type": "low_hp_damage_pct",
+                    "value": 0.5
+                }
+            ]
+        },
+        {
+            "id": "n_low_e1",
+            "name": "Fúria do Desesperado",
+            "rarity": "epic",
+            "category": "condicional",
+            "description": "Com menos de 30% de vida, +100% de dano. Sempre: ataques inimigos -5%.",
+            "effects": [
+                {
+                    "type": "low_hp_damage_pct",
+                    "value": 1.0
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.05
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_boss_r1",
+            "name": "Caçador de Chefes",
+            "rarity": "rare",
+            "category": "condicional",
+            "description": "+30% de dano contra bosses.",
+            "effects": [
+                {
+                    "type": "boss_damage_pct",
+                    "value": 0.3
+                }
+            ]
+        },
+        {
+            "id": "n_boss_e1",
+            "name": "Matador de Reis",
+            "rarity": "epic",
+            "category": "condicional",
+            "description": "+60% de dano contra bosses.",
+            "effects": [
+                {
+                    "type": "boss_damage_pct",
+                    "value": 0.6
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "n_chain3_r1",
+            "name": "Triunfo",
+            "rarity": "rare",
+            "category": "condicional",
+            "description": "Chains x3 ou mais curam 6 HP.",
+            "effects": [
+                {
+                    "type": "chain3_heal",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "id": "n_chain3_e1",
+            "name": "Canto da Vitória",
+            "rarity": "epic",
+            "category": "condicional",
+            "description": "Chains x3 ou mais curam 12 HP.",
+            "effects": [
+                {
+                    "type": "chain3_heal",
+                    "value": 12
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "i_quick_c1",
+            "name": "Mãos Ágeis",
+            "rarity": "common",
+            "category": "velocidade",
+            "description": "Jogadas rápidas em sequência causam +20% de dano.",
+            "effects": [
+                {
+                    "type": "quick_damage_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_big_c1",
+            "name": "Golpe Pesado",
+            "rarity": "common",
+            "category": "combo",
+            "description": "Matches de 4 ou mais blocos causam +20% de dano.",
+            "effects": [
+                {
+                    "type": "big_match_damage_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_chainen_c1",
+            "name": "Faísca em Cadeia",
+            "rarity": "common",
+            "category": "energia",
+            "description": "Cada nível de chain acima de x1 dá +4 de energia.",
+            "effects": [
+                {
+                    "type": "chain_energy",
+                    "value": 4
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_matchheal_c1",
+            "name": "Fôlego",
+            "rarity": "common",
+            "category": "cura",
+            "description": "Cada rodada de match cura 2 HP.",
+            "effects": [
+                {
+                    "type": "match_heal",
+                    "value": 2
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_resist_c1",
+            "name": "Pele Dura",
+            "rarity": "common",
+            "category": "defesa",
+            "description": "Veneno, silêncio, pressão e teias duram 25% menos.",
+            "effects": [
+                {
+                    "type": "status_resist_pct",
+                    "value": 0.25
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_block_c1",
+            "name": "Reflexos",
+            "rarity": "common",
+            "category": "defesa",
+            "description": "8% de chance de ignorar o dano de um ataque.",
+            "effects": [
+                {
+                    "type": "block_chance",
+                    "value": 0.08
+                }
+            ],
+            "min_floor": 2
+        },
+        {
+            "id": "i_refund_c1",
+            "name": "Economia de Mana",
+            "rarity": "common",
+            "category": "habilidade",
+            "description": "Usar a habilidade devolve 20% do custo em energia.",
+            "effects": [
+                {
+                    "type": "ability_refund_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_opener_c1",
+            "name": "Primeiro Golpe",
+            "rarity": "common",
+            "category": "condicional",
+            "description": "+25% de dano contra inimigos com mais de 70% de vida.",
+            "effects": [
+                {
+                    "type": "opener_damage_pct",
+                    "value": 0.25
+                }
+            ],
+            "min_floor": 1
+        },
+        {
+            "id": "i_floor_c1",
+            "name": "Experiência de Batalha",
+            "rarity": "common",
+            "category": "infinito",
+            "description": "+0,4% de dano por andar já vencido (máximo +60%).",
+            "effects": [
+                {
+                    "type": "floor_damage_pct",
+                    "value": 0.004
+                }
+            ],
+            "min_floor": 2
+        },
+        {
+            "id": "i_critheal_c1",
+            "name": "Sorte Curativa",
+            "rarity": "common",
+            "category": "crítico",
+            "description": "+5% de crítico. Cada crítico cura 2 HP.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.05
+                },
+                {
+                    "type": "crit_heal",
+                    "value": 2
+                }
+            ],
+            "min_floor": 2
+        },
+        {
+            "id": "i_exec_r1",
+            "name": "Carrasco",
+            "rarity": "rare",
+            "category": "condicional",
+            "description": "+45% de dano contra inimigos com menos de 30% de vida.",
+            "effects": [
+                {
+                    "type": "execute_damage_pct",
+                    "value": 0.45
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_mom_r1",
+            "name": "Ritmo de Combate",
+            "rarity": "rare",
+            "category": "combo",
+            "description": "Cada jogada seguida sem ser atingido dá +4% de dano (até 8x).",
+            "effects": [
+                {
+                    "type": "momentum_pct",
+                    "value": 0.04
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_thorns_r1",
+            "name": "Armadura de Espinhos",
+            "rarity": "rare",
+            "category": "defesa",
+            "description": "Devolve 25% do dano recebido ao inimigo e reduz 5% do dano.",
+            "effects": [
+                {
+                    "type": "thorns_pct",
+                    "value": 0.25
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.05
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_critenergy_r1",
+            "name": "Pulso Crítico",
+            "rarity": "rare",
+            "category": "crítico",
+            "description": "+8% de crítico. Cada crítico dá +6 de energia.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.08
+                },
+                {
+                    "type": "crit_energy",
+                    "value": 6
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_abheal_r1",
+            "name": "Magia Restauradora",
+            "rarity": "rare",
+            "category": "habilidade",
+            "description": "Usar a habilidade cura 12 HP. Habilidade +15% de dano.",
+            "effects": [
+                {
+                    "type": "ability_heal",
+                    "value": 12
+                },
+                {
+                    "type": "ability_power_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_quickcrit_r1",
+            "name": "Foco Afiado",
+            "rarity": "rare",
+            "category": "velocidade",
+            "description": "Jogadas rápidas causam +25% de dano. +5% de crítico.",
+            "effects": [
+                {
+                    "type": "quick_damage_pct",
+                    "value": 0.25
+                },
+                {
+                    "type": "crit_chance",
+                    "value": 0.05
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_boss_r1",
+            "name": "Caçador de Chefes",
+            "rarity": "rare",
+            "category": "boss",
+            "description": "+30% de dano contra bosses. Eles atacam 15% mais devagar.",
+            "effects": [
+                {
+                    "type": "boss_damage_pct",
+                    "value": 0.3
+                },
+                {
+                    "type": "boss_cooldown_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "i_dodge_r1",
+            "name": "Dança das Sombras",
+            "rarity": "rare",
+            "category": "defesa",
+            "description": "12% de chance de ignorar um ataque. Efeitos duram 15% menos.",
+            "effects": [
+                {
+                    "type": "block_chance",
+                    "value": 0.12
+                },
+                {
+                    "type": "status_resist_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_tide_r1",
+            "name": "Maré Viva",
+            "rarity": "rare",
+            "category": "sinergia",
+            "description": "Chains dão +6 de energia por nível extra. Chain x3+ cura 6 HP.",
+            "effects": [
+                {
+                    "type": "chain_energy",
+                    "value": 6
+                },
+                {
+                    "type": "chain3_heal",
+                    "value": 6
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_rest_r1",
+            "name": "Descanso do Viajante",
+            "rarity": "rare",
+            "category": "infinito",
+            "description": "Ao vencer um andar, cura +10% da vida. Regenera 0,5 HP/s.",
+            "effects": [
+                {
+                    "type": "floor_heal_pct",
+                    "value": 0.1
+                },
+                {
+                    "type": "regen_per_sec",
+                    "value": 0.5
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_hammer_r1",
+            "name": "Martelo de Guerra",
+            "rarity": "rare",
+            "category": "combo",
+            "description": "Match 4+: +40% de dano. Match 5+ explode 2 blocos extras.",
+            "effects": [
+                {
+                    "type": "big_match_damage_pct",
+                    "value": 0.4
+                },
+                {
+                    "type": "explosion_match5",
+                    "value": 2
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_gamble_r1",
+            "name": "Aposta Arriscada",
+            "rarity": "rare",
+            "category": "risco",
+            "description": "+30% de dano, mas você recebe 10% a mais de dano.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.3
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": -0.1
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_ambush_r1",
+            "name": "Emboscada",
+            "rarity": "rare",
+            "category": "condicional",
+            "description": "+55% de dano contra inimigos com mais de 70% de vida. Inimigo 8% mais lento.",
+            "effects": [
+                {
+                    "type": "opener_damage_pct",
+                    "value": 0.55
+                },
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.08
+                }
+            ],
+            "min_floor": 4
+        },
+        {
+            "id": "i_reserve_r1",
+            "name": "Reserva Arcana",
+            "rarity": "rare",
+            "category": "habilidade",
+            "description": "Habilidade devolve 35% do custo. +15% de energia ganha.",
+            "effects": [
+                {
+                    "type": "ability_refund_pct",
+                    "value": 0.35
+                },
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 3
+        },
+        {
+            "id": "i_exec_e1",
+            "name": "Sentença Final",
+            "rarity": "epic",
+            "category": "condicional",
+            "description": "+90% de dano contra inimigos com menos de 30% de vida. +8% de crítico.",
+            "effects": [
+                {
+                    "type": "execute_damage_pct",
+                    "value": 0.9
+                },
+                {
+                    "type": "crit_chance",
+                    "value": 0.08
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_mom_e1",
+            "name": "Avalanche",
+            "rarity": "epic",
+            "category": "combo",
+            "description": "Jogada seguida sem ser atingido: +7% de dano (até 8x). Jogadas rápidas +20%.",
+            "effects": [
+                {
+                    "type": "momentum_pct",
+                    "value": 0.07
+                },
+                {
+                    "type": "quick_damage_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_wall_e1",
+            "name": "Muralha Retaliadora",
+            "rarity": "epic",
+            "category": "defesa",
+            "description": "Devolve 50% do dano recebido. Reduz 12% do dano. 5% de esquiva.",
+            "effects": [
+                {
+                    "type": "thorns_pct",
+                    "value": 0.5
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.12
+                },
+                {
+                    "type": "block_chance",
+                    "value": 0.05
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_feast_e1",
+            "name": "Banquete Sangrento",
+            "rarity": "epic",
+            "category": "cura",
+            "description": "Cura 6% do dano causado. +6% de crítico. Cada crítico cura 4 HP.",
+            "effects": [
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.06
+                },
+                {
+                    "type": "crit_chance",
+                    "value": 0.06
+                },
+                {
+                    "type": "crit_heal",
+                    "value": 4
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_engine_e1",
+            "name": "Motor de Combos",
+            "rarity": "epic",
+            "category": "sinergia",
+            "description": "Chains: +8 de energia por nível extra e +25% de dano. Habilidade devolve 15%.",
+            "effects": [
+                {
+                    "type": "chain_energy",
+                    "value": 8
+                },
+                {
+                    "type": "chain_damage_pct",
+                    "value": 0.25
+                },
+                {
+                    "type": "ability_refund_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_titan_e1",
+            "name": "Matador de Titãs",
+            "rarity": "epic",
+            "category": "boss",
+            "description": "+55% de dano contra bosses, que atacam 20% mais devagar. Finalizar +25%.",
+            "effects": [
+                {
+                    "type": "boss_damage_pct",
+                    "value": 0.55
+                },
+                {
+                    "type": "boss_cooldown_pct",
+                    "value": 0.2
+                },
+                {
+                    "type": "execute_damage_pct",
+                    "value": 0.25
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_mind_e1",
+            "name": "Mente de Aço",
+            "rarity": "epic",
+            "category": "defesa",
+            "description": "Efeitos duram 50% menos. 10% de esquiva. +15 HP máximo.",
+            "effects": [
+                {
+                    "type": "status_resist_pct",
+                    "value": 0.5
+                },
+                {
+                    "type": "block_chance",
+                    "value": 0.1
+                },
+                {
+                    "type": "max_hp",
+                    "value": 15
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_veteran_e1",
+            "name": "Veterano do Infinito",
+            "rarity": "epic",
+            "category": "infinito",
+            "description": "+0,8% de dano por andar vencido (máx. +60%). Cura +12% ao vencer andar.",
+            "effects": [
+                {
+                    "type": "floor_damage_pct",
+                    "value": 0.008
+                },
+                {
+                    "type": "floor_heal_pct",
+                    "value": 0.12
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_pact_e1",
+            "name": "Pacto Sanguíneo",
+            "rarity": "epic",
+            "category": "risco",
+            "description": "+55% de dano e vampirismo 5%, mas perde 25 HP máximo.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.55
+                },
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.05
+                },
+                {
+                    "type": "max_hp",
+                    "value": -25
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_glass_e1",
+            "name": "Canhão de Vidro",
+            "rarity": "epic",
+            "category": "risco",
+            "description": "+25% de crítico e críticos +60% mais fortes, mas recebe 15% a mais de dano.",
+            "effects": [
+                {
+                    "type": "crit_chance",
+                    "value": 0.25
+                },
+                {
+                    "type": "crit_damage_pct",
+                    "value": 0.6
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": -0.15
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_master_e1",
+            "name": "Mestre das Habilidades",
+            "rarity": "epic",
+            "category": "habilidade",
+            "description": "Habilidade +50% de dano, 20% mais barata e cura 8 HP ao usar.",
+            "effects": [
+                {
+                    "type": "ability_power_pct",
+                    "value": 0.5
+                },
+                {
+                    "type": "ability_cost_pct",
+                    "value": -0.2
+                },
+                {
+                    "type": "ability_heal",
+                    "value": 8
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_clock_e1",
+            "name": "Relojoeiro",
+            "rarity": "epic",
+            "category": "velocidade",
+            "description": "Inimigos 15% mais lentos. Jogadas rápidas +30% de dano. +15% de energia.",
+            "effects": [
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.15
+                },
+                {
+                    "type": "quick_damage_pct",
+                    "value": 0.3
+                },
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.15
+                }
+            ],
+            "min_floor": 5
+        },
+        {
+            "id": "i_phoenix_l1",
+            "name": "Pena de Fênix",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "1x por andar: ao morrer, volta com 50% da vida. Regenera 1 HP/s.",
+            "effects": [
+                {
+                    "type": "second_wind_pct",
+                    "value": 0.5
+                },
+                {
+                    "type": "regen_per_sec",
+                    "value": 1.0
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "i_juggernaut_l1",
+            "name": "Colosso Imparável",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "Jogada seguida sem ser atingido: +9% de dano (até 8x). Defesa 10%, espinhos 20%.",
+            "effects": [
+                {
+                    "type": "momentum_pct",
+                    "value": 0.09
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.1
+                },
+                {
+                    "type": "thorns_pct",
+                    "value": 0.2
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "i_mirror_l1",
+            "name": "Espelho Vingativo",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "Devolve 80% do dano recebido. 15% de esquiva. Reduz 10% do dano.",
+            "effects": [
+                {
+                    "type": "thorns_pct",
+                    "value": 0.8
+                },
+                {
+                    "type": "block_chance",
+                    "value": 0.15
+                },
+                {
+                    "type": "damage_reduction_pct",
+                    "value": 0.1
+                }
+            ],
+            "min_floor": 6
+        },
+        {
+            "id": "i_algoz_l1",
+            "name": "Algoz do Infinito",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "+150% de dano com inimigo abaixo de 30% de vida. +10% de crítico; crítico cura 6 HP.",
+            "effects": [
+                {
+                    "type": "execute_damage_pct",
+                    "value": 1.5
+                },
+                {
+                    "type": "crit_chance",
+                    "value": 0.1
+                },
+                {
+                    "type": "crit_heal",
+                    "value": 6
+                }
+            ],
+            "min_floor": 7
+        },
+        {
+            "id": "i_crown_l1",
+            "name": "Coroa do Infinito",
+            "rarity": "legendary",
+            "category": "infinito",
+            "description": "+1,2% de dano por andar (máx. +60%). Cura +18% ao vencer andar. +20 HP máximo.",
+            "effects": [
+                {
+                    "type": "floor_damage_pct",
+                    "value": 0.012
+                },
+                {
+                    "type": "floor_heal_pct",
+                    "value": 0.18
+                },
+                {
+                    "type": "max_hp",
+                    "value": 20
+                }
+            ],
+            "min_floor": 7
+        },
+        {
+            "id": "i_storm_l1",
+            "name": "Tempestade de Energia",
+            "rarity": "legendary",
+            "category": "especial",
+            "description": "Chain: +10 de energia por nível extra. Habilidade +40% de dano e devolve 50% do custo.",
+            "effects": [
+                {
+                    "type": "chain_energy",
+                    "value": 10
+                },
+                {
+                    "type": "ability_refund_pct",
+                    "value": 0.5
+                },
+                {
+                    "type": "ability_power_pct",
+                    "value": 0.4
+                }
+            ],
+            "min_floor": 7
+        },
+        {
+            "id": "i_bane_l1",
+            "name": "Flagelo dos Chefes",
+            "rarity": "legendary",
+            "category": "boss",
+            "description": "+80% de dano contra bosses, que atacam 35% mais devagar.",
+            "effects": [
+                {
+                    "type": "boss_damage_pct",
+                    "value": 0.8
+                },
+                {
+                    "type": "boss_cooldown_pct",
+                    "value": 0.35
+                }
+            ],
+            "min_floor": 8
+        },
+        {
+            "id": "i_bloodsteel_l1",
+            "name": "Sangue e Aço",
+            "rarity": "legendary",
+            "category": "risco",
+            "description": "+70% de dano, vampirismo 12% e críticos curam 3 HP, mas perde 30 HP máximo.",
+            "effects": [
+                {
+                    "type": "damage_pct",
+                    "value": 0.7
+                },
+                {
+                    "type": "lifesteal_pct",
+                    "value": 0.12
+                },
+                {
+                    "type": "crit_heal",
+                    "value": 3
+                },
+                {
+                    "type": "max_hp",
+                    "value": -30
+                }
+            ],
+            "min_floor": 8
+        },
+        {
+            "id": "i_timewarp_l1",
+            "name": "Tempo Dobrado",
+            "rarity": "legendary",
+            "category": "velocidade",
+            "description": "Jogadas rápidas +60% de dano. Inimigos 20% mais lentos. +30% de energia ganha.",
+            "effects": [
+                {
+                    "type": "quick_damage_pct",
+                    "value": 0.6
+                },
+                {
+                    "type": "enemy_cooldown_pct",
+                    "value": 0.2
+                },
+                {
+                    "type": "energy_gain_pct",
+                    "value": 0.3
+                }
+            ],
+            "min_floor": 8
+        }
+    ]
+}

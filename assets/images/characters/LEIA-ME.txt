@@ -1,0 +1,18 @@
+ARTES DOS PERSONAGENS - coloque aqui (.gif animado, .png, .webp ou .jpg).
+O jogo procura primeiro o nome do personagem e depois o ID interno:
+
+  Personagem   Classe      Nome do arquivo (preferido)   ID interno (também vale)
+  Juiz         -           juiz                          judge
+  Tulipa       Bardo       tulipa                        bard
+  Tali         Assassina   tali                          assassin
+  Maizona      Clériga     maizona                       cleric
+  Caique       Ferreiro    caique                        blacksmith
+  Breno        Mago        breno                         mage
+  Romulo       Arqueiro    romulo                        archer
+  Matheuzim    Guerreiro   matheuzim                     warrior
+  Yuko         Monge       yuko                          monk
+
+Exemplo: assets/images/characters/tulipa.png
+A MESMA imagem aparece quando o personagem é seu inimigo no Modo Infinito.
+Sem arquivo, o jogo usa um desenho provisório (nunca fecha por falta de imagem).
+Hoje já existem: assassin.gif (Tali) e bard.gif (Tulipa).

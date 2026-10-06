@@ -1,0 +1,10 @@
+ARTES DOS INIMIGOS (.gif, .png, .webp ou .jpg) - o nome do arquivo é o ID do inimigo:
+  goblin, spider, mage, golem (inimigos originais)
+  fairy (Fada), zombie (Zumbi), necromancer (Necromante), dragon (Dragão)  <- exclusivos do Modo Infinito
+  e os dos grupos de andares (ex.: goblin_archer, spider_venom, golem_iron, void_wisp...)
+Se um inimigo não tiver arquivo próprio, usa o da sua "family" (ex.: goblin_archer usa goblin.png).
+Chefes: assets/images/bosses/boss_10.png, boss_20.png... (e boss_char_<id> usa a arte do personagem).
+Lista completa: python tools/listar_conteudo.py  ->  REFERENCIA_DE_CONTEUDO.md
+
+Expansão do Infinito: os 30 inimigos novos (vampire_bat, slime_green... star_parasite) e os 15 chefes (bosses/boss_inf_*) já vêm com arte animada (.png).
+São gerados por tools/gerar_sprites.py. Se você colocar um .gif com o mesmo nome, o jogo usa o seu (procura .gif antes de .png).

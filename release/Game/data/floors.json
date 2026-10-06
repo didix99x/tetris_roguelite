@@ -1,0 +1,615 @@
+{
+    "last_floor": 50,
+    "boss_every": 10,
+    "heal_after_floor_pct": 0.25,
+    "scaling": {
+        "hp_per_floor": 0.12,
+        "damage_per_floor": 0.06,
+        "cooldown_per_floor": -0.01,
+        "min_cooldown_factor": 0.55,
+        "ability_amount_per_10_floors": 1
+    },
+    "groups": [
+        {
+            "id": "ninho_aranhas",
+            "name": "Ninho das Aranhas",
+            "theme": "Aranhas",
+            "floors": [
+                1,
+                9
+            ],
+            "boss_floor": 10,
+            "enemies": [
+                {
+                    "id": "spider",
+                    "floors": [
+                        1,
+                        4
+                    ]
+                },
+                {
+                    "id": "spider_venom",
+                    "floors": [
+                        2,
+                        5
+                    ]
+                },
+                {
+                    "id": "spider_jumper",
+                    "floors": [
+                        3,
+                        6
+                    ]
+                },
+                {
+                    "id": "spider_weaver",
+                    "floors": [
+                        4,
+                        7
+                    ]
+                },
+                {
+                    "id": "spider_shadow",
+                    "floors": [
+                        5,
+                        8
+                    ]
+                },
+                {
+                    "id": "spider_frost",
+                    "floors": [
+                        6,
+                        9
+                    ]
+                },
+                {
+                    "id": "spider_elite",
+                    "floors": [
+                        7,
+                        9
+                    ]
+                },
+                {
+                    "id": "spider_matriarch",
+                    "floors": [
+                        8,
+                        9
+                    ]
+                },
+                {
+                    "id": "spider_guardian",
+                    "floors": [
+                        9,
+                        9
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "horda_goblin",
+            "name": "Horda Goblin",
+            "theme": "Goblins",
+            "floors": [
+                11,
+                19
+            ],
+            "boss_floor": 20,
+            "enemies": [
+                {
+                    "id": "goblin",
+                    "floors": [
+                        11,
+                        14
+                    ]
+                },
+                {
+                    "id": "goblin_warrior",
+                    "floors": [
+                        12,
+                        15
+                    ]
+                },
+                {
+                    "id": "goblin_archer",
+                    "floors": [
+                        13,
+                        16
+                    ]
+                },
+                {
+                    "id": "goblin_spearman",
+                    "floors": [
+                        14,
+                        17
+                    ]
+                },
+                {
+                    "id": "goblin_shaman",
+                    "floors": [
+                        15,
+                        18
+                    ]
+                },
+                {
+                    "id": "goblin_berserker",
+                    "floors": [
+                        16,
+                        19
+                    ]
+                },
+                {
+                    "id": "goblin_assassin",
+                    "floors": [
+                        17,
+                        19
+                    ]
+                },
+                {
+                    "id": "goblin_guard",
+                    "floors": [
+                        18,
+                        19
+                    ]
+                },
+                {
+                    "id": "goblin_champion",
+                    "floors": [
+                        19,
+                        19
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "torre_arcana",
+            "name": "Torre Arcana",
+            "theme": "Magos",
+            "floors": [
+                21,
+                29
+            ],
+            "boss_floor": 30,
+            "enemies": [
+                {
+                    "id": "mage_apprentice",
+                    "floors": [
+                        21,
+                        24
+                    ]
+                },
+                {
+                    "id": "mage",
+                    "floors": [
+                        22,
+                        25
+                    ]
+                },
+                {
+                    "id": "mage_fire",
+                    "floors": [
+                        23,
+                        26
+                    ]
+                },
+                {
+                    "id": "mage_ice",
+                    "floors": [
+                        24,
+                        27
+                    ]
+                },
+                {
+                    "id": "mage_illusionist",
+                    "floors": [
+                        25,
+                        28
+                    ]
+                },
+                {
+                    "id": "mage_necromancer",
+                    "floors": [
+                        26,
+                        29
+                    ]
+                },
+                {
+                    "id": "mage_storm",
+                    "floors": [
+                        27,
+                        29
+                    ]
+                },
+                {
+                    "id": "mage_warlock",
+                    "floors": [
+                        28,
+                        29
+                    ]
+                },
+                {
+                    "id": "mage_archon",
+                    "floors": [
+                        29,
+                        29
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "forja_de_pedra",
+            "name": "Forja de Pedra",
+            "theme": "Golens e Pedra",
+            "floors": [
+                31,
+                39
+            ],
+            "boss_floor": 40,
+            "enemies": [
+                {
+                    "id": "golem_clay",
+                    "floors": [
+                        31,
+                        34
+                    ]
+                },
+                {
+                    "id": "golem",
+                    "floors": [
+                        32,
+                        35
+                    ]
+                },
+                {
+                    "id": "golem_iron",
+                    "floors": [
+                        33,
+                        36
+                    ]
+                },
+                {
+                    "id": "golem_crystal",
+                    "floors": [
+                        34,
+                        37
+                    ]
+                },
+                {
+                    "id": "gargoyle",
+                    "floors": [
+                        35,
+                        38
+                    ]
+                },
+                {
+                    "id": "golem_lava",
+                    "floors": [
+                        36,
+                        39
+                    ]
+                },
+                {
+                    "id": "golem_moss",
+                    "floors": [
+                        37,
+                        39
+                    ]
+                },
+                {
+                    "id": "golem_runic",
+                    "floors": [
+                        38,
+                        39
+                    ]
+                },
+                {
+                    "id": "golem_sentinel",
+                    "floors": [
+                        39,
+                        39
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "vazio_faminto",
+            "name": "O Vazio Faminto",
+            "theme": "Criaturas do Vazio",
+            "floors": [
+                41,
+                49
+            ],
+            "boss_floor": 50,
+            "enemies": [
+                {
+                    "id": "void_wisp",
+                    "floors": [
+                        41,
+                        44
+                    ]
+                },
+                {
+                    "id": "void_crawler",
+                    "floors": [
+                        42,
+                        45
+                    ]
+                },
+                {
+                    "id": "void_eater",
+                    "floors": [
+                        43,
+                        46
+                    ]
+                },
+                {
+                    "id": "void_mimic",
+                    "floors": [
+                        44,
+                        47
+                    ]
+                },
+                {
+                    "id": "void_shade",
+                    "floors": [
+                        45,
+                        48
+                    ]
+                },
+                {
+                    "id": "void_warden",
+                    "floors": [
+                        46,
+                        49
+                    ]
+                },
+                {
+                    "id": "void_maw",
+                    "floors": [
+                        47,
+                        49
+                    ]
+                },
+                {
+                    "id": "void_horror",
+                    "floors": [
+                        48,
+                        49
+                    ]
+                },
+                {
+                    "id": "void_herald",
+                    "floors": [
+                        49,
+                        49
+                    ]
+                }
+            ]
+        }
+    ],
+    "infinite": {
+        "include_character_bosses": true,
+        "exclude_own_character": true,
+        "character_boss_chance": 0.3,
+        "character_boss_after_floor": 20,
+        "special_boss_chance": 0.02,
+        "special_boss_hp_factor": 1.4,
+        "special_boss_damage_factor": 1.15,
+        "exclusive_enemies": [
+            {
+                "id": "fairy",
+                "from_floor": 1,
+                "weight": 2
+            },
+            {
+                "id": "zombie",
+                "from_floor": 5,
+                "weight": 2
+            },
+            {
+                "id": "necromancer",
+                "from_floor": 15,
+                "weight": 2
+            },
+            {
+                "id": "dragon",
+                "from_floor": 25,
+                "weight": 2
+            },
+            {
+                "id": "vampire_bat",
+                "from_floor": 1,
+                "to_floor": 35,
+                "weight": 2
+            },
+            {
+                "id": "slime_green",
+                "from_floor": 1,
+                "to_floor": 30,
+                "weight": 2
+            },
+            {
+                "id": "skeleton_archer",
+                "from_floor": 3,
+                "to_floor": 40,
+                "weight": 1
+            },
+            {
+                "id": "dire_wolf",
+                "from_floor": 3,
+                "to_floor": 40,
+                "weight": 1
+            },
+            {
+                "id": "spore_mushroom",
+                "from_floor": 5,
+                "to_floor": 45,
+                "weight": 1
+            },
+            {
+                "id": "imp_flame",
+                "from_floor": 8,
+                "to_floor": 50,
+                "weight": 1
+            },
+            {
+                "id": "wail_ghost",
+                "from_floor": 10,
+                "to_floor": 55,
+                "weight": 2
+            },
+            {
+                "id": "giant_scorpion",
+                "from_floor": 12,
+                "to_floor": 60,
+                "weight": 1
+            },
+            {
+                "id": "shadow_thief",
+                "from_floor": 14,
+                "to_floor": 60,
+                "weight": 1
+            },
+            {
+                "id": "elder_sapling",
+                "from_floor": 16,
+                "to_floor": 65,
+                "weight": 1
+            },
+            {
+                "id": "harpy",
+                "from_floor": 18,
+                "to_floor": 65,
+                "weight": 1
+            },
+            {
+                "id": "minotaur",
+                "from_floor": 20,
+                "to_floor": 75,
+                "weight": 1
+            },
+            {
+                "id": "spectral_knight",
+                "from_floor": 25,
+                "to_floor": 85,
+                "weight": 1
+            },
+            {
+                "id": "basilisk",
+                "from_floor": 28,
+                "to_floor": 90,
+                "weight": 1
+            },
+            {
+                "id": "lich_acolyte",
+                "from_floor": 30,
+                "to_floor": 95,
+                "weight": 1
+            },
+            {
+                "id": "mimic_chest",
+                "from_floor": 32,
+                "to_floor": 100,
+                "weight": 1
+            },
+            {
+                "id": "frost_elemental",
+                "from_floor": 35,
+                "to_floor": 105,
+                "weight": 1
+            },
+            {
+                "id": "magma_elemental",
+                "from_floor": 35,
+                "to_floor": 105,
+                "weight": 1
+            },
+            {
+                "id": "hydra_spawn",
+                "from_floor": 45,
+                "to_floor": 120,
+                "weight": 1
+            },
+            {
+                "id": "death_knight",
+                "from_floor": 50,
+                "to_floor": 130,
+                "weight": 1
+            },
+            {
+                "id": "banshee",
+                "from_floor": 50,
+                "to_floor": 130,
+                "weight": 1
+            },
+            {
+                "id": "chimera",
+                "from_floor": 55,
+                "to_floor": 135,
+                "weight": 1
+            },
+            {
+                "id": "gorgon",
+                "from_floor": 60,
+                "to_floor": 140,
+                "weight": 1
+            },
+            {
+                "id": "werewolf",
+                "from_floor": 60,
+                "to_floor": 140,
+                "weight": 1
+            },
+            {
+                "id": "abyssal_horror",
+                "from_floor": 70,
+                "weight": 1
+            },
+            {
+                "id": "ash_phoenix",
+                "from_floor": 75,
+                "weight": 1
+            },
+            {
+                "id": "dracolich_whelp",
+                "from_floor": 80,
+                "weight": 1
+            },
+            {
+                "id": "grim_reaper",
+                "from_floor": 85,
+                "weight": 1
+            },
+            {
+                "id": "arch_demon",
+                "from_floor": 90,
+                "weight": 1
+            },
+            {
+                "id": "star_parasite",
+                "from_floor": 95,
+                "weight": 1
+            }
+        ],
+        "locked_character_boss_weight": 2,
+        "super_boss_chance": 0.15,
+        "scaling": {
+            "knee_floor": 50,
+            "tail_rate": 0.35,
+            "hp_mult_cap": 12.0,
+            "damage_mult_cap": 6.0,
+            "ability_bonus_cap": 6,
+            "min_cooldown_seconds": 2.5,
+            "player_power": {
+                "enabled": true,
+                "hp_per_offense": 0.4,
+                "hp_cap": 1.7,
+                "damage_per_defense": 0.5,
+                "damage_cap": 1.6,
+                "cooldown_per_power": 0.06,
+                "cooldown_floor": 0.85,
+                "ability_per_power": 1.0,
+                "ability_cap": 2
+            }
+        }
+    }
+}

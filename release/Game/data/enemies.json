@@ -1,0 +1,3769 @@
+{
+    "enemies": {
+        "goblin": {
+            "name": "Goblin",
+            "hp": 80,
+            "damage": 6,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "color": [
+                90,
+                170,
+                70
+            ],
+            "passive_name": "Frenesi",
+            "passive_text": "Com menos de 50% de vida, ataca mais rápido.",
+            "passive_params": {
+                "hp_threshold": 0.5,
+                "cooldown_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 3
+                }
+            ]
+        },
+        "spider": {
+            "name": "Aranha",
+            "hp": 70,
+            "damage": 5,
+            "cooldown": 6.5,
+            "min_floor": 2,
+            "color": [
+                120,
+                80,
+                140
+            ],
+            "passive_name": "Teia Grossa",
+            "passive_text": "Suas teias duram mais.",
+            "passive_params": {
+                "extra_web_time": 3.0
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 3,
+                    "duration": 8.0
+                }
+            ]
+        },
+        "mage": {
+            "name": "Mago Sombrio",
+            "hp": 90,
+            "damage": 8,
+            "cooldown": 8.0,
+            "min_floor": 4,
+            "color": [
+                140,
+                70,
+                180
+            ],
+            "passive_name": "Barreira Arcana",
+            "passive_text": "Matches sem chain causam 20% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Curse",
+                    "amount": 2
+                }
+            ]
+        },
+        "golem": {
+            "name": "Golem",
+            "hp": 150,
+            "damage": 10,
+            "cooldown": 9.0,
+            "min_floor": 6,
+            "color": [
+                150,
+                140,
+                120
+            ],
+            "passive_name": "Pele de Pedra",
+            "passive_text": "Matches de 3 blocos causam 30% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.3
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Weight",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "spider_venom": {
+            "name": "Aranha Venenosa",
+            "group_only": true,
+            "family": "spider",
+            "hp": 65,
+            "damage": 4,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "color": [
+                110,
+                170,
+                60
+            ],
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Picada Venenosa",
+                    "amount": 1.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 2,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "spider_jumper": {
+            "name": "Aranha Saltadora",
+            "group_only": true,
+            "family": "spider",
+            "hp": 50,
+            "damage": 4,
+            "cooldown": 4.5,
+            "min_floor": 1,
+            "color": [
+                200,
+                120,
+                60
+            ],
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Salto Confuso",
+                    "amount": 4
+                }
+            ]
+        },
+        "spider_weaver": {
+            "name": "Aranha Tecelã",
+            "group_only": true,
+            "family": "spider",
+            "hp": 75,
+            "damage": 4,
+            "cooldown": 8.0,
+            "min_floor": 1,
+            "color": [
+                190,
+                190,
+                220
+            ],
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Teia Grande",
+                    "amount": 5,
+                    "duration": 7.0
+                }
+            ]
+        },
+        "spider_shadow": {
+            "name": "Aranha Sombria",
+            "group_only": true,
+            "family": "spider",
+            "hp": 80,
+            "damage": 6,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "color": [
+                60,
+                45,
+                95
+            ],
+            "passive_name": "Véu de Sombra",
+            "passive_text": "Matches sem chain causam 15% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.15
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Curse",
+                    "amount": 2
+                },
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 2,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "spider_frost": {
+            "name": "Aranha de Gelo",
+            "group_only": true,
+            "family": "spider",
+            "hp": 90,
+            "damage": 5,
+            "cooldown": 8.0,
+            "min_floor": 1,
+            "color": [
+                140,
+                210,
+                240
+            ],
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Gelo Silencioso",
+                    "duration": 4.0
+                },
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 3,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "spider_elite": {
+            "name": "Aranha Elite",
+            "group_only": true,
+            "family": "spider",
+            "hp": 120,
+            "damage": 7,
+            "cooldown": 6.5,
+            "min_floor": 1,
+            "color": [
+                220,
+                60,
+                120
+            ],
+            "passive_name": "Carapaça",
+            "passive_text": "Todos os matches causam 10% menos dano.",
+            "passive_params": {
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 3,
+                    "duration": 7.0
+                },
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 2
+                }
+            ]
+        },
+        "spider_matriarch": {
+            "name": "Matriarca",
+            "group_only": true,
+            "family": "spider",
+            "hp": 150,
+            "damage": 7,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "color": [
+                160,
+                60,
+                170
+            ],
+            "passive_name": "Fúria Materna",
+            "passive_text": "Com menos de 50% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.8
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 4,
+                    "duration": 8.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Regenerar",
+                    "amount": 10
+                },
+                {
+                    "type": "poison",
+                    "name": "Veneno",
+                    "amount": 1.0,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "spider_guardian": {
+            "name": "Guardiã",
+            "group_only": true,
+            "family": "spider",
+            "hp": 170,
+            "damage": 8,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "color": [
+                230,
+                190,
+                60
+            ],
+            "passive_name": "Casca Reforçada",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Casca",
+                    "percent": 30,
+                    "duration": 6.0
+                },
+                {
+                    "type": "web",
+                    "name": "Web",
+                    "amount": 4,
+                    "duration": 8.0
+                }
+            ]
+        },
+        "goblin_warrior": {
+            "name": "Goblin Guerreiro",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 100,
+            "damage": 7,
+            "cooldown": 7.5,
+            "min_floor": 11,
+            "color": [
+                80,
+                150,
+                60
+            ],
+            "passive_name": "Armadura Simples",
+            "passive_text": "Todos os matches causam 10% menos dano.",
+            "passive_params": {
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 3
+                }
+            ]
+        },
+        "goblin_archer": {
+            "name": "Goblin Arqueiro",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 60,
+            "damage": 8,
+            "cooldown": 5.5,
+            "min_floor": 11,
+            "color": [
+                150,
+                190,
+                70
+            ],
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Flechada",
+                    "amount": 2
+                }
+            ]
+        },
+        "goblin_spearman": {
+            "name": "Goblin Lanceiro",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 85,
+            "damage": 8,
+            "cooldown": 6.5,
+            "min_floor": 11,
+            "color": [
+                110,
+                160,
+                70
+            ],
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Estocada",
+                    "amount": 3
+                },
+                {
+                    "type": "web",
+                    "name": "Rede",
+                    "amount": 2,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "goblin_shaman": {
+            "name": "Goblin Xamã",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 75,
+            "damage": 5,
+            "cooldown": 8.0,
+            "min_floor": 11,
+            "color": [
+                120,
+                80,
+                170
+            ],
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição Tribal",
+                    "amount": 2
+                },
+                {
+                    "type": "heal",
+                    "name": "Cura Tribal",
+                    "amount": 8
+                }
+            ]
+        },
+        "goblin_berserker": {
+            "name": "Goblin Berserker",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 110,
+            "damage": 9,
+            "cooldown": 6.5,
+            "min_floor": 11,
+            "color": [
+                200,
+                70,
+                50
+            ],
+            "passive_name": "Fúria",
+            "passive_text": "Com menos de 50% de vida, ataca MUITO mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.6
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 3
+                }
+            ]
+        },
+        "goblin_assassin": {
+            "name": "Goblin Assassino",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 65,
+            "damage": 10,
+            "cooldown": 5.0,
+            "min_floor": 11,
+            "color": [
+                60,
+                90,
+                60
+            ],
+            "passive_name": "Esquiva",
+            "passive_text": "Matches sem chain causam 25% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Faca nas Costas",
+                    "duration": 3.0
+                },
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 2
+                }
+            ]
+        },
+        "goblin_guard": {
+            "name": "Goblin Guarda",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 150,
+            "damage": 6,
+            "cooldown": 8.5,
+            "min_floor": 11,
+            "color": [
+                140,
+                140,
+                110
+            ],
+            "passive_name": "Escudo de Madeira",
+            "passive_text": "Todos os matches causam 25% menos dano.",
+            "passive_params": {
+                "armor": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Postura de Escudo",
+                    "percent": 30,
+                    "duration": 6.0
+                },
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 2
+                }
+            ]
+        },
+        "goblin_champion": {
+            "name": "Campeão Goblin",
+            "group_only": true,
+            "family": "goblin",
+            "hp": 180,
+            "damage": 10,
+            "cooldown": 6.5,
+            "min_floor": 11,
+            "color": [
+                230,
+                180,
+                50
+            ],
+            "passive_name": "Orgulho do Clã",
+            "passive_text": "Mais forte e, abaixo de 50% de vida, mais rápido.",
+            "passive_params": {
+                "armor": 0.1,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Break",
+                    "amount": 4
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Grito de Guerra",
+                    "amount": 5
+                }
+            ]
+        },
+        "mage_apprentice": {
+            "name": "Aprendiz de Mago",
+            "group_only": true,
+            "family": "mage",
+            "hp": 60,
+            "damage": 5,
+            "cooldown": 7.0,
+            "min_floor": 21,
+            "color": [
+                150,
+                150,
+                220
+            ],
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Feitiço Desastrado",
+                    "amount": 3
+                }
+            ]
+        },
+        "mage_fire": {
+            "name": "Mago de Fogo",
+            "group_only": true,
+            "family": "mage",
+            "hp": 75,
+            "damage": 10,
+            "cooldown": 7.0,
+            "min_floor": 21,
+            "color": [
+                240,
+                120,
+                40
+            ],
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Bola de Fogo",
+                    "amount": 4
+                }
+            ]
+        },
+        "mage_ice": {
+            "name": "Mago de Gelo",
+            "group_only": true,
+            "family": "mage",
+            "hp": 85,
+            "damage": 7,
+            "cooldown": 8.0,
+            "min_floor": 21,
+            "color": [
+                120,
+                200,
+                255
+            ],
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Tempestade Gélida",
+                    "duration": 4.0
+                },
+                {
+                    "type": "web",
+                    "name": "Prisão de Gelo",
+                    "amount": 3,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "mage_illusionist": {
+            "name": "Ilusionista",
+            "group_only": true,
+            "family": "mage",
+            "hp": 80,
+            "damage": 6,
+            "cooldown": 7.0,
+            "min_floor": 21,
+            "color": [
+                230,
+                130,
+                200
+            ],
+            "passive_name": "Ilusão",
+            "passive_text": "Matches sem chain causam 25% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Miragem",
+                    "amount": 6
+                }
+            ]
+        },
+        "mage_necromancer": {
+            "name": "Necromante",
+            "group_only": true,
+            "family": "mage",
+            "hp": 100,
+            "damage": 7,
+            "cooldown": 8.0,
+            "min_floor": 21,
+            "color": [
+                90,
+                140,
+                90
+            ],
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "poison",
+                    "name": "Praga",
+                    "amount": 1.5,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "mage_storm": {
+            "name": "Mago da Tempestade",
+            "group_only": true,
+            "family": "mage",
+            "hp": 90,
+            "damage": 9,
+            "cooldown": 6.0,
+            "min_floor": 21,
+            "color": [
+                200,
+                200,
+                90
+            ],
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Tempestade",
+                    "duration": 6.0,
+                    "speed": 1.6
+                },
+                {
+                    "type": "break",
+                    "name": "Raio",
+                    "amount": 3
+                }
+            ]
+        },
+        "mage_warlock": {
+            "name": "Bruxo",
+            "group_only": true,
+            "family": "mage",
+            "hp": 120,
+            "damage": 9,
+            "cooldown": 7.5,
+            "min_floor": 21,
+            "color": [
+                110,
+                40,
+                110
+            ],
+            "passive_name": "Pacto Sombrio",
+            "passive_text": "Com menos de 40% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.4,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "heal",
+                    "name": "Dreno Vital",
+                    "amount": 8
+                }
+            ]
+        },
+        "mage_archon": {
+            "name": "Arconte Arcano",
+            "group_only": true,
+            "family": "mage",
+            "hp": 150,
+            "damage": 11,
+            "cooldown": 7.0,
+            "min_floor": 21,
+            "color": [
+                255,
+                220,
+                120
+            ],
+            "passive_name": "Escudo Arcano",
+            "passive_text": "Reduz o dano de matches sem chain (20%) e de todos (10%).",
+            "passive_params": {
+                "chain1_reduction": 0.2,
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Caos",
+                    "amount": 6
+                },
+                {
+                    "type": "silence",
+                    "name": "Silêncio Arcano",
+                    "duration": 3.0
+                }
+            ]
+        },
+        "golem_clay": {
+            "name": "Golem de Argila",
+            "group_only": true,
+            "family": "golem",
+            "hp": 120,
+            "damage": 7,
+            "cooldown": 9.0,
+            "min_floor": 31,
+            "color": [
+                190,
+                130,
+                90
+            ],
+            "passive_name": "Argila Mole",
+            "passive_text": "Matches de 3 blocos causam 20% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 5.0,
+                    "speed": 1.6
+                }
+            ]
+        },
+        "golem_iron": {
+            "name": "Golem de Ferro",
+            "group_only": true,
+            "family": "golem",
+            "hp": 190,
+            "damage": 10,
+            "cooldown": 9.5,
+            "min_floor": 31,
+            "color": [
+                150,
+                160,
+                175
+            ],
+            "passive_name": "Casco de Ferro",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Endurecer",
+                    "percent": 25,
+                    "duration": 6.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 6.0,
+                    "speed": 1.7
+                }
+            ]
+        },
+        "golem_crystal": {
+            "name": "Golem de Cristal",
+            "group_only": true,
+            "family": "golem",
+            "hp": 130,
+            "damage": 9,
+            "cooldown": 8.0,
+            "min_floor": 31,
+            "color": [
+                150,
+                230,
+                240
+            ],
+            "passive_name": "Reflexo",
+            "passive_text": "Matches sem chain causam 25% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Refração",
+                    "amount": 5
+                },
+                {
+                    "type": "break",
+                    "name": "Estilhaçar",
+                    "amount": 2
+                }
+            ]
+        },
+        "gargoyle": {
+            "name": "Gárgula",
+            "group_only": true,
+            "family": "golem",
+            "hp": 140,
+            "damage": 11,
+            "cooldown": 7.0,
+            "min_floor": 31,
+            "color": [
+                110,
+                110,
+                130
+            ],
+            "passive_name": "Pele de Pedra",
+            "passive_text": "Matches de 3 blocos causam 25% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Garras",
+                    "amount": 3
+                },
+                {
+                    "type": "web",
+                    "name": "Rede de Pedra",
+                    "amount": 3,
+                    "duration": 7.0
+                }
+            ]
+        },
+        "golem_lava": {
+            "name": "Golem de Lava",
+            "group_only": true,
+            "family": "golem",
+            "hp": 170,
+            "damage": 12,
+            "cooldown": 8.5,
+            "min_floor": 31,
+            "color": [
+                240,
+                90,
+                40
+            ],
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Queimadura",
+                    "amount": 1.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "break",
+                    "name": "Erupção",
+                    "amount": 3
+                }
+            ]
+        },
+        "golem_moss": {
+            "name": "Golem de Musgo",
+            "group_only": true,
+            "family": "golem",
+            "hp": 200,
+            "damage": 8,
+            "cooldown": 9.0,
+            "min_floor": 31,
+            "color": [
+                90,
+                150,
+                80
+            ],
+            "abilities": [
+                {
+                    "type": "heal",
+                    "name": "Fotossíntese",
+                    "amount": 10
+                },
+                {
+                    "type": "curse",
+                    "name": "Enraizar",
+                    "amount": 2
+                }
+            ]
+        },
+        "golem_runic": {
+            "name": "Golem Rúnico",
+            "group_only": true,
+            "family": "golem",
+            "hp": 180,
+            "damage": 10,
+            "cooldown": 8.0,
+            "min_floor": 31,
+            "color": [
+                120,
+                150,
+                255
+            ],
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Runa de Silêncio",
+                    "duration": 4.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Runa Maldita",
+                    "amount": 3
+                }
+            ]
+        },
+        "golem_sentinel": {
+            "name": "Sentinela de Pedra",
+            "group_only": true,
+            "family": "golem",
+            "hp": 240,
+            "damage": 12,
+            "cooldown": 8.5,
+            "min_floor": 31,
+            "color": [
+                170,
+                170,
+                150
+            ],
+            "passive_name": "Muralha Viva",
+            "passive_text": "Armadura de 25% e matches de 3 blocos causam 20% menos.",
+            "passive_params": {
+                "armor": 0.25,
+                "match3_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 7.0,
+                    "speed": 1.9
+                },
+                {
+                    "type": "break",
+                    "name": "Esmagar",
+                    "amount": 3
+                }
+            ]
+        },
+        "void_wisp": {
+            "name": "Fagulha do Vazio",
+            "group_only": true,
+            "family": "void",
+            "hp": 70,
+            "damage": 7,
+            "cooldown": 5.5,
+            "min_floor": 41,
+            "color": [
+                170,
+                90,
+                230
+            ],
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Distorção",
+                    "amount": 5
+                }
+            ]
+        },
+        "void_crawler": {
+            "name": "Rastejante",
+            "group_only": true,
+            "family": "void",
+            "hp": 110,
+            "damage": 8,
+            "cooldown": 7.0,
+            "min_floor": 41,
+            "color": [
+                90,
+                50,
+                140
+            ],
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Fios do Vazio",
+                    "amount": 4,
+                    "duration": 8.0
+                },
+                {
+                    "type": "poison",
+                    "name": "Toque Frio",
+                    "amount": 1.0,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "void_eater": {
+            "name": "Devorador Menor",
+            "group_only": true,
+            "family": "void",
+            "hp": 130,
+            "damage": 9,
+            "cooldown": 7.0,
+            "min_floor": 41,
+            "color": [
+                60,
+                30,
+                90
+            ],
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Devorar",
+                    "amount": 4
+                },
+                {
+                    "type": "heal",
+                    "name": "Banquete",
+                    "amount": 6
+                }
+            ]
+        },
+        "void_mimic": {
+            "name": "Mímico",
+            "group_only": true,
+            "family": "void",
+            "hp": 120,
+            "damage": 8,
+            "cooldown": 6.5,
+            "min_floor": 41,
+            "color": [
+                200,
+                160,
+                80
+            ],
+            "passive_name": "Imitação",
+            "passive_text": "Matches sem chain causam 20% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Disfarce",
+                    "amount": 7
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 2
+                }
+            ]
+        },
+        "void_shade": {
+            "name": "Sombra Faminta",
+            "group_only": true,
+            "family": "void",
+            "hp": 100,
+            "damage": 10,
+            "cooldown": 6.0,
+            "min_floor": 41,
+            "color": [
+                40,
+                40,
+                70
+            ],
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Fome Gélida",
+                    "amount": 2.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "silence",
+                    "name": "Sussurro",
+                    "duration": 3.0
+                }
+            ]
+        },
+        "void_warden": {
+            "name": "Sentinela do Vazio",
+            "group_only": true,
+            "family": "void",
+            "hp": 200,
+            "damage": 10,
+            "cooldown": 8.5,
+            "min_floor": 41,
+            "color": [
+                110,
+                90,
+                160
+            ],
+            "passive_name": "Couraça Vazia",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Barreira",
+                    "percent": 30,
+                    "duration": 6.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "void_maw": {
+            "name": "Bocarra",
+            "group_only": true,
+            "family": "void",
+            "hp": 160,
+            "damage": 12,
+            "cooldown": 7.5,
+            "min_floor": 41,
+            "color": [
+                150,
+                30,
+                70
+            ],
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Mordida Abissal",
+                    "amount": 6
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 2
+                }
+            ]
+        },
+        "void_horror": {
+            "name": "Horror Abissal",
+            "group_only": true,
+            "family": "void",
+            "hp": 190,
+            "damage": 13,
+            "cooldown": 7.0,
+            "min_floor": 41,
+            "color": [
+                80,
+                20,
+                110
+            ],
+            "passive_name": "Terror Crescente",
+            "passive_text": "Com menos de 50% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "poison",
+                    "name": "Terror",
+                    "amount": 2.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Pesadelo",
+                    "amount": 6
+                }
+            ]
+        },
+        "void_herald": {
+            "name": "Arauto do Devorador",
+            "group_only": true,
+            "family": "void",
+            "hp": 220,
+            "damage": 14,
+            "cooldown": 6.5,
+            "min_floor": 41,
+            "color": [
+                230,
+                60,
+                110
+            ],
+            "passive_name": "Aura do Devorador",
+            "passive_text": "Armadura de 10% e matches sem chain causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.1,
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Devorar",
+                    "amount": 4
+                },
+                {
+                    "type": "web",
+                    "name": "Teia Negra",
+                    "amount": 4,
+                    "duration": 8.0
+                },
+                {
+                    "type": "silence",
+                    "name": "Silêncio",
+                    "duration": 3.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "fairy": {
+            "name": "Fada",
+            "hp": 55,
+            "damage": 5,
+            "cooldown": 4.8,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "fairy",
+            "color": [
+                240,
+                150,
+                220
+            ],
+            "passive_name": "Brilho Evasivo",
+            "passive_text": "Matches sem chain causam 20% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Pó de Fada",
+                    "amount": 4
+                },
+                {
+                    "type": "heal",
+                    "name": "Bênção Fugaz",
+                    "amount": 6
+                }
+            ]
+        },
+        "zombie": {
+            "name": "Zumbi",
+            "hp": 140,
+            "damage": 7,
+            "cooldown": 8.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "zombie",
+            "color": [
+                110,
+                150,
+                90
+            ],
+            "passive_name": "Carne Podre",
+            "passive_text": "Todos os matches causam 15% menos dano.",
+            "passive_params": {
+                "armor": 0.15
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Mordida Infecciosa",
+                    "amount": 1.0,
+                    "duration": 6.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Putrefação",
+                    "amount": 2
+                }
+            ]
+        },
+        "necromancer": {
+            "name": "Necromante",
+            "hp": 100,
+            "damage": 8,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "necromancer",
+            "color": [
+                90,
+                60,
+                130
+            ],
+            "passive_name": "Pacto Sombrio",
+            "passive_text": "Com menos de 40% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.4,
+                "enrage_factor": 0.8
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Ressurgir Pedras",
+                    "amount": 3
+                },
+                {
+                    "type": "heal",
+                    "name": "Drenar Vida",
+                    "amount": 8
+                },
+                {
+                    "type": "poison",
+                    "name": "Maldição da Morte",
+                    "amount": 1.5,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "dragon": {
+            "name": "Dragão",
+            "hp": 220,
+            "damage": 14,
+            "cooldown": 8.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "dragon",
+            "color": [
+                200,
+                70,
+                50
+            ],
+            "passive_name": "Escamas",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Baforada de Fogo",
+                    "amount": 5
+                },
+                {
+                    "type": "poison",
+                    "name": "Chamas",
+                    "amount": 2.0,
+                    "duration": 4.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Rugido",
+                    "duration": 6.0,
+                    "speed": 1.7
+                }
+            ]
+        },
+        "vampire_bat": {
+            "name": "Morcego Vampiro",
+            "hp": 55,
+            "damage": 5,
+            "cooldown": 4.8,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "bat",
+            "color": [
+                110,
+                60,
+                130
+            ],
+            "portrait": "void",
+            "passive_name": "Sede de Sangue",
+            "passive_text": "Recupera um pouco de vida a cada ataque.",
+            "passive_params": {
+                "attack_heal_pct": 0.03
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Mordida",
+                    "amount": 40
+                },
+                {
+                    "type": "drain",
+                    "name": "Sangria Energética",
+                    "amount": 8
+                }
+            ]
+        },
+        "slime_green": {
+            "name": "Gosma Ácida",
+            "hp": 100,
+            "damage": 4,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "ooze",
+            "color": [
+                90,
+                200,
+                90
+            ],
+            "portrait": "void",
+            "passive_name": "Corpo Gelatinoso",
+            "passive_text": "Matches de 3 blocos causam 35% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.35
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Gosma Pegajosa",
+                    "amount": 3,
+                    "duration": 8.0
+                },
+                {
+                    "type": "poison",
+                    "name": "Ácido",
+                    "amount": 1.0,
+                    "duration": 4.0
+                }
+            ]
+        },
+        "skeleton_archer": {
+            "name": "Esqueleto Arqueiro",
+            "hp": 60,
+            "damage": 7,
+            "cooldown": 5.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "undead",
+            "color": [
+                215,
+                210,
+                185
+            ],
+            "portrait": "archer",
+            "passive_name": "Ossos Duros",
+            "passive_text": "Todos os matches causam 10% menos dano.",
+            "passive_params": {
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Flecha Óssea",
+                    "amount": 45
+                },
+                {
+                    "type": "break",
+                    "name": "Chuva de Flechas",
+                    "amount": 2
+                }
+            ]
+        },
+        "dire_wolf": {
+            "name": "Lobo Atroz",
+            "hp": 70,
+            "damage": 7,
+            "cooldown": 4.6,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "beast",
+            "color": [
+                120,
+                120,
+                135
+            ],
+            "portrait": "goblin",
+            "passive_name": "Instinto de Caça",
+            "passive_text": "Com menos de 50% de vida, ataca bem mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Mordida Feroz",
+                    "amount": 50
+                }
+            ]
+        },
+        "spore_mushroom": {
+            "name": "Cogumelo Esporulante",
+            "hp": 90,
+            "damage": 4,
+            "cooldown": 8.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "fungus",
+            "color": [
+                190,
+                90,
+                150
+            ],
+            "portrait": "zombie",
+            "passive_name": "Micélio",
+            "passive_text": "Regenera vida lentamente.",
+            "passive_params": {
+                "regen_pct": 0.008
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Esporos",
+                    "amount": 1.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "silence",
+                    "name": "Névoa Sonífera",
+                    "duration": 3.0
+                }
+            ]
+        },
+        "imp_flame": {
+            "name": "Diabrete Flamejante",
+            "hp": 65,
+            "damage": 8,
+            "cooldown": 5.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "demon",
+            "color": [
+                230,
+                90,
+                40
+            ],
+            "portrait": "goblin",
+            "passive_name": "Pele Ardente",
+            "passive_text": "Chains x1 causam 15% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.15
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Bola de Fogo",
+                    "amount": 3
+                },
+                {
+                    "type": "curse",
+                    "name": "Marca Infernal",
+                    "amount": 2
+                }
+            ]
+        },
+        "wail_ghost": {
+            "name": "Espectro Lamentoso",
+            "hp": 85,
+            "damage": 6,
+            "cooldown": 6.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "ghost",
+            "color": [
+                150,
+                190,
+                230
+            ],
+            "portrait": "necromancer",
+            "passive_name": "Intangível",
+            "passive_text": "Chains x1 causam 35% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.35
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Lamento",
+                    "duration": 3.5
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Assombração",
+                    "amount": 6
+                }
+            ]
+        },
+        "giant_scorpion": {
+            "name": "Escorpião Gigante",
+            "hp": 110,
+            "damage": 9,
+            "cooldown": 6.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "insect",
+            "color": [
+                200,
+                150,
+                60
+            ],
+            "portrait": "spider",
+            "passive_name": "Carapaça",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Ferrão Venenoso",
+                    "amount": 2.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "break",
+                    "name": "Pinça",
+                    "amount": 3
+                }
+            ]
+        },
+        "shadow_thief": {
+            "name": "Ladrão das Sombras",
+            "hp": 80,
+            "damage": 9,
+            "cooldown": 5.2,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "rogue",
+            "color": [
+                60,
+                60,
+                95
+            ],
+            "portrait": "assassin",
+            "passive_name": "Mãos Leves",
+            "passive_text": "Chains x1 causam 20% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "drain",
+                    "name": "Roubar Energia",
+                    "amount": 14
+                },
+                {
+                    "type": "strike",
+                    "name": "Punhalada",
+                    "amount": 55
+                }
+            ]
+        },
+        "elder_sapling": {
+            "name": "Broto Ancestral",
+            "hp": 140,
+            "damage": 6,
+            "cooldown": 8.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "plant",
+            "color": [
+                100,
+                160,
+                70
+            ],
+            "portrait": "zombie",
+            "passive_name": "Raízes Profundas",
+            "passive_text": "Regenera vida continuamente.",
+            "passive_params": {
+                "regen_pct": 0.012
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Raízes",
+                    "amount": 4,
+                    "duration": 9.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Seiva Vital",
+                    "amount": 8
+                }
+            ]
+        },
+        "harpy": {
+            "name": "Harpia Estridente",
+            "hp": 85,
+            "damage": 8,
+            "cooldown": 5.2,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "winged",
+            "color": [
+                180,
+                120,
+                160
+            ],
+            "portrait": "fairy",
+            "passive_name": "Voo Errático",
+            "passive_text": "Matches de 3 blocos causam 25% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Grito Desorientador",
+                    "amount": 7
+                },
+                {
+                    "type": "silence",
+                    "name": "Guincho",
+                    "duration": 3.0
+                }
+            ]
+        },
+        "minotaur": {
+            "name": "Minotauro Furioso",
+            "hp": 170,
+            "damage": 11,
+            "cooldown": 8.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "beast",
+            "color": [
+                150,
+                90,
+                60
+            ],
+            "portrait": "golem",
+            "passive_name": "Fúria Bovina",
+            "passive_text": "Com menos de 50% de vida, ataca bem mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.65
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Investida",
+                    "duration": 6.0,
+                    "speed": 1.7
+                },
+                {
+                    "type": "break",
+                    "name": "Chifrada",
+                    "amount": 4
+                }
+            ]
+        },
+        "spectral_knight": {
+            "name": "Cavaleiro Espectral",
+            "hp": 160,
+            "damage": 11,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "ghost",
+            "color": [
+                130,
+                150,
+                200
+            ],
+            "portrait": "warrior",
+            "passive_name": "Armadura Etérea",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Lâmina Fantasma",
+                    "amount": 60
+                },
+                {
+                    "type": "curse",
+                    "name": "Pavor",
+                    "amount": 3
+                }
+            ]
+        },
+        "basilisk": {
+            "name": "Basilisco",
+            "hp": 150,
+            "damage": 10,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "reptile",
+            "color": [
+                80,
+                150,
+                110
+            ],
+            "portrait": "dragon",
+            "passive_name": "Escamas Rígidas",
+            "passive_text": "Matches de 3 blocos causam 30% menos dano.",
+            "passive_params": {
+                "match3_reduction": 0.3
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Olhar Petrificante",
+                    "amount": 4
+                },
+                {
+                    "type": "poison",
+                    "name": "Veneno Mortal",
+                    "amount": 1.5,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "lich_acolyte": {
+            "name": "Acólito do Lich",
+            "hp": 130,
+            "damage": 9,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "undead",
+            "color": [
+                110,
+                200,
+                150
+            ],
+            "portrait": "necromancer",
+            "passive_name": "Filactério Menor",
+            "passive_text": "Recupera vida a cada ataque.",
+            "passive_params": {
+                "attack_heal_pct": 0.025
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Mau-Olhado",
+                    "amount": 3
+                },
+                {
+                    "type": "heal",
+                    "name": "Absorver Vida",
+                    "amount": 9
+                },
+                {
+                    "type": "drain",
+                    "name": "Dreno Arcano",
+                    "amount": 12
+                }
+            ]
+        },
+        "mimic_chest": {
+            "name": "Baú Mimic",
+            "hp": 180,
+            "damage": 12,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "construct",
+            "color": [
+                180,
+                130,
+                60
+            ],
+            "portrait": "golem",
+            "passive_name": "Madeira Maciça",
+            "passive_text": "Matches de 3 blocos e chains x1 causam menos dano.",
+            "passive_params": {
+                "armor": 0.15,
+                "match3_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Mordida do Baú",
+                    "amount": 70
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Isca Enganosa",
+                    "amount": 8
+                }
+            ]
+        },
+        "frost_elemental": {
+            "name": "Elemental de Gelo",
+            "hp": 170,
+            "damage": 9,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "elemental",
+            "color": [
+                130,
+                210,
+                240
+            ],
+            "portrait": "golem",
+            "passive_name": "Pele Cristalina",
+            "passive_text": "Todos os matches causam 20% menos dano.",
+            "passive_params": {
+                "armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Congelar",
+                    "duration": 4.0
+                },
+                {
+                    "type": "armor",
+                    "name": "Casca de Gelo",
+                    "percent": 35,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "magma_elemental": {
+            "name": "Elemental de Magma",
+            "hp": 190,
+            "damage": 13,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "elemental",
+            "color": [
+                240,
+                110,
+                30
+            ],
+            "portrait": "golem",
+            "passive_name": "Núcleo Incandescente",
+            "passive_text": "Com menos de 40% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.4,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Erupção",
+                    "amount": 5
+                },
+                {
+                    "type": "poison",
+                    "name": "Brasas",
+                    "amount": 2.0,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "hydra_spawn": {
+            "name": "Cria de Hidra",
+            "hp": 200,
+            "damage": 11,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "reptile",
+            "color": [
+                60,
+                140,
+                120
+            ],
+            "portrait": "dragon",
+            "passive_name": "Cabeças Renascentes",
+            "passive_text": "Regenera vida continuamente.",
+            "passive_params": {
+                "regen_pct": 0.015
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Mordidas Múltiplas",
+                    "amount": 4,
+                    "duration": 8.0
+                },
+                {
+                    "type": "poison",
+                    "name": "Veneno",
+                    "amount": 2.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Regeneração",
+                    "amount": 10
+                }
+            ]
+        },
+        "death_knight": {
+            "name": "Cavaleiro da Morte",
+            "hp": 230,
+            "damage": 14,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "undead",
+            "color": [
+                90,
+                70,
+                120
+            ],
+            "portrait": "warrior",
+            "passive_name": "Armadura Profana",
+            "passive_text": "Todos os matches causam 25% menos dano.",
+            "passive_params": {
+                "armor": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Golpe Sombrio",
+                    "amount": 75
+                },
+                {
+                    "type": "curse",
+                    "name": "Decreto da Morte",
+                    "amount": 4
+                },
+                {
+                    "type": "armor",
+                    "name": "Aura Profana",
+                    "percent": 30,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "banshee": {
+            "name": "Banshee",
+            "hp": 160,
+            "damage": 11,
+            "cooldown": 6.2,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "ghost",
+            "color": [
+                170,
+                160,
+                230
+            ],
+            "portrait": "necromancer",
+            "passive_name": "Espírito Evasivo",
+            "passive_text": "Chains x1 causam 30% menos dano.",
+            "passive_params": {
+                "chain1_reduction": 0.3
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Uivo Mortal",
+                    "duration": 4.5
+                },
+                {
+                    "type": "drain",
+                    "name": "Grito Sugador",
+                    "amount": 16
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Lamúria",
+                    "amount": 8
+                }
+            ]
+        },
+        "chimera": {
+            "name": "Quimera",
+            "hp": 240,
+            "damage": 14,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "beast",
+            "color": [
+                200,
+                120,
+                60
+            ],
+            "portrait": "dragon",
+            "passive_name": "Três Cabeças",
+            "passive_text": "Com menos de 50% de vida, ataca mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Garras",
+                    "amount": 5
+                },
+                {
+                    "type": "poison",
+                    "name": "Cauda Venenosa",
+                    "amount": 2.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Rugido de Fúria",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "gorgon": {
+            "name": "Górgona",
+            "hp": 210,
+            "damage": 12,
+            "cooldown": 7.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "reptile",
+            "color": [
+                90,
+                170,
+                100
+            ],
+            "portrait": "mage_enemy",
+            "passive_name": "Escamas de Serpente",
+            "passive_text": "Matches de 3 blocos causam 30% menos dano; todos, 10% menos.",
+            "passive_params": {
+                "match3_reduction": 0.3,
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Cabelo de Serpentes",
+                    "amount": 5,
+                    "duration": 9.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Olhar de Pedra",
+                    "amount": 5
+                },
+                {
+                    "type": "silence",
+                    "name": "Sibilo",
+                    "duration": 4.0
+                }
+            ]
+        },
+        "werewolf": {
+            "name": "Lobisomem",
+            "hp": 220,
+            "damage": 15,
+            "cooldown": 5.8,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "beast",
+            "color": [
+                130,
+                100,
+                90
+            ],
+            "portrait": "goblin",
+            "passive_name": "Maldição da Lua",
+            "passive_text": "Regenera vida e, com menos de 50%, ataca bem mais rápido.",
+            "passive_params": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.6,
+                "regen_pct": 0.01
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Garras Selvagens",
+                    "amount": 70
+                },
+                {
+                    "type": "break",
+                    "name": "Rasgar",
+                    "amount": 5
+                }
+            ]
+        },
+        "abyssal_horror": {
+            "name": "Horror Abissal",
+            "hp": 260,
+            "damage": 15,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "abyss",
+            "color": [
+                50,
+                60,
+                130
+            ],
+            "portrait": "void",
+            "passive_name": "Carne Insondável",
+            "passive_text": "Todos os matches causam 15% menos dano; chains x1, 20% menos.",
+            "passive_params": {
+                "armor": 0.15,
+                "chain1_reduction": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Tentáculos",
+                    "amount": 9
+                },
+                {
+                    "type": "curse",
+                    "name": "Corrupção",
+                    "amount": 5
+                },
+                {
+                    "type": "poison",
+                    "name": "Tinta Venenosa",
+                    "amount": 2.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "drain",
+                    "name": "Devorar Energia",
+                    "amount": 18
+                }
+            ]
+        },
+        "ash_phoenix": {
+            "name": "Fênix das Cinzas",
+            "hp": 240,
+            "damage": 16,
+            "cooldown": 6.8,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "winged",
+            "color": [
+                250,
+                150,
+                60
+            ],
+            "portrait": "dragon",
+            "passive_name": "Renascimento",
+            "passive_text": "Recupera vida a cada ataque.",
+            "passive_params": {
+                "attack_heal_pct": 0.04
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Chuva de Brasas",
+                    "amount": 6
+                },
+                {
+                    "type": "heal",
+                    "name": "Renascer",
+                    "amount": 12
+                },
+                {
+                    "type": "poison",
+                    "name": "Cinzas Ardentes",
+                    "amount": 2.5,
+                    "duration": 5.0
+                }
+            ]
+        },
+        "dracolich_whelp": {
+            "name": "Filhote de Dracolich",
+            "hp": 290,
+            "damage": 17,
+            "cooldown": 7.2,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "undead",
+            "color": [
+                150,
+                200,
+                190
+            ],
+            "portrait": "dragon",
+            "passive_name": "Ossos de Dragão",
+            "passive_text": "Todos os matches causam 25% menos dano.",
+            "passive_params": {
+                "armor": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Sopro Gélido",
+                    "amount": 6
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição Óssea",
+                    "amount": 5
+                },
+                {
+                    "type": "weight",
+                    "name": "Voo Predador",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "grim_reaper": {
+            "name": "Ceifador",
+            "hp": 250,
+            "damage": 18,
+            "cooldown": 6.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "undead",
+            "color": [
+                70,
+                70,
+                95
+            ],
+            "portrait": "necromancer",
+            "passive_name": "Manto da Morte",
+            "passive_text": "Chains x1 causam 30% menos dano; todos, 10% menos.",
+            "passive_params": {
+                "chain1_reduction": 0.3,
+                "armor": 0.1
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Ceifa",
+                    "amount": 85
+                },
+                {
+                    "type": "drain",
+                    "name": "Colheita de Almas",
+                    "amount": 20
+                },
+                {
+                    "type": "silence",
+                    "name": "Silêncio Eterno",
+                    "duration": 4.0
+                }
+            ]
+        },
+        "arch_demon": {
+            "name": "Arquidemônio",
+            "hp": 320,
+            "damage": 19,
+            "cooldown": 7.0,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "demon",
+            "color": [
+                200,
+                40,
+                60
+            ],
+            "portrait": "dragon",
+            "passive_name": "Pele Infernal",
+            "passive_text": "Todos os matches causam 25% menos dano; com menos de 40% de vida, ataca mais rápido.",
+            "passive_params": {
+                "armor": 0.25,
+                "enrage_hp": 0.4,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Chamas Infernais",
+                    "amount": 7
+                },
+                {
+                    "type": "curse",
+                    "name": "Pacto Sombrio",
+                    "amount": 6
+                },
+                {
+                    "type": "strike",
+                    "name": "Tridente",
+                    "amount": 80
+                },
+                {
+                    "type": "weight",
+                    "name": "Fúria Demoníaca",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "star_parasite": {
+            "name": "Parasita Estelar",
+            "hp": 270,
+            "damage": 17,
+            "cooldown": 6.5,
+            "min_floor": 1,
+            "group_only": true,
+            "infinite_only": true,
+            "family": "abyss",
+            "color": [
+                150,
+                100,
+                240
+            ],
+            "portrait": "void",
+            "passive_name": "Casca Cósmica",
+            "passive_text": "Regenera vida; chains x1 causam 25% menos dano.",
+            "passive_params": {
+                "regen_pct": 0.012,
+                "chain1_reduction": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Distorção",
+                    "amount": 10
+                },
+                {
+                    "type": "drain",
+                    "name": "Sugar Estrelas",
+                    "amount": 20
+                },
+                {
+                    "type": "poison",
+                    "name": "Radiação",
+                    "amount": 3.0,
+                    "duration": 5.0
+                },
+                {
+                    "type": "web",
+                    "name": "Teia Cósmica",
+                    "amount": 5,
+                    "duration": 9.0
+                }
+            ]
+        }
+    },
+    "bosses": {
+        "10": {
+            "name": "Rainha Aranha",
+            "title": "Boss do Andar 10",
+            "hp": 260,
+            "damage": 9,
+            "cooldown": 6.0,
+            "color": [
+                170,
+                60,
+                140
+            ],
+            "mechanic_name": "Ninho",
+            "mechanic_text": "Prende muitos blocos em teias de longa duração.",
+            "mechanics": {},
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Ninho de Teias",
+                    "amount": 5,
+                    "duration": 12.0
+                },
+                {
+                    "type": "break",
+                    "name": "Mordida",
+                    "amount": 2
+                }
+            ]
+        },
+        "20": {
+            "name": "Lorde Goblin",
+            "title": "Boss do Andar 20",
+            "hp": 360,
+            "damage": 12,
+            "cooldown": 5.5,
+            "color": [
+                70,
+                150,
+                60
+            ],
+            "mechanic_name": "Saque Furioso",
+            "mechanic_text": "Destrói blocos e embaralha cores; abaixo de 50% de vida fica muito mais rápido.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.6
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Saque",
+                    "amount": 5
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Confusão",
+                    "amount": 8
+                }
+            ]
+        },
+        "30": {
+            "name": "Arquimago Sombrio",
+            "title": "Boss do Andar 30",
+            "hp": 440,
+            "damage": 14,
+            "cooldown": 6.0,
+            "color": [
+                120,
+                50,
+                170
+            ],
+            "mechanic_name": "Maldição Profunda",
+            "mechanic_text": "Transforma blocos em pedra e troca cores. Abaixo de 50% de vida suas magias ficam mais fortes.",
+            "mechanics": {
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 4
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Inversão",
+                    "amount": 8
+                }
+            ]
+        },
+        "40": {
+            "name": "Golem Colossal",
+            "title": "Boss do Andar 40",
+            "hp": 600,
+            "damage": 16,
+            "cooldown": 7.0,
+            "color": [
+                140,
+                130,
+                110
+            ],
+            "mechanic_name": "Armadura Colossal",
+            "mechanic_text": "Matches sem chain causam 40% menos dano. Aumenta a pressão e destrói blocos.",
+            "mechanics": {
+                "chain_armor": 0.4
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Peso Colossal",
+                    "duration": 7.0,
+                    "speed": 2.0
+                },
+                {
+                    "type": "break",
+                    "name": "Esmagar",
+                    "amount": 4
+                }
+            ]
+        },
+        "50": {
+            "name": "Devorador de Puzzles",
+            "title": "Boss Final - Andar 50",
+            "hp": 800,
+            "damage": 20,
+            "cooldown": 5.5,
+            "color": [
+                200,
+                40,
+                80
+            ],
+            "mechanic_name": "Fome Infinita",
+            "mechanic_text": "Usa TODAS as habilidades em ciclo. Abaixo de 50% de vida fica mais rápido e mais forte.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5,
+                "chain_armor": 0.25
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Devorar",
+                    "amount": 4
+                },
+                {
+                    "type": "web",
+                    "name": "Teia Negra",
+                    "amount": 4,
+                    "duration": 10.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso",
+                    "duration": 6.0,
+                    "speed": 1.8
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Caos",
+                    "amount": 8
+                }
+            ]
+        }
+    },
+    "character_bosses": {
+        "warrior": {
+            "hp": 330,
+            "damage": 12,
+            "cooldown": 6.0,
+            "mechanic_name": "Muralha de Chains",
+            "mechanic_text": "Matches sem chain causam 35% menos dano. Abaixo de 50% de vida ataca mais rápido.",
+            "mechanics": {
+                "chain_armor": 0.35,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Golpe Brutal",
+                    "amount": 4
+                },
+                {
+                    "type": "weight",
+                    "name": "Investida",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "mage": {
+            "hp": 300,
+            "damage": 10,
+            "cooldown": 6.5,
+            "mechanic_name": "Alquimia Sombria",
+            "mechanic_text": "Troca as cores do tabuleiro, cria pedras e silencia as suas habilidades.",
+            "mechanics": {},
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Alquimia Sombria",
+                    "amount": 8
+                },
+                {
+                    "type": "silence",
+                    "name": "Selo Arcano",
+                    "duration": 4.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Petrificar",
+                    "amount": 2
+                }
+            ]
+        },
+        "assassin": {
+            "hp": 280,
+            "damage": 14,
+            "cooldown": 4.8,
+            "mechanic_name": "Ritmo Letal",
+            "mechanic_text": "Ataca muito rápido e envenena. Abaixo de 50% de vida fica ainda mais rápida.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Lâmina Envenenada",
+                    "amount": 1.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "silence",
+                    "name": "Golpe no Pescoço",
+                    "duration": 3.0
+                },
+                {
+                    "type": "break",
+                    "name": "Corte Duplo",
+                    "amount": 2
+                }
+            ]
+        },
+        "bard": {
+            "hp": 320,
+            "damage": 9,
+            "cooldown": 6.5,
+            "mechanic_name": "Canção Hostil",
+            "mechanic_text": "Cura a si mesma, silencia suas habilidades e fica mais forte abaixo de 50% de vida.",
+            "mechanics": {
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5
+            },
+            "abilities": [
+                {
+                    "type": "heal",
+                    "name": "Melodia Curativa",
+                    "amount": 8
+                },
+                {
+                    "type": "silence",
+                    "name": "Canção do Silêncio",
+                    "duration": 4.0
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Desafino",
+                    "amount": 6
+                }
+            ]
+        },
+        "judge": {
+            "hp": 320,
+            "damage": 11,
+            "cooldown": 6.5,
+            "mechanic_name": "Sentença",
+            "mechanic_text": "Silencia suas habilidades e reduz o dano de matches sem chain em 20%.",
+            "mechanics": {
+                "chain_armor": 0.2
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Ordem no Tribunal",
+                    "duration": 3.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Condenar",
+                    "amount": 2
+                },
+                {
+                    "type": "break",
+                    "name": "Martelada",
+                    "amount": 3
+                }
+            ]
+        },
+        "cleric": {
+            "hp": 340,
+            "damage": 8,
+            "cooldown": 7.0,
+            "mechanic_name": "Bênção Sagrada",
+            "mechanic_text": "Cura a si mesma, cria armadura e fica mais forte abaixo de 50% de vida.",
+            "mechanics": {
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.4
+            },
+            "abilities": [
+                {
+                    "type": "heal",
+                    "name": "Cura Divina",
+                    "amount": 10
+                },
+                {
+                    "type": "armor",
+                    "name": "Escudo Sagrado",
+                    "percent": 30,
+                    "duration": 6.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Julgamento",
+                    "amount": 2
+                }
+            ]
+        },
+        "blacksmith": {
+            "hp": 380,
+            "damage": 10,
+            "cooldown": 7.5,
+            "mechanic_name": "Aço Reforçado",
+            "mechanic_text": "Matches sem chain causam 30% menos dano. Forja armadura e destrói blocos.",
+            "mechanics": {
+                "chain_armor": 0.3
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Armadura Forjada",
+                    "percent": 35,
+                    "duration": 7.0
+                },
+                {
+                    "type": "break",
+                    "name": "Martelo",
+                    "amount": 3
+                },
+                {
+                    "type": "weight",
+                    "name": "Forja Acelerada",
+                    "duration": 6.0,
+                    "speed": 1.7
+                }
+            ]
+        },
+        "archer": {
+            "hp": 270,
+            "damage": 13,
+            "cooldown": 4.8,
+            "mechanic_name": "Mira Mortal",
+            "mechanic_text": "Ataca rápido e envenena. Abaixo de 50% de vida fica mais rápida.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Chuva de Flechas",
+                    "amount": 2
+                },
+                {
+                    "type": "poison",
+                    "name": "Flecha Envenenada",
+                    "amount": 1.0,
+                    "duration": 4.0
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Tiro Certeiro",
+                    "amount": 4
+                }
+            ]
+        },
+        "monk": {
+            "hp": 290,
+            "damage": 12,
+            "cooldown": 5.0,
+            "mechanic_name": "Fluxo Incessante",
+            "mechanic_text": "Embaralha o tabuleiro e silencia habilidades. Abaixo de 50% de vida fica mais rápido.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Fluxo do Chi",
+                    "amount": 6
+                },
+                {
+                    "type": "silence",
+                    "name": "Ponto de Pressão",
+                    "duration": 3.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Ritmo Acelerado",
+                    "duration": 5.0,
+                    "speed": 1.6
+                }
+            ]
+        }
+    },
+    "infinite_bosses": {
+        "bone_colossus": {
+            "name": "Colosso de Ossos",
+            "title": "Boss do Infinito",
+            "hp": 300,
+            "damage": 10,
+            "cooldown": 6.5,
+            "color": [
+                215,
+                205,
+                170
+            ],
+            "min_floor": 10,
+            "portrait": "golem",
+            "mechanic_name": "Ossos Reforçados",
+            "mechanic_text": "Chains x1 causam 30% menos dano. Esmaga, amaldiçoa e prende blocos. Com menos de 40% de vida ataca mais rápido.",
+            "mechanics": {
+                "chain_armor": 0.3,
+                "enrage_hp": 0.4,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Esmagar",
+                    "amount": 4
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição Óssea",
+                    "amount": 3
+                },
+                {
+                    "type": "web",
+                    "name": "Gaiola de Ossos",
+                    "amount": 3,
+                    "duration": 7.0
+                }
+            ]
+        },
+        "ember_witch": {
+            "name": "Bruxa das Brasas",
+            "title": "Boss do Infinito",
+            "hp": 270,
+            "damage": 10,
+            "cooldown": 6.0,
+            "color": [
+                230,
+                100,
+                40
+            ],
+            "min_floor": 10,
+            "portrait": "mage_enemy",
+            "mechanic_name": "Chama Crescente",
+            "mechanic_text": "Queima blocos e envenena. Abaixo de 50% de vida suas magias ficam mais fortes.",
+            "mechanics": {
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Labareda",
+                    "amount": 4
+                },
+                {
+                    "type": "poison",
+                    "name": "Brasa Viva",
+                    "amount": 1.5,
+                    "duration": 5.0
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Fumaça",
+                    "amount": 6
+                }
+            ]
+        },
+        "frost_wyrm": {
+            "name": "Serpe Glacial",
+            "title": "Boss do Infinito",
+            "hp": 420,
+            "damage": 13,
+            "cooldown": 6.5,
+            "color": [
+                130,
+                200,
+                240
+            ],
+            "min_floor": 20,
+            "portrait": "dragon",
+            "mechanic_name": "Gelo Eterno",
+            "mechanic_text": "Todos os matches causam 15% menos dano. Silencia e prende blocos em gelo.",
+            "mechanics": {
+                "armor": 0.15,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5
+            },
+            "abilities": [
+                {
+                    "type": "silence",
+                    "name": "Sopro Gélido",
+                    "duration": 3.5
+                },
+                {
+                    "type": "armor",
+                    "name": "Escamas de Gelo",
+                    "percent": 30,
+                    "duration": 6.0
+                },
+                {
+                    "type": "web",
+                    "name": "Teia de Gelo",
+                    "amount": 4,
+                    "duration": 8.0
+                }
+            ]
+        },
+        "plague_doctor": {
+            "name": "Médico da Peste",
+            "title": "Boss do Infinito",
+            "hp": 380,
+            "damage": 12,
+            "cooldown": 7.0,
+            "color": [
+                110,
+                150,
+                90
+            ],
+            "min_floor": 20,
+            "portrait": "necromancer",
+            "mechanic_name": "Epidemia",
+            "mechanic_text": "Regenera vida, envenena e amaldiçoa. Com menos de 50% de vida ataca mais rápido.",
+            "mechanics": {
+                "regen_pct": 0.006,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.75
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Peste Negra",
+                    "amount": 2.0,
+                    "duration": 6.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Elixir Obscuro",
+                    "amount": 8
+                },
+                {
+                    "type": "curse",
+                    "name": "Praga",
+                    "amount": 4
+                }
+            ]
+        },
+        "shadow_stalker": {
+            "name": "Espreitador das Sombras",
+            "title": "Boss do Infinito",
+            "hp": 470,
+            "damage": 15,
+            "cooldown": 5.2,
+            "color": [
+                80,
+                70,
+                120
+            ],
+            "min_floor": 30,
+            "portrait": "assassin",
+            "mechanic_name": "Passo Sombrio",
+            "mechanic_text": "Matches de 3 blocos causam 35% menos dano. Golpeia, silencia e drena energia.",
+            "mechanics": {
+                "match3_reduction": 0.35,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Emboscada",
+                    "amount": 60
+                },
+                {
+                    "type": "silence",
+                    "name": "Véu de Trevas",
+                    "duration": 3.5
+                },
+                {
+                    "type": "drain",
+                    "name": "Furto de Energia",
+                    "amount": 14
+                }
+            ]
+        },
+        "stone_hydra": {
+            "name": "Hidra de Pedra",
+            "title": "Boss do Infinito",
+            "hp": 560,
+            "damage": 14,
+            "cooldown": 6.5,
+            "color": [
+                130,
+                140,
+                120
+            ],
+            "min_floor": 30,
+            "portrait": "dragon",
+            "mechanic_name": "Cabeças de Pedra",
+            "mechanic_text": "Reduz 15% do dano. Ganha fúria em DUAS fases: abaixo de 60% e de 30% de vida.",
+            "mechanics": {
+                "armor": 0.15,
+                "phase_two_hp": 0.6,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.7
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Mordida Tripla",
+                    "amount": 5
+                },
+                {
+                    "type": "curse",
+                    "name": "Olhar de Pedra",
+                    "amount": 5
+                },
+                {
+                    "type": "web",
+                    "name": "Pescoços Enrolados",
+                    "amount": 4,
+                    "duration": 8.0
+                }
+            ]
+        },
+        "crypt_lord": {
+            "name": "Senhor da Cripta",
+            "title": "Boss do Infinito",
+            "hp": 650,
+            "damage": 15,
+            "cooldown": 7.0,
+            "color": [
+                120,
+                200,
+                150
+            ],
+            "min_floor": 40,
+            "portrait": "necromancer",
+            "mechanic_name": "Pacto Mortal",
+            "mechanic_text": "Recupera vida a cada ataque e a cada cura. Abaixo de 50% de vida suas magias ficam mais fortes.",
+            "mechanics": {
+                "attack_heal_pct": 0.025,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.4
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Selo da Cripta",
+                    "amount": 5
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Inversão Sepulcral",
+                    "amount": 8
+                },
+                {
+                    "type": "heal",
+                    "name": "Banquete de Almas",
+                    "amount": 8
+                }
+            ]
+        },
+        "thunder_roc": {
+            "name": "Rocnar da Tempestade",
+            "title": "Boss do Infinito",
+            "hp": 600,
+            "damage": 16,
+            "cooldown": 5.8,
+            "color": [
+                240,
+                220,
+                90
+            ],
+            "min_floor": 40,
+            "portrait": "dragon",
+            "mechanic_name": "Tempestade",
+            "mechanic_text": "Ataca rápido e acelera o tabuleiro. Com menos de 50% de vida fica ainda mais veloz.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.65,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.4
+            },
+            "abilities": [
+                {
+                    "type": "weight",
+                    "name": "Vendaval",
+                    "duration": 6.0,
+                    "speed": 1.9
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Relâmpago",
+                    "amount": 9
+                },
+                {
+                    "type": "break",
+                    "name": "Garras Elétricas",
+                    "amount": 6
+                }
+            ]
+        },
+        "blighted_ancient": {
+            "name": "Ancião Corrompido",
+            "title": "Boss do Infinito",
+            "hp": 850,
+            "damage": 18,
+            "cooldown": 7.5,
+            "color": [
+                110,
+                150,
+                60
+            ],
+            "min_floor": 50,
+            "portrait": "zombie",
+            "mechanic_name": "Casca Antiga",
+            "mechanic_text": "Reduz 25% do dano e regenera vida. Prende, envenena e se cura.",
+            "mechanics": {
+                "armor": 0.25,
+                "regen_pct": 0.008
+            },
+            "abilities": [
+                {
+                    "type": "web",
+                    "name": "Raízes Sufocantes",
+                    "amount": 5,
+                    "duration": 9.0
+                },
+                {
+                    "type": "poison",
+                    "name": "Seiva Tóxica",
+                    "amount": 2.5,
+                    "duration": 6.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Renovação",
+                    "amount": 8
+                }
+            ]
+        },
+        "iron_warden": {
+            "name": "Carcereiro de Ferro",
+            "title": "Boss do Infinito",
+            "hp": 950,
+            "damage": 20,
+            "cooldown": 7.0,
+            "color": [
+                160,
+                165,
+                180
+            ],
+            "min_floor": 60,
+            "portrait": "golem",
+            "mechanic_name": "Cela de Ferro",
+            "mechanic_text": "Chains x1 causam 30% menos dano e todos os matches, 20% menos. Abaixo de 50% de vida, mais forte.",
+            "mechanics": {
+                "chain_armor": 0.3,
+                "armor": 0.2,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.4
+            },
+            "abilities": [
+                {
+                    "type": "armor",
+                    "name": "Placas de Ferro",
+                    "percent": 35,
+                    "duration": 6.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Marcha Pesada",
+                    "duration": 6.0,
+                    "speed": 1.8
+                },
+                {
+                    "type": "strike",
+                    "name": "Golpe de Corrente",
+                    "amount": 80
+                }
+            ]
+        },
+        "lich_king": {
+            "name": "Rei Lich Eterno",
+            "title": "SUPER BOSS do Infinito",
+            "hp": 900,
+            "damage": 15,
+            "cooldown": 6.0,
+            "color": [
+                90,
+                230,
+                170
+            ],
+            "min_floor": 30,
+            "super": true,
+            "portrait": "necromancer",
+            "mechanic_name": "Domínio dos Mortos",
+            "mechanic_text": "Regenera e se cura a cada ataque. Entra em fúria abaixo de 60% e em desespero abaixo de 30%.",
+            "mechanics": {
+                "attack_heal_pct": 0.03,
+                "regen_pct": 0.004,
+                "phase_two_hp": 0.6,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.7,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Decreto Fúnebre",
+                    "amount": 5
+                },
+                {
+                    "type": "drain",
+                    "name": "Dreno de Almas",
+                    "amount": 18
+                },
+                {
+                    "type": "silence",
+                    "name": "Mordaça Sepulcral",
+                    "duration": 4.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Ressurgir",
+                    "amount": 8
+                }
+            ]
+        },
+        "ash_dragon": {
+            "name": "Dragão das Cinzas",
+            "title": "SUPER BOSS do Infinito",
+            "hp": 1100,
+            "damage": 19,
+            "cooldown": 6.5,
+            "color": [
+                250,
+                110,
+                40
+            ],
+            "min_floor": 40,
+            "super": true,
+            "portrait": "dragon",
+            "mechanic_name": "Fôlego Infernal",
+            "mechanic_text": "Reduz 15% do dano. Abaixo de 50% de vida ataca bem mais rápido; abaixo de 25%, devasta o tabuleiro.",
+            "mechanics": {
+                "armor": 0.15,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.65,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.7
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Sopro de Fogo",
+                    "amount": 7
+                },
+                {
+                    "type": "poison",
+                    "name": "Cinzas Ardentes",
+                    "amount": 3.0,
+                    "duration": 6.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Rasante",
+                    "duration": 6.0,
+                    "speed": 1.9
+                },
+                {
+                    "type": "strike",
+                    "name": "Garras de Fogo",
+                    "amount": 70
+                }
+            ]
+        },
+        "ruin_titan": {
+            "name": "Titã da Ruína",
+            "title": "SUPER BOSS do Infinito",
+            "hp": 1400,
+            "damage": 21,
+            "cooldown": 7.5,
+            "color": [
+                190,
+                170,
+                130
+            ],
+            "min_floor": 50,
+            "super": true,
+            "portrait": "golem",
+            "mechanic_name": "Muralha Viva",
+            "mechanic_text": "Chains x1 causam 25% menos dano e todos os matches, 20% menos. Abaixo de 50% de vida, mais forte; abaixo de 25%, desaba em fúria.",
+            "mechanics": {
+                "chain_armor": 0.25,
+                "armor": 0.2,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.7
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Punho da Ruína",
+                    "amount": 90
+                },
+                {
+                    "type": "break",
+                    "name": "Abalo Sísmico",
+                    "amount": 8
+                },
+                {
+                    "type": "armor",
+                    "name": "Pele de Rocha",
+                    "percent": 40,
+                    "duration": 7.0
+                },
+                {
+                    "type": "weight",
+                    "name": "Passos do Titã",
+                    "duration": 6.0,
+                    "speed": 1.8
+                }
+            ]
+        },
+        "void_empress": {
+            "name": "Imperatriz do Vazio",
+            "title": "SUPER BOSS do Infinito",
+            "hp": 1250,
+            "damage": 21,
+            "cooldown": 5.8,
+            "color": [
+                170,
+                100,
+                250
+            ],
+            "min_floor": 60,
+            "super": true,
+            "portrait": "void",
+            "mechanic_name": "Coroa do Vazio",
+            "mechanic_text": "Matches de 3 blocos causam 30% menos dano. Distorce o tabuleiro e drena energia. Três fases.",
+            "mechanics": {
+                "match3_reduction": 0.3,
+                "phase_two_hp": 0.6,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.7,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Distorção Real",
+                    "amount": 10
+                },
+                {
+                    "type": "curse",
+                    "name": "Decreto do Vazio",
+                    "amount": 6
+                },
+                {
+                    "type": "drain",
+                    "name": "Dreno Cósmico",
+                    "amount": 20
+                },
+                {
+                    "type": "silence",
+                    "name": "Silêncio Absoluto",
+                    "duration": 4.5
+                },
+                {
+                    "type": "web",
+                    "name": "Fios do Destino",
+                    "amount": 6,
+                    "duration": 9.0
+                }
+            ]
+        },
+        "world_serpent": {
+            "name": "Serpente do Fim dos Tempos",
+            "title": "SUPER BOSS do Infinito",
+            "hp": 1600,
+            "damage": 23,
+            "cooldown": 6.5,
+            "color": [
+                240,
+                200,
+                70
+            ],
+            "min_floor": 70,
+            "super": true,
+            "portrait": "dragon",
+            "mechanic_name": "Ouroboros",
+            "mechanic_text": "Regenera, se cura ao atacar e reduz 15% do dano. Abaixo de 50% fica furiosa; abaixo de 25%, implacável.",
+            "mechanics": {
+                "regen_pct": 0.006,
+                "attack_heal_pct": 0.03,
+                "armor": 0.15,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.7,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Veneno do Fim",
+                    "amount": 3.5,
+                    "duration": 6.0
+                },
+                {
+                    "type": "break",
+                    "name": "Constrição",
+                    "amount": 8
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição Eterna",
+                    "amount": 6
+                },
+                {
+                    "type": "strike",
+                    "name": "Presas Temporais",
+                    "amount": 90
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Espiral",
+                    "amount": 10
+                }
+            ]
+        }
+    },
+    "yoshi": {
+        "_comentario": "YOSHI. 'story' = boss do andar 50 do Modo Normal (boss comum, NÃO desbloqueia o personagem). 'infinite' = boss supremo do andar 100 do Modo Infinito (derrotá-lo desbloqueia Yoshi e dá cartas lendárias).",
+        "story": {
+            "floor": 50,
+            "name": "Yoshi",
+            "title": "Boss Final - Andar 50",
+            "hp": 900,
+            "damage": 21,
+            "cooldown": 5.5,
+            "color": [
+                200,
+                60,
+                70
+            ],
+            "art_folder": "characters",
+            "image": "yoshi",
+            "portrait": "warrior",
+            "mechanic_name": "Lâmina Implacável",
+            "mechanic_text": "Chains x1 causam 25% menos dano. Usa todas as habilidades em ciclo. Abaixo de 50% de vida fica mais rápido e mais forte.",
+            "mechanics": {
+                "chain_armor": 0.25,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.7,
+                "phase_two_hp": 0.5,
+                "phase_two_boost": 1.5
+            },
+            "abilities": [
+                {
+                    "type": "break",
+                    "name": "Corte Rápido",
+                    "amount": 4
+                },
+                {
+                    "type": "web",
+                    "name": "Fios de Aço",
+                    "amount": 4,
+                    "duration": 10.0
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição",
+                    "amount": 3
+                },
+                {
+                    "type": "weight",
+                    "name": "Investida",
+                    "duration": 6.0,
+                    "speed": 1.8
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Caos",
+                    "amount": 8
+                },
+                {
+                    "type": "strike",
+                    "name": "Iai",
+                    "amount": 60
+                }
+            ]
+        },
+        "infinite": {
+            "floor": 100,
+            "name": "Yoshi, o Rei do Tetris",
+            "title": "BOSS SUPREMO",
+            "hp": 1800,
+            "damage": 22,
+            "cooldown": 6.0,
+            "color": [
+                200,
+                50,
+                60
+            ],
+            "super": true,
+            "character_id": "yoshi",
+            "art_folder": "characters",
+            "image": "yoshi",
+            "portrait": "warrior",
+            "mechanic_name": "Rei do Tetris",
+            "mechanic_text": "Tem as passivas de TODOS os inimigos. Sua habilidade especial deixa você CEGO por 2 segundos.",
+            "mechanics": {
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.3,
+                "phase_three_hp": 0.35,
+                "phase_three_factor": 0.7,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "blind",
+                    "name": "Cegueira do Rei",
+                    "duration": 2.0
+                },
+                {
+                    "type": "break",
+                    "name": "Corte Imperial",
+                    "amount": 7
+                },
+                {
+                    "type": "curse",
+                    "name": "Decreto Sombrio",
+                    "amount": 6
+                },
+                {
+                    "type": "strike",
+                    "name": "Iai Supremo",
+                    "amount": 90
+                },
+                {
+                    "type": "blind",
+                    "name": "Cegueira do Rei",
+                    "duration": 2.0
+                },
+                {
+                    "type": "shuffle",
+                    "name": "Caos Real",
+                    "amount": 10
+                },
+                {
+                    "type": "drain",
+                    "name": "Dreno Real",
+                    "amount": 20
+                },
+                {
+                    "type": "web",
+                    "name": "Fios de Aço",
+                    "amount": 6,
+                    "duration": 9.0
+                },
+                {
+                    "type": "poison",
+                    "name": "Lâmina Envenenada",
+                    "amount": 3.0,
+                    "duration": 6.0
+                },
+                {
+                    "type": "silence",
+                    "name": "Silêncio Real",
+                    "duration": 4.5
+                },
+                {
+                    "type": "weight",
+                    "name": "Marcha do Rei",
+                    "duration": 6.0,
+                    "speed": 1.9
+                },
+                {
+                    "type": "armor",
+                    "name": "Armadura de Ferro",
+                    "percent": 35,
+                    "duration": 6.0
+                },
+                {
+                    "type": "heal",
+                    "name": "Meditação",
+                    "amount": 6
+                }
+            ],
+            "appearance_message": {
+                "text": "CUIDADO! VOCÊ ENCONTROU YOSHI, O REI DO TETRIS",
+                "seconds": 4.5
+            },
+            "reward": {
+                "cards": 3,
+                "rarity": "legendary"
+            },
+            "passive_scale": {
+                "regen_pct": 0.2,
+                "attack_heal_pct": 0.25
+            }
+        }
+    }
+}

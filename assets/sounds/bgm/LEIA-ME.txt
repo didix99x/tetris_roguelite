@@ -1,0 +1,16 @@
+MÚSICAS (BGM) - coloque aqui os arquivos, com estes nomes (.ogg, .mp3 ou .wav):
+
+  menu.ogg           menu, opções e escolha de personagem
+  battle.ogg         batalha normal
+  boss.ogg           batalha contra chefe
+  infinite.ogg       batalha normal no Modo Infinito
+  infinite_boss.ogg  chefe no Modo Infinito
+  reward.ogg         escolha de recompensa
+  victory.ogg        tela de vitória
+  game_over.ogg      tela de game over
+  music.ogg          música geral: toca onde não houver arquivo específico
+
+Reservas automáticas: boss -> battle; infinite -> battle; infinite_boss -> boss -> infinite -> battle;
+reward -> battle; qualquer um -> music. Sem nenhum arquivo, o jogo fica em silêncio (sem erro).
+A música só reinicia quando o arquivo muda (vários andares seguidos de batalha não cortam a música).
+Prefira .ogg (leve). Depois de trocar, feche e abra o jogo.

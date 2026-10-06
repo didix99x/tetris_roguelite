@@ -1,0 +1,15 @@
+ROGUE TOCA - como jogar
+=======================
+
+1. Extraia TODO o conteudo do ZIP em uma pasta (ex.: Documentos\RogueToca).
+   Nao rode de dentro do ZIP e nao separe as pastas: o Launcher.exe precisa da pasta "Game" ao lado dele.
+2. Abra "Launcher.exe" e clique em JOGAR.
+   (Nao precisa instalar Python nem nada.)
+
+Seu progresso e suas configuracoes ficam em:  %APPDATA%\RogueToca
+
+Se o Windows mostrar "O Windows protegeu seu computador" (SmartScreen):
+clique em "Mais informacoes" e depois em "Executar assim mesmo".
+O aviso aparece porque o programa e novo e nao tem assinatura digital paga.
+
+Se o jogo nao abrir, envie o arquivo  Game\logs\game.log  para o desenvolvedor.
