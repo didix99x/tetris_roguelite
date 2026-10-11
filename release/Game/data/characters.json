@@ -1,0 +1,296 @@
+{
+    "judge": {
+        "name": "Juiz",
+        "class": "—",
+        "image": "juiz",
+        "style": "Equilíbrio",
+        "max_hp": 110,
+        "energy_max": 100,
+        "passive": "impartiality",
+        "passive_name": "Imparcialidade",
+        "passive_text": "+10% de dano em todos os matches.",
+        "passive_params": {
+            "damage_bonus": 0.1
+        },
+        "ability": "gavel",
+        "ability_name": "Martelo da Justiça",
+        "ability_text": "Causa 35 de dano e atrasa o próximo ataque do inimigo em 2,5 segundos.",
+        "ability_cost": 50,
+        "ability_params": {
+            "damage": 35,
+            "delay": 2.5
+        },
+        "unlock": "default",
+        "color": [
+            220,
+            190,
+            80
+        ],
+        "gender": "m"
+    },
+    "bard": {
+        "name": "Tulipa",
+        "style": "Suporte e ritmo",
+        "max_hp": 100,
+        "energy_max": 100,
+        "passive": "heal_on_match",
+        "passive_name": "Melodia Curativa",
+        "passive_text": "Cada match recupera vida, mais ainda em chains.",
+        "passive_params": {
+            "heal_per_match": 2,
+            "heal_per_chain_level": 1
+        },
+        "ability": "purify_song",
+        "ability_name": "Canção Purificadora",
+        "ability_text": "Remove teias e pedras do tabuleiro e atrasa o próximo ataque do inimigo.",
+        "ability_cost": 45,
+        "ability_params": {
+            "delay": 5.0
+        },
+        "color": [
+            60,
+            160,
+            120
+        ],
+        "class": "Bardo",
+        "image": "tulipa",
+        "unlock": "defeat_in_infinite",
+        "gender": "f"
+    },
+    "assassin": {
+        "name": "Tali",
+        "style": "Velocidade",
+        "max_hp": 100,
+        "energy_max": 100,
+        "passive": "quick_chain",
+        "passive_name": "Ritmo Letal",
+        "passive_text": "Matches feitos logo após o anterior (até 2s) causam +30% de dano.",
+        "passive_params": {
+            "quick_bonus": 0.3,
+            "quick_window": 2.0
+        },
+        "ability": "execute",
+        "ability_name": "Execução",
+        "ability_text": "Mata inimigo com menos de 30% de vida. Senão, causa 30 de dano.",
+        "ability_cost": 60,
+        "ability_params": {
+            "damage": 30,
+            "execute_threshold": 0.3,
+            "boss_damage_pct": 0.15
+        },
+        "color": [
+            150,
+            90,
+            200
+        ],
+        "class": "Assassina",
+        "image": "tali",
+        "unlock": "defeat_in_infinite",
+        "gender": "f"
+    },
+    "cleric": {
+        "name": "Maizona",
+        "class": "Clériga",
+        "image": "maizona",
+        "style": "Cura e proteção",
+        "max_hp": 110,
+        "energy_max": 100,
+        "passive": "constant_blessing",
+        "passive_name": "Bênção Constante",
+        "passive_text": "Recupera 0,8 de vida por segundo.",
+        "passive_params": {
+            "regen_per_sec": 0.8
+        },
+        "ability": "divine_light",
+        "ability_name": "Luz Divina",
+        "ability_text": "Cura 25% da vida máxima e remove veneno, teias e pedras.",
+        "ability_cost": 50,
+        "ability_params": {
+            "heal_pct": 0.25
+        },
+        "unlock": "defeat_in_infinite",
+        "color": [
+            250,
+            245,
+            200
+        ],
+        "gender": "f"
+    },
+    "blacksmith": {
+        "name": "Caique",
+        "class": "Ferreiro",
+        "image": "caique",
+        "style": "Resistência",
+        "max_hp": 130,
+        "energy_max": 100,
+        "passive": "forged_armor",
+        "passive_name": "Armadura Forjada",
+        "passive_text": "Ataques inimigos causam 12% menos dano.",
+        "passive_params": {
+            "damage_reduction": 0.12
+        },
+        "ability": "reinforced_forge",
+        "ability_name": "Forja Reforçada",
+        "ability_text": "Cura 10% da vida máxima e ganha +6% de defesa (até 4 vezes por run).",
+        "ability_cost": 55,
+        "ability_params": {
+            "defense_gain": 0.06,
+            "max_stacks": 4,
+            "heal_pct": 0.1
+        },
+        "unlock": "defeat_in_infinite",
+        "color": [
+            200,
+            110,
+            60
+        ],
+        "gender": "m"
+    },
+    "mage": {
+        "name": "Breno",
+        "style": "Manipulação de cores",
+        "max_hp": 90,
+        "energy_max": 100,
+        "passive": "big_match_energy",
+        "passive_name": "Arcano Voraz",
+        "passive_text": "Matches grandes geram energia adicional.",
+        "passive_params": {
+            "energy_per_extra_block": 8
+        },
+        "ability": "color_shift",
+        "ability_name": "Alquimia",
+        "ability_text": "Pinta alguns blocos com a cor mais comum do tabuleiro.",
+        "ability_cost": 40,
+        "ability_params": {
+            "blocks": 6
+        },
+        "color": [
+            90,
+            130,
+            240
+        ],
+        "class": "Mago",
+        "image": "breno",
+        "unlock": "defeat_in_infinite",
+        "gender": "m"
+    },
+    "archer": {
+        "name": "Romulo",
+        "class": "Arqueiro",
+        "image": "romulo",
+        "style": "Precisão",
+        "max_hp": 95,
+        "energy_max": 100,
+        "passive": "eagle_eyes",
+        "passive_name": "Olhos de Águia",
+        "passive_text": "10% de chance de crítico. Chains x3+ restauram 8 de energia.",
+        "passive_params": {
+            "crit_chance": 0.1,
+            "chain3_energy": 8
+        },
+        "ability": "arrow_rain",
+        "ability_name": "Chuva de Flechas",
+        "ability_text": "Dispara 5 flechas de 9 de dano cada (45 no total).",
+        "ability_cost": 50,
+        "ability_params": {
+            "arrows": 5,
+            "damage_each": 9
+        },
+        "unlock": "defeat_in_infinite",
+        "color": [
+            90,
+            160,
+            80
+        ],
+        "gender": "m"
+    },
+    "warrior": {
+        "name": "Matheuzim",
+        "style": "Chains",
+        "max_hp": 120,
+        "energy_max": 100,
+        "passive": "chain_damage",
+        "passive_name": "Fúria",
+        "passive_text": "Chains maiores causam mais dano.",
+        "passive_params": {
+            "chain_bonus_per_level": 0.15
+        },
+        "ability": "power_strike",
+        "ability_name": "Golpe Poderoso",
+        "ability_text": "Causa dano direto no inimigo.",
+        "ability_cost": 50,
+        "ability_params": {
+            "damage": 45
+        },
+        "color": [
+            220,
+            80,
+            60
+        ],
+        "class": "Guerreiro",
+        "image": "matheuzim",
+        "unlock": "defeat_in_infinite",
+        "gender": "m"
+    },
+    "monk": {
+        "name": "Yuko",
+        "class": "Monge",
+        "image": "yuko",
+        "style": "Fluxo e combos",
+        "max_hp": 100,
+        "energy_max": 100,
+        "passive": "flowing_chi",
+        "passive_name": "Chi em Fluxo",
+        "passive_text": "Cada nível de chain acima de x1 gera 5 de energia extra.",
+        "passive_params": {
+            "energy_per_chain_level": 5
+        },
+        "ability": "resonant_palm",
+        "ability_name": "Palma Ressonante",
+        "ability_text": "20 de dano + 10 por nível da maior chain da batalha (até 5 níveis).",
+        "ability_cost": 45,
+        "ability_params": {
+            "base_damage": 20,
+            "damage_per_chain_level": 10,
+            "max_chain_levels": 5
+        },
+        "unlock": "defeat_in_infinite",
+        "color": [
+            240,
+            150,
+            60
+        ],
+        "gender": "m"
+    },
+    "yoshi": {
+        "name": "Yoshi",
+        "style": "Disciplina",
+        "max_hp": 105,
+        "energy_max": 100,
+        "passive": "unhurried",
+        "passive_name": "Desembainhar",
+        "passive_text": "Matches feitos sem pressa (mais de 2s depois do anterior) causam +30% de dano.",
+        "passive_params": {
+            "unhurried_bonus": 0.3,
+            "quick_window": 2.0
+        },
+        "ability": "iai",
+        "ability_name": "Iai Relâmpago",
+        "ability_text": "Causa 42 de dano (+25% contra bosses) e recupera 6 de vida.",
+        "ability_cost": 55,
+        "ability_params": {
+            "damage": 42,
+            "boss_bonus_pct": 0.25,
+            "heal": 6
+        },
+        "color": [
+            200,
+            60,
+            70
+        ],
+        "class": "Samurai",
+        "image": "yoshi",
+        "unlock": "defeat_yoshi_infinite_100",
+        "gender": "m"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "_comentario": "FUNDOS DAS BATALHAS (só visual). As imagens ficam em assets/backgrounds/<tema>/ (png/jpg). Trocar a imagem = trocar o fundo.",
+    "dim": 150,
+    "families": {"spider": "spiders", "goblin": "goblins", "mage": "mages", "golem": "golems", "void": "infinite"},
+    "boss_theme": "bosses",
+    "fallback_theme": "infinite",
+    "floors": {
+        "_comentario": "Fundo fixo para um andar: \"7\": \"mages\" (tema) ou \"7\": \"mages/variacao.jpg\" (arquivo). Para o Infinito use \"infinite:100\"."
+    }
+}

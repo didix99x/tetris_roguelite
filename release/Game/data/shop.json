@@ -1,0 +1,56 @@
+{
+    "_comentario": "TUDO da Loja e dos pontos permanentes fica aqui. Mudou um número? Os textos da interface usam os mesmos valores.",
+    "points": {
+        "_comentario": "Pontos permanentes ganhos jogando. Não existe ouro durante a run.",
+        "multiplier": 0.6,
+        "_multiplier_comentario": "Multiplicador aplicado UMA vez em tudo que é ganho (andar, chefe, vitória e marcos): 0.6 = 60% (redução de 40%). Os números abaixo são os valores BASE.",
+        "floor_clear": 15,
+        "floor_clear_infinite": 20,
+        "boss_defeat": 100,
+        "super_boss_defeat": 250,
+        "story_victory": 1000,
+        "milestones": {
+            "_comentario": "Marcos de andar (uma vez só por marco): andar -> pontos",
+            "story": {"10": 100, "20": 200, "30": 300, "40": 400},
+            "infinite": {"25": 200, "50": 500, "75": 800, "100": 1500}
+        }
+    },
+    "card_price_multiplier": 1.3,
+    "_card_price_comentario": "Multiplicador aplicado UMA vez no preço das cartas da Loja: 1.3 = +30%. Os valores de card_costs são os BASE.",
+    "card_costs": {"common": 100, "rare": 250, "epic": 500, "legendary": 1000},
+    "upgrades": {
+        "max_level": 15,
+        "cost_table": [60, 90, 130, 180, 240, 310, 400, 500, 620, 760, 920, 1100, 1300, 1550, 1800],
+        "attributes": {
+            "vida": {"label": "VIDA", "text": "Aumenta permanentemente a vida máxima.", "per_level": 4, "cost_mult": 1.0},
+            "dano": {"label": "DANO", "text": "Aumenta o dano causado pelo personagem.", "per_level": 0.02, "cost_mult": 1.2},
+            "defesa": {"label": "DEFESA", "text": "Reduz o dano recebido (nunca chega a 100%).", "per_level": 0.01, "cost_mult": 1.0},
+            "passiva": {"label": "PASSIVA", "text": "Melhora o efeito da passiva original do personagem.", "cost_mult": 1.1}
+        },
+        "passive": {
+            "_comentario": "Qual número da passiva cada personagem melhora: param (data/characters.json > passive_params), base (lido de lá), per_level, formato",
+            "judge": {"param": "damage_bonus", "per_level": 0.01, "fmt": "pct", "what": "Dano da passiva"},
+            "bard": {"param": "heal_per_match", "per_level": 0.2, "fmt": "hp", "what": "Cura por match"},
+            "assassin": {"param": "quick_bonus", "per_level": 0.01, "fmt": "pct", "what": "Bônus de jogada rápida"},
+            "cleric": {"param": "regen_per_sec", "per_level": 0.08, "fmt": "hps", "what": "Regeneração"},
+            "blacksmith": {"param": "damage_reduction", "per_level": 0.005, "fmt": "pct", "what": "Redução de dano"},
+            "mage": {"param": "energy_per_extra_block", "per_level": 0.4, "fmt": "en", "what": "Energia por bloco extra"},
+            "archer": {"param": "crit_chance", "per_level": 0.01, "fmt": "pct", "what": "Chance de crítico"},
+            "warrior": {"param": "chain_bonus_per_level", "per_level": 0.01, "fmt": "pct", "what": "Bônus por nível de chain"},
+            "monk": {"param": "energy_per_chain_level", "per_level": 0.3, "fmt": "en", "what": "Energia por nível de chain"},
+            "yoshi": {"param": "unhurried_bonus", "per_level": 0.01, "fmt": "pct", "what": "Bônus sem pressa"}
+        }
+    },
+    "events": {
+        "_comentario": "Eventos entre andares (Modo Normal e Infinito). Nunca depois de chefe e nunca no último andar.",
+        "every_floors": 4,
+        "chance": 0.75,
+        "rest_heal_pct": 0.35,
+        "rest_energy": 40,
+        "swap_max_per_run": 1,
+        "swap_fail_chance": 0.25,
+        "mystery_weights": {"blessing": 3, "bargain": 2, "trap": 1, "nothing": 1}
+    },
+    "hint": {"idle_seconds": 6.0},
+    "backgrounds": {"dim": 150}
+}

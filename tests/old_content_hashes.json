@@ -1,0 +1,44 @@
+{
+ "characters": {
+  "warrior": "5719f7c50bac",
+  "mage": "0dbcd342258c",
+  "assassin": "ae17edabafd7",
+  "bard": "c46b1ee9b5b5"
+ },
+ "enemies": {
+  "goblin": "da4cbdaa42f5",
+  "spider": "763503bf5783",
+  "mage": "a5e4cc8ed615",
+  "golem": "ab85e41b67fa"
+ },
+ "bosses": {
+  "10": "dec8923130e8",
+  "20": "84b2d2c8b5e0",
+  "30": "7b21e70b4792",
+  "40": "1ee282bfdddd",
+  "50": "8c2699ef7973"
+ },
+ "rewards": {
+  "dmg_10": "c22c64ba3c58",
+  "hp_10": "9379c87d3af3",
+  "heal_30": "b6470c774094",
+  "energy_15": "33923ee3c96a",
+  "slow_8": "78abbe725292",
+  "chain_20": "d927b4309e64",
+  "hp_25": "0f8757aa5c44",
+  "boom5_3": "6b3c7b8460f2",
+  "energy_30": "05e4ecebe50f",
+  "cost_20": "02960e12444f",
+  "chain_boom": "dc000811b92e",
+  "dmg_30": "22c17a5249d2",
+  "steal_5": "c3f840e8833b",
+  "boom5_6": "c17c557ca7ed",
+  "regen_1": "c2f59bf92666",
+  "legend_chain": "293a7654f893",
+  "legend_time": "e2173d91e0e0",
+  "legend_storm": "39445af6a176",
+  "legend_vamp": "dd4daadbf29b"
+ },
+ "rarity_weights": "f00c10652d1a",
+ "floors": "59183c350194"
+}
