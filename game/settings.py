@@ -14,7 +14,10 @@ log = logging.getLogger(__name__)
 DEFAULT_SETTINGS = {
     "music_volume": 0.5,
     "sfx_volume": 0.7,
+<<<<<<< HEAD
     "screen_shake": True,            # tremor de tela ligado/desligado (Opções)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     "window_mode": "windowed",      # "windowed", "fullscreen" ou "borderless"
     "window_width": 1280,
     "window_height": 720,
@@ -27,6 +30,7 @@ DEFAULT_SETTINGS = {
         "swap": ["return", "space"],
         "ability": ["q", "e"],
         "back": ["escape"],
+<<<<<<< HEAD
         "tab_prev": ["pageup"],       # trocar de aba/página nos menus (no controle: LB / L1)
         "tab_next": ["pagedown"],     # (no controle: RB / R1)
     },
@@ -45,6 +49,8 @@ DEFAULT_SETTINGS = {
         "tab_prev": None,
         "tab_next": None,
         "deadzone": 0.55,
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     },
 }
 
@@ -66,8 +72,13 @@ class Settings:
             with open(self.path, encoding="utf-8") as f:
                 saved = json.load(f)
             for key, value in saved.items():
+<<<<<<< HEAD
                 if key in ("controls", "gamepad") and isinstance(value, dict):
                     self.data[key].update(value)           # chaves que faltam (save antigo) ficam com o padrão
+=======
+                if key == "controls" and isinstance(value, dict):
+                    self.data["controls"].update(value)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
                 elif key in self.data:
                     self.data[key] = value
         except (OSError, ValueError):

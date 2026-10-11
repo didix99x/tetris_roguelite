@@ -27,6 +27,7 @@ class Progress:
         self.unlocked = []
         self.infinite_unlocked = False
         self.best_infinite_floor = 0
+<<<<<<< HEAD
         # --- progressão permanente (Loja). Campos novos são opcionais: saves antigos continuam funcionando ---
         self.points = 0                  # pontos permanentes (não existe ouro durante a run)
         self.purchased_cards = []        # ids das cartas compradas na Loja
@@ -35,6 +36,8 @@ class Progress:
         self.bestiary = {}               # {id do inimigo: vezes derrotado}
         self.history = []                # últimas runs (mais recente primeiro)
         self.boss_misses = {}            # chefes de desbloqueio do Infinito: {personagem: andares elegíveis sem aparecer}
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.load()
         self.update_unlocks()
 
@@ -56,6 +59,7 @@ class Progress:
             # quem já zerou o jogo antes desta versão também ganha o modo infinito
             self.infinite_unlocked = bool(data.get("infinite_unlocked", self.wins > 0))
             self.best_infinite_floor = int(data.get("best_infinite_floor", 0))
+<<<<<<< HEAD
             self.points = max(0, int(data.get("points", 0)))
             self.purchased_cards = list(data.get("purchased_cards", []))
             self.upgrades = {c: {a: int(n) for a, n in lv.items()} for c, lv in dict(data.get("upgrades", {})).items()}
@@ -63,6 +67,8 @@ class Progress:
             self.bestiary = {k: int(v) for k, v in dict(data.get("bestiary", {})).items()}
             self.history = list(data.get("history", []))
             self.boss_misses = {str(k): max(0, int(v)) for k, v in dict(data.get("boss_misses", {})).items()}
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         except (OSError, ValueError):
             log.exception("Não foi possível ler progress.json; começando do zero.")
 
@@ -76,6 +82,7 @@ class Progress:
             "save_version": SAVE_VERSION,
             "infinite_unlocked": self.infinite_unlocked,
             "best_infinite_floor": self.best_infinite_floor,
+<<<<<<< HEAD
             "points": self.points,
             "purchased_cards": self.purchased_cards,
             "upgrades": self.upgrades,
@@ -83,6 +90,8 @@ class Progress:
             "bestiary": self.bestiary,
             "history": self.history[:30],
             "boss_misses": self.boss_misses,
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         }
         try:
             with open(self.path, "w", encoding="utf-8") as f:
@@ -131,6 +140,7 @@ class Progress:
     def discover(self, reward_id):
         if reward_id not in self.discovered_rewards:
             self.discovered_rewards.append(reward_id)
+<<<<<<< HEAD
 
     # ---- registros (Bestiário e Histórico de runs) ----
     def record_defeat(self, enemy_id):
@@ -139,3 +149,5 @@ class Progress:
     def record_run(self, entry):
         self.history.insert(0, entry)
         del self.history[30:]
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f

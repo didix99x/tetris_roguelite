@@ -488,6 +488,7 @@ O jogo decide pelo campo `character_id`: só o Yoshi do andar 100 tem `"characte
 
 ### Garantias
 Os 9 personagens, os bosses, cartas, passivas e dados antigos não foram alterados (o único boss que "perde" lugar é o do andar 50 do Modo Normal, por pedido). O Yoshi do andar 50 não desbloqueia, o do andar 100 desbloqueia, ele nunca aparece em outro andar, e a cegueira não altera a lógica (testado).
+<<<<<<< HEAD
 
 
 ---
@@ -596,3 +597,5 @@ Tudo continua em **um** arquivo (`progress.json`, pasta de dados do usuário): `
 - **Conquistas** (o Bestiário e o Histórico de runs já existem e são salvos).
 - **Tooltips** de informações dos inimigos (a HUD já mostra passiva, habilidades em efeitos ativos e status).
 - Arte das cartas e fundos são gerados por código (estilo vetorial); para arte feita à mão, basta substituir os arquivos.
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f

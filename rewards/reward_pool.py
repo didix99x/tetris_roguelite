@@ -7,6 +7,7 @@ Cada recompensa pode ter "min_floor": só aparece a partir desse andar.
 import random
 
 
+<<<<<<< HEAD
 def roll_rewards(rewards_data, count, floor_number, rng=None, only_rarity=None, blocked_ids=None):
     """only_rarity (ex.: "legendary") oferece SOMENTE cartas dessa raridade (usado pelo Boss especial)."""
     rng = rng or random.Random()
@@ -17,6 +18,16 @@ def roll_rewards(rewards_data, count, floor_number, rng=None, only_rarity=None, 
     if only_rarity:
         pool = [r for r in pool if r["rarity"] == only_rarity] or \
                [r for r in allowed if r["rarity"] == only_rarity]
+=======
+def roll_rewards(rewards_data, count, floor_number, rng=None, only_rarity=None):
+    """only_rarity (ex.: "legendary") oferece SOMENTE cartas dessa raridade (usado pelo Boss especial)."""
+    rng = rng or random.Random()
+    weights = rewards_data["rarity_weights"]
+    pool = [r for r in rewards_data["rewards"] if r.get("min_floor", 1) <= floor_number]
+    if only_rarity:
+        pool = [r for r in pool if r["rarity"] == only_rarity] or \
+               [r for r in rewards_data["rewards"] if r["rarity"] == only_rarity]
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     picks = []
     for _ in range(count):
         if not pool:

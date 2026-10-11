@@ -27,9 +27,13 @@ class InfiniteFloors(unittest.TestCase):
         self.data = load_data()
 
     def build(self, floor, seed=1, own=None):
+<<<<<<< HEAD
         # (todos os personagens ainda bloqueados: só os bloqueados aparecem como chefes de desbloqueio)
         return build_infinite_floor(floor, self.data["enemies"], self.data["floors"], random.Random(seed), own,
                                     self.data["characters"], list(self.data["characters"]))
+=======
+        return build_infinite_floor(floor, self.data["enemies"], self.data["floors"], random.Random(seed), own)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def test_any_floor_builds_forever(self):
         for floor in list(range(1, 130)) + [500, 1000]:

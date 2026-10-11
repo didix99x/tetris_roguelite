@@ -390,8 +390,11 @@
         "include_character_bosses": true,
         "exclude_own_character": true,
         "character_boss_chance": 0.3,
+<<<<<<< HEAD
         "locked_character_boss_chance": 0.5,
         "boss_pity_floors": 2,
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         "character_boss_after_floor": 20,
         "special_boss_chance": 0.02,
         "special_boss_hp_factor": 1.4,

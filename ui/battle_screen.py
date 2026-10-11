@@ -6,6 +6,7 @@ Também transforma os "eventos" do Combat em sons e efeitos visuais.
 """
 import config
 import pygame
+<<<<<<< HEAD
 from combat.combat import IDLE
 from game.audio import chain_sound
 from ui import theme
@@ -17,6 +18,13 @@ from ui.boss_warning import AppearanceWarning
 from ui.hud import draw_hud
 from ui.phoenix_rebirth import PhoenixRebirth
 from ui.portraits import draw_portrait
+=======
+from ui import theme
+from ui.ability_fx import AbilityFX
+from ui.board_view import BoardView
+from ui.boss_warning import AppearanceWarning
+from ui.hud import draw_hud
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 from ui.vfx import VFX
 from ui.widgets import draw_text, wrap_text
 
@@ -28,15 +36,19 @@ class BattleScreen:
         self.combat = self.run.start_floor()
         self.view = BoardView()
         self.vfx = VFX()
+<<<<<<< HEAD
         self.idle = 0.0                                  # segundos sem o jogador agir (dica de jogada)
         self.hint = None                                 # (x, y) da dica atual
         self.hint_after = float(game.run.data.get("shop", {}).get("hint", {}).get("idle_seconds", 6.0))
         self._mouse = None
         self.vfx.shake_enabled = bool(game.settings.get("screen_shake"))
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.fx = AbilityFX()                       # efeitos das habilidades (ui/ability_fx.py)
         self.fx_ctx = self._build_fx_context()
         self.time = 0.0
         self.paused = False
+<<<<<<< HEAD
         self.rebirth = PhoenixRebirth()          # animação da carta Phoenix (só visual; congela o combate enquanto toca)
         self.end_timer = 0.0
         self.banner_time = 2.2
@@ -45,10 +57,17 @@ class BattleScreen:
             game.audio.play("boss")                                      # som grave de entrada do chefe
         self.warning = AppearanceWarning(message["text"], message.get("seconds", 4.0)) if message else None
         self.intro_band = pygame.Surface((config.SCREEN_WIDTH, 200), pygame.SRCALPHA)
+=======
+        self.end_timer = 0.0
+        self.banner_time = 2.2
+        message = getattr(self.combat.enemy, "appearance_message", None)      # ex.: Yoshi, o Rei do Tetris (andar 100)
+        self.warning = AppearanceWarning(message["text"], message.get("seconds", 4.0)) if message else None
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.blind_layer = pygame.Surface((self.view.width_px + 16, self.view.height_px + 16), pygame.SRCALPHA)
         self.overlay = pygame.Surface((config.SCREEN_WIDTH, config.SCREEN_HEIGHT), pygame.SRCALPHA)
         self.overlay.fill((0, 0, 0, 170))
 
+<<<<<<< HEAD
     def _update_hint(self, dt):
         """Dica de jogada: depois de alguns segundos parado, destaca (SEM executar) uma troca possível."""
         if self.paused or self.combat.result or self.combat.phase != IDLE or self.banner_time > 0 or self.rebirth.active:
@@ -58,6 +77,8 @@ class BattleScreen:
         if self.idle >= self.hint_after and self.hint is None:
             self.hint = find_hint(self.combat.board)
 
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     def _draw_blind(self, surface):
         """CEGUEIRA do Yoshi: escurece a área de jogo pelo tempo restante de combat.blind_time (2 s). SÓ visual:
         o jogo continua funcionando por baixo e volta ao normal sozinho quando o tempo acaba."""
@@ -83,10 +104,13 @@ class BattleScreen:
     # ------------------------------------------------ entrada
     def handle_input(self, inp):
         combat = self.combat
+<<<<<<< HEAD
         if any(inp.pressed(n) for n in ("left", "right", "up", "down", "swap", "ability", "back")) or inp.click or \
                 (self._mouse is not None and inp.mouse_pos != self._mouse):
             self.idle, self.hint = 0.0, None                # o jogador voltou a jogar: a dica some
         self._mouse = inp.mouse_pos
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if combat.result:
             return
         if inp.pressed("back"):
@@ -98,8 +122,11 @@ class BattleScreen:
             elif inp.pressed("ability"):
                 self.game.abandon_run()
             return
+<<<<<<< HEAD
         if self.rebirth.active:                 # durante a animação da Phoenix ninguém joga (evita ação em estado inválido)
             return
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
         if inp.pressed("left"):
             combat.move_cursor(-1, 0)
@@ -134,6 +161,7 @@ class BattleScreen:
             self.banner_time -= dt
         if self.warning:
             self.warning.update(dt)
+<<<<<<< HEAD
         if self.rebirth.active:                 # Phoenix: o combate fica congelado (inimigo, veneno, tempo) até a animação acabar
             self.rebirth.update(dt)
         else:
@@ -142,6 +170,12 @@ class BattleScreen:
         self.vfx.update(dt)
         self.fx.update(dt)
         self._update_hint(dt)
+=======
+        self.combat.update(dt)
+        self._process_events()
+        self.vfx.update(dt)
+        self.fx.update(dt)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if self.combat.result:
             self.end_timer += dt
             if self.end_timer > 1.4:
@@ -163,12 +197,20 @@ class BattleScreen:
             elif kind in ("swap_fail", "ability_fail"):
                 audio.play("fail")
             elif kind == "match":
+<<<<<<< HEAD
                 audio.play("match_big" if len(event["cells"]) >= 4 else "match")
+=======
+                audio.play("match")
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
                 for (x, y, color_id) in event["cells"]:
                     px, py = view.cell_center(x, y)
                     vfx.add_burst(px, py, config.BLOCK_COLORS.get(color_id, (255, 255, 255)), 4)
             elif kind == "chain":
+<<<<<<< HEAD
                 audio.play(chain_sound(event["level"]))          # x2, x3, x4+: cada vez mais agudo e forte
+=======
+                audio.play("chain")
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
                 vfx.add_text(f"CHAIN x{event['level']}", center_x, view.y + 40, config.ACCENT_COLOR,
                              52 + 6 * min(event["level"], 6), 1.2)
                 vfx.add_shake(3 + event["level"], 0.2)
@@ -204,10 +246,13 @@ class BattleScreen:
                 vfx.add_text(f"+{event['amount']}", center_x, 140, (120, 240, 140), 34, 0.9)
             elif kind == "heal":
                 vfx.add_text(f"+{event['amount']}", 190, 290, (120, 240, 140), 34, 0.9)
+<<<<<<< HEAD
             elif kind == "second_wind":
                 if self.rebirth.start():        # 1x por andar (o combate já garante); um 2º aviso durante a animação é ignorado
                     audio.play("reward")
                     vfx.add_shake(5, 0.3)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             elif kind == "burst":
                 for (x, y, color_id) in event["cells"]:
                     px, py = view.cell_center(x, y)
@@ -232,13 +277,19 @@ class BattleScreen:
     # ------------------------------------------------ desenho
     def draw(self, surface):
         surface.fill(config.BACKGROUND_COLOR)
+<<<<<<< HEAD
         draw_background(surface, self.combat.enemy, self.run.floor_number, self.run.mode)      # fundo do tema (só visual)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         offset = self.vfx.shake_offset()
         draw_hud(surface, self.combat, self.run)
         self.view.draw(surface, self.combat.board, self.time, offset,
                        show_cursor=not self.combat.result)
+<<<<<<< HEAD
         if self.hint:
             draw_hint(surface, self.view, self.hint, self.time)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.fx.draw(surface)
         self._draw_blind(surface)
         self.vfx.draw(surface)
@@ -246,6 +297,7 @@ class BattleScreen:
         if self.banner_time > 0 and not self.paused:
             enemy = self.combat.enemy
             if enemy.is_boss:
+<<<<<<< HEAD
                 # apresentação rápida do chefe: faixa escura, retrato e nome deslizando (dura o mesmo que o banner)
                 elapsed = 2.2 - self.banner_time
                 slide = 1.0 - (1.0 - min(1.0, elapsed / 0.35)) ** 3
@@ -259,6 +311,12 @@ class BattleScreen:
                     draw_text(surface, "SUPER BOSS", 40, (255, 90, 70), (640 + offset, 262))
                 draw_text(surface, f"ANDAR {self.run.floor_number}", 48, config.ACCENT_COLOR, (640 + offset, 300))
                 draw_text(surface, enemy.name.upper(), 72, enemy.color, (640 + offset, 360), shadow=True)
+=======
+                if getattr(enemy, "is_super", False):
+                    draw_text(surface, "SUPER BOSS", 40, (255, 90, 70), (640, 262))
+                draw_text(surface, f"ANDAR {self.run.floor_number}", 48, config.ACCENT_COLOR, (640, 300))
+                draw_text(surface, enemy.name.upper(), 72, enemy.color, (640, 360))
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
                 for i, line in enumerate(wrap_text(enemy.passive_label(), 26, 900)[:3]):
                     draw_text(surface, line, 26, config.TEXT_COLOR, (640, 415 + i * 30))
             else:
@@ -267,8 +325,11 @@ class BattleScreen:
 
         if self.warning and self.warning.active and not self.paused:
             self.warning.draw(surface)
+<<<<<<< HEAD
         if self.rebirth.active and not self.paused:
             self.rebirth.draw(surface)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
         if self.paused:
             surface.blit(self.overlay, (0, 0))

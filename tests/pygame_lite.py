@@ -16,9 +16,12 @@ import types
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 SRCALPHA = 0x00010000
+<<<<<<< HEAD
 KEYDOWN, KEYUP, MOUSEBUTTONDOWN = 768, 769, 1025
 JOYAXISMOTION, JOYHATMOTION, JOYBUTTONDOWN, JOYDEVICEADDED, JOYDEVICEREMOVED = 1536, 1538, 1540, 1541, 1542
 QUIT = 256
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 BLEND_ADD = 1
 BLEND_RGBA_ADD = 6
 BLEND_RGB_ADD = 1
@@ -320,6 +323,7 @@ def install():
                                      lines=_lines_draw, polygon=_polygon_draw, arc=_arc_draw)
     mod.font = types.SimpleNamespace(Font=Font, init=lambda: None)
     mod.time = types.SimpleNamespace(get_ticks=lambda: _state["ticks"])
+<<<<<<< HEAD
     mod.image = types.SimpleNamespace(frombytes=_frombytes, fromstring=_frombytes, load=lambda p: Surface.from_image(Image.open(p)))
     mod.transform = types.SimpleNamespace(scale=_transform_scale, smoothscale=_transform_scale)
     mod.KEYDOWN, mod.KEYUP, mod.MOUSEBUTTONDOWN, mod.QUIT = KEYDOWN, KEYUP, MOUSEBUTTONDOWN, QUIT
@@ -328,6 +332,10 @@ def install():
     mod.key = types.SimpleNamespace(key_code=lambda name: sum(ord(c) * (i + 1) for i, c in enumerate(name)))
     mod.mouse = types.SimpleNamespace(get_pos=lambda: (0, 0))
     mod.joystick = types.SimpleNamespace(init=lambda: None, get_count=lambda: 0)
+=======
+    mod.image = types.SimpleNamespace(frombytes=_frombytes, fromstring=_frombytes)
+    mod.transform = types.SimpleNamespace(scale=_transform_scale)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     mod.lite = True
     mod.set_ticks = lambda ms: _state.__setitem__("ticks", int(ms))
     sys.modules["pygame"] = mod

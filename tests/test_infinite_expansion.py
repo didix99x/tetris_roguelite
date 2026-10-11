@@ -46,8 +46,12 @@ class Base(unittest.TestCase):
         self.floors = self.data["floors"]
 
     def infinite(self, floor, seed, own="warrior", **kw):
+<<<<<<< HEAD
         return build_infinite_floor(floor, self.enemies, self.floors, random.Random(seed), own, self.data["characters"],
                                     list(self.data["characters"]), **kw)
+=======
+        return build_infinite_floor(floor, self.enemies, self.floors, random.Random(seed), own, self.data["characters"], [], **kw)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def fresh_combat(self, char="warrior", floor=1, seed=1):
         run = RunManager(char, self.data, random.Random(seed), mode="infinite")
@@ -476,8 +480,12 @@ class NewCards(Base):
         self.assertGreaterEqual(len(multi), 30)
 
     def test_legendaries_have_unique_effects(self):
+<<<<<<< HEAD
         old_types = {e["type"] for r in self.data["rewards"]["rewards"]
                      if not r["id"].startswith("i_") and not r.get("shop") for e in r["effects"]}
+=======
+        old_types = {e["type"] for r in self.data["rewards"]["rewards"] if not r["id"].startswith("i_") for e in r["effects"]}
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         legends = [c for c in self.cards() if c["rarity"] == "legendary"]
         unique = [c["id"] for c in legends if {e["type"] for e in c["effects"]} - old_types]
         self.assertGreaterEqual(len(unique), 7)
@@ -766,8 +774,12 @@ class Compatibility(Base):
     def test_no_economy_or_shop_added(self):
         text = open(os.path.join(ROOT, "data", "rewards.json"), encoding="utf-8").read().lower()
         import re
+<<<<<<< HEAD
         # Loja de PONTOS permanentes existe (fora da run); o que continua proibido é ouro/moeda/inventário DENTRO da run
         for banned in (r"\bgold\b", r"\bouro\b", r"\bmoedas?\b", r"inventári"):
+=======
+        for banned in (r"\bgold\b", r"\bouro\b", r"\bmoedas?\b", r"\bloja\b", r"\bshop\b", r"inventári"):
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             self.assertIsNone(re.search(banned, text), banned)
         self.assertFalse({"gold", "coins", "shop"} & set(DEFAULT_MODS))
 

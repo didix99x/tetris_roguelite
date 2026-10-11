@@ -94,7 +94,11 @@ def _character_enemy_data(char_id, combat_data, characters_data):
 
 
 def _pick_infinite_boss(floor_number, enemies_data, floors_data, rng, own_character, characters_data,
+<<<<<<< HEAD
                         locked_characters, boss_misses=None, track=False):
+=======
+                        locked_characters):
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     """Sorteia um boss do Infinito (da história ou um personagem jogável). Devolve (id, dados).
 
     Em DUAS etapas (valores em data/floors.json > infinite):
@@ -104,6 +108,7 @@ def _pick_infinite_boss(floor_number, enemies_data, floors_data, rng, own_charac
          `locked_character_boss_weight` fichas). Senão: escolhe entre os chefes da história.
     Se não houver personagem elegível, o chefe é sempre da história.
 
+<<<<<<< HEAD
     CHEFES DE DESBLOQUEIO: só os personagens AINDA BLOQUEADOS entram no sorteio de personagens (quando todos já
     foram desbloqueados, deixam de aparecer). Com algum bloqueado a chance sobe para `locked_character_boss_chance`
     (padrão 0.5). Aparição GARANTIDA: `boss_misses` {personagem: andares elegíveis seguidos sem aparecer}; ao chegar em
@@ -111,6 +116,8 @@ def _pick_infinite_boss(floor_number, enemies_data, floors_data, rng, own_charac
     ele poderia aparecer (acima de `character_boss_after_floor`, e nunca o personagem da run). `track=True` atualiza
     a contagem (só o andar normal de chefe; o Boss especial e o andar do Yoshi não contam).
 
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     Chefes EXCLUSIVOS DO INFINITO (data/enemies.json > infinite_bosses, ids `boss_inf_<chave>`):
       cada um tem `min_floor` (só aparece a partir desse andar). Os normais entram na mesma lista dos chefes
       da história; os SUPER BOSSES (`"super": true`) são mais raros: só aparecem com chance `super_boss_chance`
@@ -121,21 +128,32 @@ def _pick_infinite_boss(floor_number, enemies_data, floors_data, rng, own_charac
     story = [(f"boss_{key}", data) for key, data in enemies_data["bosses"].items()
              if int(key) <= max(every, floor_number)]
     characters = []
+<<<<<<< HEAD
     entries = {}                       # personagem ainda bloqueado e elegível neste andar -> (id do chefe, dados)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     if settings.get("include_character_bosses", True) and floor_number > int(settings.get("character_boss_after_floor", 20)):
         locked = set(locked_characters or [])
         for char_id, combat_data in enemies_data.get("character_bosses", {}).items():
             if settings.get("exclude_own_character", True) and char_id == own_character:
                 continue
+<<<<<<< HEAD
             if char_id not in locked:      # já desbloqueado: não volta como chefe de desbloqueio
                 continue
             entry = (f"boss_char_{char_id}", _character_enemy_data(char_id, combat_data, characters_data))
             entries[char_id] = entry
             characters.append(entry)
+=======
+            entry = (f"boss_char_{char_id}", _character_enemy_data(char_id, combat_data, characters_data))
+            characters.append(entry)
+            if char_id in locked:          # personagem ainda bloqueado: mais fichas no sorteio entre personagens
+                characters.extend([entry] * (int(settings.get("locked_character_boss_weight", 2)) - 1))
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     infinite = [(f"boss_inf_{key}", data) for key, data in enemies_data.get("infinite_bosses", {}).items()
                 if int(data.get("min_floor", every)) <= floor_number]
     supers = [entry for entry in infinite if entry[1].get("super")]
     regular = [entry for entry in infinite if not entry[1].get("super")]
+<<<<<<< HEAD
     chance = float(settings.get("locked_character_boss_chance", settings.get("character_boss_chance", 0.30)))
     misses = boss_misses if boss_misses is not None else {}
     limit = int(settings.get("boss_pity_floors", 2))
@@ -158,6 +176,14 @@ def _pick_infinite_boss(floor_number, enemies_data, floors_data, rng, own_charac
         for char_id in entries:
             misses[char_id] = 0 if char_id == picked else misses.get(char_id, 0) + 1
     return result
+=======
+    chance = float(settings.get("character_boss_chance", 0.30))
+    if characters and (not story or rng.random() < chance):
+        return rng.choice(characters)
+    if supers and rng.random() < float(settings.get("super_boss_chance", 0.15)):
+        return rng.choice(supers)
+    return rng.choice(story + regular)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 def _infinite_stats(data, floor_number, floors_data, player, base_max_hp, is_boss):
@@ -167,7 +193,11 @@ def _infinite_stats(data, floor_number, floors_data, player, base_max_hp, is_bos
 
 
 def build_infinite_floor(floor_number, enemies_data, floors_data, rng=None, own_character=None,
+<<<<<<< HEAD
                          characters_data=None, locked_characters=None, player=None, base_max_hp=None, boss_misses=None):
+=======
+                         characters_data=None, locked_characters=None, player=None, base_max_hp=None):
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     """Andar do MODO INFINITO.
 
     - Monstros: sorteados entre os temas já liberados (a cada 10 andares entra um tema novo),
@@ -192,8 +222,12 @@ def build_infinite_floor(floor_number, enemies_data, floors_data, rng=None, own_
 
     if floor_number % every == 0:
         boss_id, data = _pick_infinite_boss(floor_number, enemies_data, floors_data, rng,
+<<<<<<< HEAD
                                             own_character, characters_data, locked_characters,
                                             boss_misses=boss_misses, track=True)
+=======
+                                            own_character, characters_data, locked_characters)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         stats = _infinite_stats(data, floor_number, floors_data, player, base_max_hp, True)
         return Floor(floor_number, Boss(boss_id, data, stats), True)
 
@@ -220,7 +254,11 @@ def build_infinite_floor(floor_number, enemies_data, floors_data, rng=None, own_
 
 
 def build_special_boss(floor_number, enemies_data, floors_data, rng=None, own_character=None,
+<<<<<<< HEAD
                        characters_data=None, locked_characters=None, player=None, base_max_hp=None, boss_misses=None):
+=======
+                       characters_data=None, locked_characters=None, player=None, base_max_hp=None):
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     """BOSS ESPECIAL (encontro de 2% do Modo Infinito): usa o mesmo sistema de Boss,
     só um pouco mais forte (special_boss_hp_factor / special_boss_damage_factor)."""
     rng = rng or random.Random()

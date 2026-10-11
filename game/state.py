@@ -4,8 +4,11 @@
 class GameState:
     MENU = "MENU"
     OPTIONS = "OPTIONS"
+<<<<<<< HEAD
     SHOP = "SHOP"                  # Loja (cartas, upgrades, álbum, bestiário, histórico)
     EVENT = "EVENT"                # eventos entre andares (descanso, troca arriscada, sala misteriosa)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     CHARACTER_SELECT = "CHARACTER_SELECT"
     BATTLE = "BATTLE"
     REWARD = "REWARD"

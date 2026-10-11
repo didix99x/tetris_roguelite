@@ -4,15 +4,23 @@ import pygame
 import config
 from game.settings import RESOLUTIONS, WINDOW_MODE_NAMES, WINDOW_MODES
 from game.state import GameState
+<<<<<<< HEAD
 from game.input import PAD_ACTION_NAMES
 from ui.widgets import ButtonList, controller_hint, draw_text
+=======
+from ui.widgets import ButtonList, draw_text
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 class MenuScreen:
     def __init__(self, game):
         self.game = game
         self.infinite_open = game.progress.is_infinite_unlocked()
+<<<<<<< HEAD
         self.buttons = ButtonList(["JOGAR", "MODO INFINITO", "LOJA", "OPÇÕES", "SAIR"], start_y=284, height=50, gap=12,
+=======
+        self.buttons = ButtonList(["JOGAR", "MODO INFINITO", "OPÇÕES", "SAIR"], start_y=300, height=54, gap=14,
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
                                   disabled=() if self.infinite_open else (1,))
         self.time = 0.0
         self.message_time = 0.0
@@ -32,11 +40,16 @@ class MenuScreen:
                 self.game.audio.play("fail")
                 self.message_time = 3.5
         elif choice == 2:
+<<<<<<< HEAD
             self.game.audio.play("select")
             self.game.change_state(GameState.SHOP)
         elif choice == 3:
             self.game.change_state(GameState.OPTIONS)
         elif choice == 4:
+=======
+            self.game.change_state(GameState.OPTIONS)
+        elif choice == 3:
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             self.game.quit()
 
     def update(self, dt):
@@ -63,20 +76,27 @@ class MenuScreen:
         info = f"Melhor andar: {progress.best_floor}   Runs: {progress.runs}   Vitórias: {progress.wins}"
         if self.infinite_open:
             info += f"   Infinito: andar {progress.best_infinite_floor}"
+<<<<<<< HEAD
         info += f"   Pontos: {progress.points}"
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         draw_text(surface, info, 24, config.MUTED_TEXT_COLOR, (640, 686))
 
 
 class OptionsScreen:
+<<<<<<< HEAD
     """OPÇÕES. Duas páginas na mesma tela: GERAL (som, tela) e CONTROLE / JOYSTICK (botões do controle, remapeamento).
     Trocar de página: LB/RB (Xbox), L1/R1 (PlayStation), PageUp/PageDown, ou o item "CONTROLE / JOYSTICK" da página Geral."""
     PAGES = ("GERAL", "CONTROLE / JOYSTICK")
     WAIT_LIMIT = 8.0                 # segundos esperando um botão no remapeamento (depois cancela sozinho)
 
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     def __init__(self, game):
         self.game = game
         self.settings = game.settings
         self.selected = 0
+<<<<<<< HEAD
         self.items = ["music", "sfx", "shake", "mode", "resolution", "pad", "back"]
         self.rects = [pygame.Rect(340, 208 + i * 60, 600, 50) for i in range(len(self.items))]
         # ---- página CONTROLE / JOYSTICK ----
@@ -88,23 +108,33 @@ class OptionsScreen:
         self.wait_time = 0.0
         self.message, self.message_time = "", 0.0
         self.time = 0.0
+=======
+        self.items = ["music", "sfx", "mode", "resolution", "back"]
+        self.rects = [pygame.Rect(340, 250 + i * 72, 600, 56) for i in range(len(self.items))]
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def _adjust(self, item, direction):
         s = self.settings
         audio = self.game.audio
+<<<<<<< HEAD
         if item == "pad":
             if direction > 0:                            # abre a página CONTROLE / JOYSTICK
                 self.page = 1
             return
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if item in ("music", "sfx"):
             key = "music_volume" if item == "music" else "sfx_volume"
             value = round(max(0.0, min(1.0, s.get(key) + 0.1 * direction)), 1)
             s.set(key, value)
             audio.apply_volumes()
             audio.play("select")
+<<<<<<< HEAD
         elif item == "shake":
             s.set("screen_shake", not s.get("screen_shake"))
             audio.play("select")
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         elif item == "mode":
             index = (WINDOW_MODES.index(s.get("window_mode")) + direction) % len(WINDOW_MODES)
             s.set("window_mode", WINDOW_MODES[index])
@@ -119,11 +149,18 @@ class OptionsScreen:
                 self.game.apply_display_mode()
 
     def _back(self):
+<<<<<<< HEAD
         self._stop_waiting()
         self.settings.save()
         self.game.change_state(GameState.MENU)
 
     def _handle_general(self, inp):
+=======
+        self.settings.save()
+        self.game.change_state(GameState.MENU)
+
+    def handle_input(self, inp):
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if inp.pressed("back"):
             self._back()
             return
@@ -150,6 +187,7 @@ class OptionsScreen:
                 else:
                     self._adjust(self.items[i], 1)
 
+<<<<<<< HEAD
     def handle_input(self, inp):
         if self.waiting is None:                         # (durante o remapeamento as abas não trocam)
             if inp.pressed("tab_next"):
@@ -233,6 +271,10 @@ class OptionsScreen:
             elif self.wait_time > self.WAIT_LIMIT:
                 self._stop_waiting()
                 self._say("Tempo esgotado. Remapeamento cancelado; o botão anterior foi mantido.")
+=======
+    def update(self, dt):
+        pass
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def _label(self, item):
         s = self.settings
@@ -240,23 +282,33 @@ class OptionsScreen:
             return f"Música: {round(s.get('music_volume') * 100)}%"
         if item == "sfx":
             return f"Efeitos: {round(s.get('sfx_volume') * 100)}%"
+<<<<<<< HEAD
         if item == "shake":
             return f"Tremor de tela: {'ON' if s.get('screen_shake') else 'OFF'}"
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if item == "mode":
             return f"Modo de tela: {WINDOW_MODE_NAMES[s.get('window_mode')]}"
         if item == "resolution":
             return f"Tamanho da janela: {s.get('window_width')}x{s.get('window_height')}"
+<<<<<<< HEAD
         if item == "pad":
             return "CONTROLE / JOYSTICK   >"
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         return "VOLTAR"
 
     def draw(self, surface):
         surface.fill(config.BACKGROUND_COLOR)
+<<<<<<< HEAD
         draw_text(surface, "OPÇÕES", 64, config.TEXT_COLOR, (640, 96))
         self._draw_page_tabs(surface)
         if self.page == 1:
             self._draw_pad_page(surface)
             return
+=======
+        draw_text(surface, "OPÇÕES", 72, config.TEXT_COLOR, (640, 130))
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         for i, (item, rect) in enumerate(zip(self.items, self.rects)):
             active = i == self.selected
             pygame.draw.rect(surface, (60, 60, 90) if active else (35, 35, 55), rect, border_radius=10)
@@ -264,6 +316,7 @@ class OptionsScreen:
                              width=3 if active else 2, border_radius=10)
             draw_text(surface, self._label(item), 32,
                       config.ACCENT_COLOR if active else config.TEXT_COLOR, rect.center)
+<<<<<<< HEAD
         draw_text(surface, controller_hint(self.game, "Setas: escolher e ajustar   Enter: mudar   Esc: voltar   F11: tela cheia   PgUp/PgDn: página",
                                            (("move", "escolher"), ("swap", "mudar"), ("back", "voltar"), ("tabs", "página"))),
                   24, config.MUTED_TEXT_COLOR, (640, 690))
@@ -310,3 +363,7 @@ class OptionsScreen:
         draw_text(surface, controller_hint(self.game, "Setas: escolher   Enter: remapear   Esc: voltar   PgUp/PgDn: página",
                                            (("move", "escolher"), ("swap", "remapear"), ("tabs", "página"))),
                   22, config.MUTED_TEXT_COLOR, (640, 700))
+=======
+        draw_text(surface, "Setas: escolher e ajustar   Enter: mudar   Esc: voltar   F11: tela cheia",
+                  24, config.MUTED_TEXT_COLOR, (640, 680))
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f

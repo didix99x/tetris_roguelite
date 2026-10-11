@@ -10,9 +10,12 @@ import logging
 import pygame
 
 import config
+<<<<<<< HEAD
 from ui import hud
 from game import shop as shop_logic
 from run import events as run_events
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 from game.audio import AudioManager
 from game.data_loader import load_all
 from game import music_map
@@ -43,7 +46,10 @@ class Game:
         self.clock = pygame.time.Clock()
         self.audio = AudioManager(self.settings)
         self.input = Input(self.settings, self.to_canvas)
+<<<<<<< HEAD
         self.input.init_gamepads()                # Xbox/PlayStation: opcional, o jogo funciona sem controle
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         pygame.key.set_repeat(220, 70)
 
         self.running = True
@@ -55,7 +61,10 @@ class Game:
         self.bonus_picks_total = 0
         self.bonus_rarity = "legendary"
         self.bonus_title = ""
+<<<<<<< HEAD
         self.run_points = 0
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.run = None
         self.state = None
         self.screen = None
@@ -97,10 +106,14 @@ class Game:
             size = (max(1, int(cw * scale)), max(1, int(ch * scale)))
             if self._scaled is None or self._scaled.get_size() != size:
                 self._scaled = pygame.Surface(size)
+<<<<<<< HEAD
             try:                                   # suavizado: o texto fica nítido quando a janela não é 1280x720
                 pygame.transform.smoothscale(self.canvas, size, self._scaled)
             except (ValueError, pygame.error):     # formato de pixel sem suporte: usa o método simples
                 pygame.transform.scale(self.canvas, size, self._scaled)
+=======
+            pygame.transform.scale(self.canvas, size, self._scaled)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             offset = ((ww - size[0]) // 2, (wh - size[1]) // 2)
             window.fill((0, 0, 0))
             window.blit(self._scaled, offset)
@@ -113,8 +126,11 @@ class Game:
         from ui.battle_screen import BattleScreen
         from ui.boss_offer import BossOfferScreen
         from ui.character_select import CharacterSelectScreen
+<<<<<<< HEAD
         from ui.event_screen import EventScreen
         from ui.shop_screen import ShopScreen
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         from ui.game_over import GameOverScreen
         from ui.menu import MenuScreen, OptionsScreen
         from ui.reward_screen import RewardScreen
@@ -126,10 +142,13 @@ class Game:
             self.screen = OptionsScreen(self)
         elif state == GameState.CHARACTER_SELECT:
             self.screen = CharacterSelectScreen(self)
+<<<<<<< HEAD
         elif state == GameState.SHOP:
             self.screen = ShopScreen(self)
         elif state == GameState.EVENT:
             self.screen = EventScreen(self)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         elif state == GameState.BATTLE:
             self.screen = BattleScreen(self)
         elif state == GameState.REWARD:
@@ -150,12 +169,17 @@ class Game:
         self.unlock_notice = []
         self.special_reward_pending = False
         self.bonus_picks_left = self.bonus_picks_total = 0
+<<<<<<< HEAD
         self.run_points = 0                    # pontos permanentes ganhos nesta run (mostrados no fim)
         self.run = RunManager(char_id, self.data, mode=self.pending_mode,
                               unlocked_characters=self.progress.unlocked,
                               upgrades=self.progress.upgrades.get(char_id),
                               blocked_cards=shop_logic.blocked_card_ids(self.progress, self.data["rewards"], char_id),
                               boss_misses=self.progress.boss_misses)
+=======
+        self.run = RunManager(char_id, self.data, mode=self.pending_mode,
+                              unlocked_characters=self.progress.unlocked)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.change_state(GameState.BATTLE)
 
     def _unlock_defeated_character(self, enemy):
@@ -167,6 +191,7 @@ class Game:
             self.unlock_notice.append(f"{char['name'].upper()} DESBLOQUEAD{ending}!")
             self.progress.save()                      # salva na hora: não se perde se a run acabar
 
+<<<<<<< HEAD
     # ------------------------------------------------ pontos permanentes (Loja) / bestiário / histórico
     def _earn(self, amount):
         """Soma pontos permanentes (data/shop.json > points) e salva na hora."""
@@ -199,6 +224,11 @@ class Game:
         self._unlock_defeated_character(run.floor.enemy)
         self.progress.record_defeat(run.floor.enemy.id)                  # Bestiário
         self._award_victory_points(run.floor.enemy, victory=(run.mode == "story" and run.floor_number >= (run.last_floor or 10 ** 9)))
+=======
+    def on_battle_won(self):
+        run = self.run
+        self._unlock_defeated_character(run.floor.enemy)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if run.special_active:                       # venceu o BOSS ESPECIAL
             run.special_active = False
             self.special_reward_pending = True
@@ -220,7 +250,10 @@ class Game:
             return
         self.progress.record_floor(run.floor_number)
         if run.finished:
+<<<<<<< HEAD
             self._record_run_end("vitória")
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             self.progress.runs += 1
             self.progress.wins += 1
             self.just_unlocked_infinite = self.progress.unlock_infinite()
@@ -250,6 +283,7 @@ class Game:
             self.special_reward_pending = False
             self.change_state(GameState.BATTLE)
             return
+<<<<<<< HEAD
         if run_events.event_due(self.run, self.data["shop"], self.run.rng):    # descanso / troca arriscada / sala misteriosa
             self.change_state(GameState.EVENT)
             return
@@ -260,6 +294,8 @@ class Game:
 
     def _continue_run(self):
         """Vai para o próximo andar (ou para o encontro especial com Boss, no Infinito)."""
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.run.advance_floor()
         if self.run.mode == "infinite" and self.roll_special_boss():
             self.change_state(GameState.BOSS_OFFER)
@@ -279,13 +315,19 @@ class Game:
         self.change_state(GameState.BATTLE)
 
     def on_battle_lost(self):
+<<<<<<< HEAD
         self._record_run_end("derrota")
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.progress.runs += 1
         self.progress.save()
         self.change_state(GameState.GAME_OVER)
 
     def abandon_run(self):
+<<<<<<< HEAD
         self._record_run_end("abandonou")
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.progress.runs += 1
         self.progress.save()
         self.run = None
@@ -300,10 +342,13 @@ class Game:
         while self.running:
             # 1) INPUT
             self.input.begin_frame()
+<<<<<<< HEAD
             if self.input.pad_active():                     # só mostra os botões do controle se ele está em uso
                 hud.set_gamepad_kind(self.input.pad_kind, self.input.pad_labels())
             else:
                 hud.set_gamepad_kind(None)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False

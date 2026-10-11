@@ -361,7 +361,10 @@ class PlayableYoshi(Base):
         c.enemy.is_boss = True
         c.enemy.hp = 10 ** 6
         run.player.energy = run.player.energy_max
+<<<<<<< HEAD
         c.ability_cd = 0.0                          # (passaram os 3 s de recarga)
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         c.use_ability()
         self.assertEqual(10 ** 6 - c.enemy.hp, round(42 * 1.25))
 

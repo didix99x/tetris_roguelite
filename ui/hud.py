@@ -118,7 +118,11 @@ def _draw_player(surface, combat):
              marker=min(0.99, cost / player.energy_max) if player.energy_max else None,
              icon=(icons.draw_bolt, (255, 220, 90)))
 
+<<<<<<< HEAD
     _draw_ability_box(surface, player, cost, getattr(combat, "ability_cd", 0.0))
+=======
+    _draw_ability_box(surface, player, cost)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     ox, oy, ow, oh = theme.PASSIVE_BOX
     draw_inner_box(surface, theme.PASSIVE_BOX)
@@ -127,9 +131,15 @@ def _draw_player(surface, combat):
     draw_wrapped(surface, player.passive_text, 21, theme.TEXT_MUTED, (ox + 14, oy + 58), ow - 28, 21)
 
 
+<<<<<<< HEAD
 def _draw_ability_box(surface, player, cost, cooldown=0.0):
     ax, ay, aw, ah = theme.ABILITY_BOX
     ready = player.can_use_ability() and cooldown <= 0
+=======
+def _draw_ability_box(surface, player, cost):
+    ax, ay, aw, ah = theme.ABILITY_BOX
+    ready = player.can_use_ability()
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     draw_inner_box(surface, theme.ABILITY_BOX, glow=theme.READY if ready else None)
     badge = (ax + 32, ay + ah // 2)
     badge_color = theme.READY if ready else player.color
@@ -139,12 +149,16 @@ def _draw_ability_box(surface, player, cost, cooldown=0.0):
                     (255, 255, 255) if ready else _mix(badge_color, (255, 255, 255), 0.4))
     draw_text(surface, "HABILIDADE", 19, theme.TEXT_MUTED, (ax + 66, ay + 9), "topleft")
     draw_text(surface, player.ability_name, 27, theme.TEXT, (ax + 66, ay + 26), "topleft")
+<<<<<<< HEAD
     if cooldown > 0:                                                  # recarga: tempo restante + barrinha
         draw_text(surface, f"RECARGA  {cooldown:.1f}s", 27, (255, 190, 90), (ax + 66, ay + 54), "topleft", shadow=True)
         frac = max(0.0, min(1.0, 1.0 - cooldown / max(0.001, config.ABILITY_COOLDOWN)))
         pygame.draw.rect(surface, (40, 40, 60), (ax + 66, ay + ah - 9, aw - 80, 4), border_radius=2)
         pygame.draw.rect(surface, (255, 190, 90), (ax + 66, ay + ah - 9, int((aw - 80) * frac), 4), border_radius=2)
     elif ready:
+=======
+    if ready:
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         draw_text(surface, "PRONTA  [Q]", 27, _mix(theme.READY, (255, 255, 255), 0.25 * _pulse(220.0)), (ax + 66, ay + 54),
                   "topleft", shadow=True)
     else:
@@ -230,6 +244,7 @@ def _draw_chain(surface, combat):
 
 # ---------------------------------------------------------------- teclas (embaixo)
 _HINTS = (("Setas/WASD", "mover"), ("Enter/Espaço", "trocar"), ("Q", "habilidade"), ("Esc", "pausa"))
+<<<<<<< HEAD
 _PAD_KIND = [None]          # tipo do controle EM USO ("xbox", "ps") ou None (a barra mostra o teclado)
 _PAD_LABELS = [None]        # botões configurados (mostrados na barra); None = padrão do tipo
 
@@ -247,12 +262,18 @@ def _hints():
     from game.input import PAD_PROMPTS
     p = _PAD_LABELS[0] or PAD_PROMPTS[_PAD_KIND[0]]
     return ((p["move"], "mover"), (p["swap"], "trocar"), (p["ability"], "habilidade"), (p["back"], "pausa"))
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 def _draw_hints(surface):
     from ui.widgets import render_text
     items, total = [], 0
+<<<<<<< HEAD
     for key, label in _hints():
+=======
+    for key, label in _HINTS:
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         k, t = render_text(key, 19, theme.TEXT), render_text(label, 20, theme.TEXT_MUTED)
         items.append((k, t))
         total += k.get_width() + 16 + 8 + t.get_width() + 30

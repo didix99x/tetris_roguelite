@@ -1,5 +1,9 @@
 """
+<<<<<<< HEAD
 game/input.py - ENTRADA (teclado, mouse e CONTROLE).
+=======
+game/input.py - ENTRADA (teclado e mouse).
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 As teclas vêm de settings.json ("controls"). O resto do jogo não pergunta
 "qual tecla?", pergunta "qual AÇÃO?": left, right, up, down, swap,
@@ -7,10 +11,13 @@ ability, back.
 
 Quer mudar as teclas? Edite o "controls" do settings.json
 (nomes de teclas do pygame: "left", "a", "return", "space", "escape"...).
+<<<<<<< HEAD
 
 CONTROLE (Xbox, PlayStation ou compatível reconhecido pelo Windows): o D-pad e o analógico esquerdo viram
 left/right/up/down e os botões viram swap/ability/back (settings.json > "gamepad"). Assim TODAS as telas
 funcionam com controle sem mudar nada nelas. O tipo (Xbox/PlayStation) é detectado pelo nome do controle.
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 """
 import logging
 
@@ -21,6 +28,7 @@ log = logging.getLogger(__name__)
 # Só estas ações repetem quando a tecla fica pressionada.
 REPEATABLE = {"left", "right", "up", "down"}
 
+<<<<<<< HEAD
 # nomes que indicam um controle PlayStation (o resto é tratado como Xbox/genérico)
 PLAYSTATION_WORDS = ("playstation", "ps3", "ps4", "ps5", "dualshock", "dualsense", "sony", "wireless controller")
 
@@ -58,6 +66,8 @@ PAD_PROMPTS = {
     None: {"move": "D-Pad", "swap": "Botão 1", "ability": "Botão 3", "back": "Start", "cancel": "Botão 2"},
 }
 
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 class Input:
     def __init__(self, settings, to_canvas):
@@ -69,6 +79,7 @@ class Input:
         self.actions = set()
         self.click = None             # posição do clique deste frame (ou None)
         self.mouse_pos = (0, 0)
+<<<<<<< HEAD
         self.pads = {}                # controles conectados: instance_id -> joystick
         self.pad_kind = None          # 'xbox', 'ps' ou None (nenhum controle)
         self._axis_dir = {}           # direção atual do analógico (para gerar 1 ação por empurrão)
@@ -169,6 +180,8 @@ class Input:
             default = DEFAULT_SETTINGS["gamepad"][action]
             cfg[action] = list(default) if default is not None else None
         self.settings.save()
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def rebuild_keymap(self):
         self.keymap = {}
@@ -183,13 +196,19 @@ class Input:
 
     def begin_frame(self):
         self.actions.clear()
+<<<<<<< HEAD
         self.pad_pressed = []
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.click = None
         self.mouse_pos = self.to_canvas(pygame.mouse.get_pos())
 
     def handle_event(self, event):
         if event.type == pygame.KEYDOWN:
+<<<<<<< HEAD
             self.last_device = "keyboard"
+=======
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             for action in self.keymap.get(event.key, []):
                 if event.key in self._held and action not in REPEATABLE:
                     continue
@@ -198,6 +217,7 @@ class Input:
         elif event.type == pygame.KEYUP:
             self._held.discard(event.key)
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+<<<<<<< HEAD
             self.last_device = "keyboard"
             self.click = self.to_canvas(event.pos)
         else:
@@ -248,6 +268,9 @@ class Input:
             if direction and self._axis_dir.get(event.axis) != direction and not self.capture_pad:   # só no momento em que empurra
                 self.actions.add(direction)
             self._axis_dir[event.axis] = direction
+=======
+            self.click = self.to_canvas(event.pos)
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def pressed(self, action):
         return action in self.actions

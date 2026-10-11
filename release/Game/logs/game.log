@@ -1,0 +1,478 @@
+2026-10-05 16:35:12,177 [INFO] game.audio: Música 'menu': menu.mp3
+2026-10-05 16:35:12,178 [INFO] game.game: Estado: MENU
+2026-10-05 16:35:14,960 [INFO] game.game: Estado: CHARACTER_SELECT
+2026-10-05 16:35:47,706 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:35:47,706 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:35:58,537 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:35:58,538 [INFO] game.game: Estado: REWARD
+2026-10-05 16:36:03,232 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:36:03,232 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:37:04,935 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:37:04,936 [INFO] game.game: Estado: REWARD
+2026-10-05 16:37:07,767 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:37:07,769 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:37:24,301 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:37:24,302 [INFO] game.game: Estado: REWARD
+2026-10-05 16:37:26,320 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:37:26,320 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:37:34,388 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:37:34,388 [INFO] game.game: Estado: REWARD
+2026-10-05 16:37:36,705 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:37:36,705 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:37:48,541 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:37:48,541 [INFO] game.game: Estado: REWARD
+2026-10-05 16:37:51,763 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:37:51,763 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:38:02,809 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:38:02,810 [INFO] game.game: Estado: REWARD
+2026-10-05 16:38:05,906 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:38:05,907 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:38:33,391 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:38:33,391 [INFO] game.game: Estado: REWARD
+2026-10-05 16:38:39,603 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:38:39,604 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:39:04,460 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:39:04,460 [INFO] game.game: Estado: REWARD
+2026-10-05 16:39:06,952 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:39:06,952 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:39:23,958 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:39:23,959 [INFO] game.game: Estado: REWARD
+2026-10-05 16:39:26,882 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-05 16:39:26,883 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:40:15,667 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:40:15,668 [INFO] game.game: Estado: REWARD
+2026-10-05 16:40:19,792 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-05 16:40:19,792 [INFO] game.game: Estado: BATTLE
+2026-10-05 16:40:57,348 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-05 16:40:57,349 [INFO] game.game: Estado: REWARD
+2026-10-06 14:16:48,978 [INFO] game.audio: Música 'menu': menu.mp3
+2026-10-06 14:16:48,978 [INFO] game.game: Estado: MENU
+2026-10-06 14:16:55,868 [INFO] game.game: Estado: CHARACTER_SELECT
+2026-10-06 14:17:00,748 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:17:00,748 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:17:18,491 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:17:18,491 [INFO] game.game: Estado: REWARD
+2026-10-06 14:17:20,461 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:17:20,461 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:17:36,240 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:17:36,240 [INFO] game.game: Estado: REWARD
+2026-10-06 14:17:39,507 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:17:39,508 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:17:49,795 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:17:49,796 [INFO] game.game: Estado: REWARD
+2026-10-06 14:18:02,547 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:18:02,547 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:18:25,096 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:18:25,096 [INFO] game.game: Estado: REWARD
+2026-10-06 14:18:27,551 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:18:27,551 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:18:40,303 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:18:40,303 [INFO] game.game: Estado: REWARD
+2026-10-06 14:18:46,402 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:18:46,402 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:19:03,516 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:19:03,516 [INFO] game.game: Estado: REWARD
+2026-10-06 14:19:11,055 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:19:11,056 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:19:31,946 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:19:31,946 [INFO] game.game: Estado: REWARD
+2026-10-06 14:19:37,568 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:19:37,568 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:20:07,874 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:20:07,875 [INFO] game.game: Estado: REWARD
+2026-10-06 14:20:09,754 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:20:09,754 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:20:28,117 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:20:28,118 [INFO] game.game: Estado: REWARD
+2026-10-06 14:20:29,641 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:20:29,641 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:21:18,178 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:21:18,179 [INFO] game.game: Estado: REWARD
+2026-10-06 14:21:27,149 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:21:27,149 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:21:45,338 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:21:45,339 [INFO] game.game: Estado: REWARD
+2026-10-06 14:21:52,972 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:21:52,972 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:22:16,821 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:22:16,821 [INFO] game.game: Estado: REWARD
+2026-10-06 14:22:21,660 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:22:21,660 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:22:31,406 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:22:31,406 [INFO] game.game: Estado: REWARD
+2026-10-06 14:22:37,005 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:22:37,005 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:22:59,084 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:22:59,085 [INFO] game.game: Estado: REWARD
+2026-10-06 14:23:01,783 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:23:01,784 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:23:25,695 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:23:25,695 [INFO] game.game: Estado: REWARD
+2026-10-06 14:23:29,462 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:23:29,462 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:23:36,719 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:23:36,719 [INFO] game.game: Estado: REWARD
+2026-10-06 14:23:40,201 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:23:40,201 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:24:10,543 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:24:10,543 [INFO] game.game: Estado: REWARD
+2026-10-06 14:24:12,205 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:24:12,206 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:24:37,580 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:24:37,580 [INFO] game.game: Estado: REWARD
+2026-10-06 14:24:40,718 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:24:40,719 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:25:12,894 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:25:12,895 [INFO] game.game: Estado: REWARD
+2026-10-06 14:25:19,928 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:25:19,929 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:26:04,354 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:26:04,354 [INFO] game.game: Estado: REWARD
+2026-10-06 14:26:07,040 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:26:07,040 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:26:26,429 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:26:26,430 [INFO] game.game: Estado: REWARD
+2026-10-06 14:26:33,110 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:26:33,110 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:26:50,147 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:26:50,148 [INFO] game.game: Estado: REWARD
+2026-10-06 14:26:52,269 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:26:52,269 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:27:01,347 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:27:01,348 [INFO] game.game: Estado: REWARD
+2026-10-06 14:27:06,900 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:27:06,901 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:27:27,817 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:27:27,817 [INFO] game.game: Estado: REWARD
+2026-10-06 14:27:32,302 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:27:32,302 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:27:52,969 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:27:52,970 [INFO] game.game: Estado: REWARD
+2026-10-06 14:28:01,270 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:28:01,271 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:28:45,937 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:28:45,938 [INFO] game.game: Estado: REWARD
+2026-10-06 14:28:50,332 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:28:50,332 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:29:04,959 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:29:04,960 [INFO] game.game: Estado: REWARD
+2026-10-06 14:29:08,430 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:29:08,431 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:29:29,050 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:29:29,051 [INFO] game.game: Estado: REWARD
+2026-10-06 14:29:34,465 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:29:34,466 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:29:39,815 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:29:39,815 [INFO] game.game: Estado: REWARD
+2026-10-06 14:29:49,475 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:29:49,475 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:30:25,455 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:30:25,455 [INFO] game.game: Estado: REWARD
+2026-10-06 14:30:30,594 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:30:30,594 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:30:47,960 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:30:47,961 [INFO] game.game: Estado: REWARD
+2026-10-06 14:30:51,913 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:30:51,913 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:31:05,465 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:31:05,465 [INFO] game.game: Estado: REWARD
+2026-10-06 14:31:10,486 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:31:10,486 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:31:35,365 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:31:35,366 [INFO] game.game: Estado: REWARD
+2026-10-06 14:31:42,697 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:31:42,697 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:31:47,301 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:31:47,301 [INFO] game.game: Estado: REWARD
+2026-10-06 14:31:49,914 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:31:49,914 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:31:57,177 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:31:57,177 [INFO] game.game: Estado: REWARD
+2026-10-06 14:31:59,725 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:31:59,725 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:33:43,487 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:33:43,487 [INFO] game.game: Estado: REWARD
+2026-10-06 14:33:46,278 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:33:46,279 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:34:53,564 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:34:53,564 [INFO] game.game: Estado: REWARD
+2026-10-06 14:34:57,644 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:34:57,644 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:35:15,090 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:35:15,091 [INFO] game.game: Estado: REWARD
+2026-10-06 14:35:25,307 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:35:25,307 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:35:32,234 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:35:32,235 [INFO] game.game: Estado: REWARD
+2026-10-06 14:35:34,037 [INFO] game.game: Estado: BOSS_OFFER
+2026-10-06 14:35:36,108 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:35:36,109 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:36:39,241 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:36:39,241 [INFO] game.game: Estado: REWARD
+2026-10-06 14:36:53,757 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:36:53,758 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:38:00,052 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:38:00,052 [INFO] game.game: Estado: REWARD
+2026-10-06 14:38:03,259 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:38:03,260 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:38:17,886 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:38:17,886 [INFO] game.game: Estado: REWARD
+2026-10-06 14:38:22,415 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:38:22,415 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:38:28,333 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:38:28,334 [INFO] game.game: Estado: REWARD
+2026-10-06 14:38:36,318 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:38:36,318 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:38:46,532 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:38:46,532 [INFO] game.game: Estado: REWARD
+2026-10-06 14:38:54,211 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:38:54,211 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:39:13,047 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:39:13,048 [INFO] game.game: Estado: REWARD
+2026-10-06 14:39:14,622 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:39:14,622 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:39:32,264 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:39:32,264 [INFO] game.game: Estado: REWARD
+2026-10-06 14:39:34,785 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:39:34,785 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:40:21,156 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:40:21,156 [INFO] game.game: Estado: REWARD
+2026-10-06 14:40:26,839 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:40:26,840 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:40:31,874 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:40:31,874 [INFO] game.game: Estado: REWARD
+2026-10-06 14:40:33,125 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:40:33,125 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:41:00,724 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:41:00,724 [INFO] game.game: Estado: REWARD
+2026-10-06 14:41:06,706 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:41:06,706 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:41:29,675 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:41:29,676 [INFO] game.game: Estado: REWARD
+2026-10-06 14:41:35,254 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:41:35,255 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:41:53,049 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:41:53,050 [INFO] game.game: Estado: REWARD
+2026-10-06 14:41:56,593 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:41:56,593 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:42:17,909 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:42:17,910 [INFO] game.game: Estado: REWARD
+2026-10-06 14:42:21,724 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:42:21,724 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:42:56,942 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:42:56,942 [INFO] game.game: Estado: REWARD
+2026-10-06 14:43:01,476 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:43:01,476 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:43:15,980 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:43:15,981 [INFO] game.game: Estado: REWARD
+2026-10-06 14:43:55,756 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:43:55,756 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:44:09,067 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:44:09,068 [INFO] game.game: Estado: REWARD
+2026-10-06 14:44:12,802 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:44:12,802 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:44:16,556 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:44:16,556 [INFO] game.game: Estado: REWARD
+2026-10-06 14:44:19,379 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:44:19,379 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:44:25,919 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:44:25,920 [INFO] game.game: Estado: REWARD
+2026-10-06 14:44:29,514 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:44:29,514 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:44:51,234 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:44:51,234 [INFO] game.game: Estado: REWARD
+2026-10-06 14:44:53,383 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:44:53,383 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:45:10,449 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:45:10,449 [INFO] game.game: Estado: REWARD
+2026-10-06 14:45:17,378 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:45:17,378 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:45:46,493 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:45:46,494 [INFO] game.game: Estado: REWARD
+2026-10-06 14:45:50,488 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:45:50,488 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:46:01,008 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:46:01,009 [INFO] game.game: Estado: REWARD
+2026-10-06 14:46:05,161 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:46:05,161 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:46:30,065 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:46:30,065 [INFO] game.game: Estado: REWARD
+2026-10-06 14:46:34,047 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:46:34,047 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:47:05,033 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:47:05,034 [INFO] game.game: Estado: REWARD
+2026-10-06 14:47:11,710 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:47:11,710 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:47:33,237 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:47:33,238 [INFO] game.game: Estado: REWARD
+2026-10-06 14:47:40,811 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:47:40,811 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:47:54,943 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:47:54,943 [INFO] game.game: Estado: REWARD
+2026-10-06 14:47:57,715 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:47:57,715 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:48:13,320 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:48:13,320 [INFO] game.game: Estado: REWARD
+2026-10-06 14:48:19,010 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:48:19,011 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:48:54,692 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:48:54,693 [INFO] game.game: Estado: REWARD
+2026-10-06 14:48:59,595 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:48:59,596 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:49:12,919 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:49:12,919 [INFO] game.game: Estado: REWARD
+2026-10-06 14:49:25,108 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:49:25,109 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:49:47,832 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:49:47,833 [INFO] game.game: Estado: REWARD
+2026-10-06 14:49:52,098 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:49:52,099 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:50:04,250 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:50:04,250 [INFO] game.game: Estado: REWARD
+2026-10-06 14:50:07,298 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:50:07,298 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:50:35,729 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:50:35,729 [INFO] game.game: Estado: REWARD
+2026-10-06 14:50:39,436 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:50:39,436 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:50:57,803 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:50:57,803 [INFO] game.game: Estado: REWARD
+2026-10-06 14:51:01,168 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:51:01,169 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:51:25,076 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:51:25,076 [INFO] game.game: Estado: REWARD
+2026-10-06 14:51:27,138 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:51:27,138 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:51:42,150 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:51:42,151 [INFO] game.game: Estado: REWARD
+2026-10-06 14:51:49,339 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:51:49,339 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:51:58,722 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:51:58,722 [INFO] game.game: Estado: REWARD
+2026-10-06 14:52:01,845 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:52:01,845 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:52:23,206 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:52:23,206 [INFO] game.game: Estado: REWARD
+2026-10-06 14:52:27,746 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:52:27,746 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:52:39,318 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:52:39,318 [INFO] game.game: Estado: REWARD
+2026-10-06 14:52:42,502 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:52:42,502 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:53:00,886 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:53:00,887 [INFO] game.game: Estado: REWARD
+2026-10-06 14:53:09,866 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:53:09,866 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:53:27,044 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:53:27,044 [INFO] game.game: Estado: REWARD
+2026-10-06 14:53:35,099 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:53:35,099 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:53:56,214 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:53:56,214 [INFO] game.game: Estado: REWARD
+2026-10-06 14:54:03,098 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:54:03,099 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:55:03,212 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:55:03,212 [INFO] game.game: Estado: REWARD
+2026-10-06 14:55:06,439 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:55:06,440 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:55:26,599 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:55:26,600 [INFO] game.game: Estado: REWARD
+2026-10-06 14:55:32,418 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:55:32,419 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:55:39,285 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:55:39,285 [INFO] game.game: Estado: REWARD
+2026-10-06 14:55:46,898 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:55:46,898 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:55:55,642 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:55:55,643 [INFO] game.game: Estado: REWARD
+2026-10-06 14:55:58,661 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:55:58,661 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:56:25,811 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:56:25,812 [INFO] game.game: Estado: REWARD
+2026-10-06 14:56:29,975 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:56:29,975 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:56:35,824 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:56:35,825 [INFO] game.game: Estado: REWARD
+2026-10-06 14:56:37,970 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:56:37,970 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:56:56,582 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:56:56,582 [INFO] game.game: Estado: REWARD
+2026-10-06 14:57:01,188 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:57:01,188 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:57:16,777 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:57:16,778 [INFO] game.game: Estado: REWARD
+2026-10-06 14:57:29,723 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:57:29,724 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:57:36,462 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:57:36,462 [INFO] game.game: Estado: REWARD
+2026-10-06 14:57:41,421 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:57:41,421 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:58:03,586 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:58:03,586 [INFO] game.game: Estado: REWARD
+2026-10-06 14:58:05,451 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 14:58:05,451 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:58:15,429 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:58:15,430 [INFO] game.game: Estado: REWARD
+2026-10-06 14:58:18,363 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:58:18,363 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:58:34,022 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:58:34,022 [INFO] game.game: Estado: REWARD
+2026-10-06 14:58:35,512 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:58:35,513 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:58:46,888 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:58:46,888 [INFO] game.game: Estado: REWARD
+2026-10-06 14:58:53,879 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:58:53,880 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:59:03,594 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:59:03,594 [INFO] game.game: Estado: REWARD
+2026-10-06 14:59:06,648 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:59:06,649 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:59:20,523 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:59:20,523 [INFO] game.game: Estado: REWARD
+2026-10-06 14:59:25,226 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:59:25,226 [INFO] game.game: Estado: BATTLE
+2026-10-06 14:59:30,676 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 14:59:30,676 [INFO] game.game: Estado: REWARD
+2026-10-06 14:59:34,002 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 14:59:34,002 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:00:07,540 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:00:07,540 [INFO] game.game: Estado: REWARD
+2026-10-06 15:00:11,981 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:00:11,981 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:00:59,155 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:00:59,155 [INFO] game.game: Estado: REWARD
+2026-10-06 15:01:01,128 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:01:01,129 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:01:17,668 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:01:17,669 [INFO] game.game: Estado: REWARD
+2026-10-06 15:01:20,647 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:01:20,647 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:01:49,821 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:01:49,822 [INFO] game.game: Estado: REWARD
+2026-10-06 15:02:41,363 [INFO] game.audio: Música 'infinite_boss': infinite_boss.mp3
+2026-10-06 15:02:41,364 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:08:33,370 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:08:33,370 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:02,315 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:02,449 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:09,943 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:09:09,943 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:09:18,255 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:09:18,255 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:19,514 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:09:19,514 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:09:22,711 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:09:22,711 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:23,651 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:09:23,652 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:09:31,879 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:09:31,879 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:32,813 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:09:32,813 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:09:39,723 [INFO] game.audio: Música 'reward': reward.mp3
+2026-10-06 15:09:39,723 [INFO] game.game: Estado: REWARD
+2026-10-06 15:09:41,752 [INFO] game.audio: Música 'infinite': infinite.mp3
+2026-10-06 15:09:41,752 [INFO] game.game: Estado: BATTLE
+2026-10-06 15:09:43,273 [INFO] game.audio: Música 'menu': menu.mp3
+2026-10-06 15:09:43,273 [INFO] game.game: Estado: MENU
+2026-10-06 15:09:44,667 [INFO] game.game: Estado: CHARACTER_SELECT

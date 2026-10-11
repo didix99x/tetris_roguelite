@@ -3,7 +3,11 @@ import json
 
 from paths import data_path
 
+<<<<<<< HEAD
 DATA_FILES = ("characters", "enemies", "rewards", "floors", "shop")
+=======
+DATA_FILES = ("characters", "enemies", "rewards", "floors")
+>>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 class DataError(Exception):
