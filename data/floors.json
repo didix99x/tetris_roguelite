@@ -390,11 +390,8 @@
         "include_character_bosses": true,
         "exclude_own_character": true,
         "character_boss_chance": 0.3,
-<<<<<<< HEAD
         "locked_character_boss_chance": 0.5,
         "boss_pity_floors": 2,
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         "character_boss_after_floor": 20,
         "special_boss_chance": 0.02,
         "special_boss_hp_factor": 1.4,
@@ -615,6 +612,34 @@
                 "ability_per_power": 1.0,
                 "ability_cap": 2
             }
+        },
+        "super_boss_schedule": {
+            "_comentario": "Depois do Yoshi (andar 100): 105 = super chefe que já existia (nunca um personagem); a partir de 110 = personagens jogáveis como super chefes; um super chefe a cada 'every' andares, para sempre.",
+            "after_floor": 100,
+            "first_floor": 105,
+            "every": 5,
+            "first_character_floor": 110
+        },
+        "void_fury": {
+            "_comentario": "FÚRIA DO VAZIO (andar >= start_floor, o Yoshi do andar 100 não é afetado). Vida e dano = base do andar x start_mult x (1+taxa)^(andares desde start_floor) x tier_mult^(centenas já concluídas). Ajuste aqui para deixar mais fácil/difícil.",
+            "start_floor": 100,
+            "milestone_every": 100,
+            "min_common_hp": 10000,
+            "min_boss_hp_factor": 2.5,
+            "start_hp_mult": 4.0,
+            "hp_per_floor": 0.03,
+            "tier_hp_mult": 5.0,
+            "hp_cap": 1000000000000000,
+            "start_damage_mult": 1.25,
+            "damage_per_floor": 0.015,
+            "tier_damage_mult": 2.0,
+            "damage_cap": 1000000000000,
+            "cooldown_per_tier": 0.04,
+            "cooldown_factor_floor": 0.6,
+            "ability_bonus_per_tier": 2,
+            "ability_bonus_cap": 10,
+            "super_hp_mult": 1.8,
+            "super_damage_mult": 1.3
         }
     }
 }

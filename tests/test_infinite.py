@@ -27,18 +27,18 @@ class InfiniteFloors(unittest.TestCase):
         self.data = load_data()
 
     def build(self, floor, seed=1, own=None):
-<<<<<<< HEAD
         # (todos os personagens ainda bloqueados: só os bloqueados aparecem como chefes de desbloqueio)
         return build_infinite_floor(floor, self.data["enemies"], self.data["floors"], random.Random(seed), own,
                                     self.data["characters"], list(self.data["characters"]))
-=======
-        return build_infinite_floor(floor, self.data["enemies"], self.data["floors"], random.Random(seed), own)
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def test_any_floor_builds_forever(self):
         for floor in list(range(1, 130)) + [500, 1000]:
             f = self.build(floor, seed=floor)
-            self.assertEqual(f.is_boss, floor % 10 == 0)
+            # até o andar 100: chefe a cada 10. Depois do Yoshi: super chefe a cada 5 (105, 110, 115...), ver run/floor.py
+            if floor <= 100:
+                self.assertEqual(f.is_boss, floor % 10 == 0)
+            else:
+                self.assertEqual(f.is_boss, floor % 5 == 0)
             self.assertGreater(f.enemy.hp, 0)
 
     def test_monsters_are_random(self):

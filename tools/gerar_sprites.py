@@ -1,7 +1,7 @@
 """
 tools/gerar_sprites.py - gera a ARTE ANIMADA dos inimigos e bosses do Modo Infinito.
 
-    python tools/gerar_sprites.py            -> grava os PNGs animados em assets/images/enemies e /bosses
+    python tools/gerar_sprites.py            -> grava os PNGs animados em assets/images/enemies e /bosses (NÃO sobrescreve arquivos que já existem; use --forcar)
     python tools/gerar_sprites.py --sheet    -> também grava tools/sprites_preview.png (folha de conferência)
 
 Estilo: o mesmo dos retratos do jogo (ui/portraits.py): formas planas com contorno escuro, fundo transparente
@@ -1072,9 +1072,14 @@ def main():
     if missing:
         sys.exit("Sem receita de sprite para: " + ", ".join(missing))
     previews = []
+    force = "--forcar" in sys.argv
     for name, color, is_boss, folder in items:
-        frames = [render(name, color, is_boss, f) for f in range(FRAMES)]
         out_dir = os.path.join(ROOT, "assets", "images", folder)
+        if not force and os.path.exists(os.path.join(out_dir, name + ".png")):
+            # protege as artes novas (ver tools/aplicar_novas_artes.py); use --forcar para sobrescrever
+            print("pulado (já existe)", folder, name)
+            continue
+        frames = [render(name, color, is_boss, f) for f in range(FRAMES)]
         os.makedirs(out_dir, exist_ok=True)
         save_apng(frames, os.path.join(out_dir, name + ".png"))
         previews.append((name, color, frames))

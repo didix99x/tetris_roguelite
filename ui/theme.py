@@ -74,12 +74,9 @@ BONUS_TOP = 522                          # y onde começa a lista de bônus da r
 
 HINT_Y = 697                             # y da faixa de teclas, embaixo
 
-<<<<<<< HEAD
 # Símbolos desenhados nas peças (anel, triângulo, losango, estrela, cruz): ajudam a distinguir as cores. Só visual.
 PIECE_SYMBOLS = True
 
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 # ======================================================================
 # 4) EFEITOS VISUAIS
 # ======================================================================

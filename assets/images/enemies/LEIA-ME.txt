@@ -8,3 +8,9 @@ Lista completa: python tools/listar_conteudo.py  ->  REFERENCIA_DE_CONTEUDO.md
 
 Expansão do Infinito: os 30 inimigos novos (vampire_bat, slime_green... star_parasite) e os 15 chefes (bosses/boss_inf_*) já vêm com arte animada (.png).
 São gerados por tools/gerar_sprites.py. Se você colocar um .gif com o mesmo nome, o jogo usa o seu (procura .gif antes de .png).
+
+ARTES NOVAS (2026-10-12): todos os inimigos e chefes agora usam as imagens enviadas (PNG estático, 256 ou 512 px, sem transparência).
+O nome do arquivo continua sendo o ID: enemies/<id>.png e bosses/boss_10.png ... boss_40.png, bosses/boss_inf_<chave>.png.
+Para trocar uma arte: sobrescreva o arquivo com o mesmo nome (ou use tools/aplicar_novas_artes.py + tools/mapa_artes_inimigos.json).
+As artes geradas por código (animadas) ficaram em arte_antiga_backup/. tools/gerar_sprites.py não sobrescreve mais arquivos existentes.
+Sem arte própria (usam o desenho provisório): spider, golem, boss_50. O Bruxo (mage_warlock) usa a arte do Mago Sombrio (família mage).

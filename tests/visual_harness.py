@@ -19,11 +19,8 @@ os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 try:
     import pygame
     pygame.font.init()
-<<<<<<< HEAD
     pygame.display.init()
     pygame.display.set_mode((1, 1))      # video mode (invisível, driver "dummy"): convert_alpha() exige isso
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     LITE = False
 except ImportError:                      # sem pygame: usa o mini-pygame baseado em Pillow
     from tests import pygame_lite
@@ -44,10 +41,7 @@ class FakeAudio:
 class FakeGame:
     def __init__(self, run):
         self.run, self.audio = run, FakeAudio()
-<<<<<<< HEAD
         self.settings = type("Settings", (), {"get": lambda self, key: {"screen_shake": True}.get(key, 0.5)})()
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.won = self.lost = False
 
     def on_battle_won(self):

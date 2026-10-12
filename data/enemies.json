@@ -3765,5 +3765,227 @@
                 "attack_heal_pct": 0.25
             }
         }
+    },
+    "super_character_bosses": {
+        "_comentario": "SUPER CHEFES (Modo Infinito, andar 110+): o personagem usa o kit de character_bosses + estas mecânicas/habilidades extras. 'abilities' são ADICIONADAS ao fim do ciclo do kit.",
+        "warrior": {
+            "mechanic_name": "Muralha Inquebrável",
+            "mechanic_text": "Reduz o dano de matches sem chain em 45%. Abaixo de 50% ataca mais rápido e na fase final entra em fúria.",
+            "mechanics": {
+                "chain_armor": 0.45,
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.75,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.7,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Golpe Devastador",
+                    "amount": 120
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso do Escudo",
+                    "duration": 7.0,
+                    "speed": 2.2
+                }
+            ]
+        },
+        "mage": {
+            "mechanic_name": "Alquimia do Colapso",
+            "mechanic_text": "Embaralha, silencia e drena energia. Na fase 2 as habilidades ficam mais fortes.",
+            "mechanics": {
+                "armor": 0.1,
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "drain",
+                    "name": "Sifão Arcano",
+                    "amount": 18
+                },
+                {
+                    "type": "curse",
+                    "name": "Maldição Final",
+                    "amount": 6
+                }
+            ]
+        },
+        "assassin": {
+            "mechanic_name": "Ritmo Letal Absoluto",
+            "mechanic_text": "Ataca muito rápido, envenena e executa. Abaixo de 50% fica ainda mais veloz.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.6,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "poison",
+                    "name": "Veneno Mortal",
+                    "amount": 2.5,
+                    "duration": 6.0
+                },
+                {
+                    "type": "strike",
+                    "name": "Execução",
+                    "amount": 140
+                }
+            ]
+        },
+        "bard": {
+            "mechanic_name": "Canção da Ruína",
+            "mechanic_text": "Cura a si mesma ao atacar, silencia e embaralha o tabuleiro.",
+            "mechanics": {
+                "attack_heal_pct": 0.01,
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "heal",
+                    "name": "Canção de Vida",
+                    "amount": 10
+                },
+                {
+                    "type": "drain",
+                    "name": "Eco Dissonante",
+                    "amount": 16
+                }
+            ]
+        },
+        "judge": {
+            "mechanic_name": "Sentença Final",
+            "mechanic_text": "Reduz o dano de matches sem chain em 35%, amaldiçoa e pesa o tabuleiro.",
+            "mechanics": {
+                "chain_armor": 0.35,
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "curse",
+                    "name": "Condenação Final",
+                    "amount": 6
+                },
+                {
+                    "type": "weight",
+                    "name": "Peso da Lei",
+                    "duration": 7.0,
+                    "speed": 2.2
+                }
+            ]
+        },
+        "cleric": {
+            "mechanic_name": "Milagre Sombrio",
+            "mechanic_text": "Armadura sagrada, curas e maldições. Recebe menos dano de todos os matches.",
+            "mechanics": {
+                "armor": 0.12,
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "heal",
+                    "name": "Milagre Sombrio",
+                    "amount": 12
+                },
+                {
+                    "type": "armor",
+                    "name": "Égide Sagrada",
+                    "percent": 40,
+                    "duration": 7.0
+                }
+            ]
+        },
+        "blacksmith": {
+            "mechanic_name": "Aço Colossal",
+            "mechanic_text": "Recebe menos dano de todos os matches e esmaga o tabuleiro com golpes pesados.",
+            "mechanics": {
+                "armor": 0.15,
+                "phase_two_hp": 0.7,
+                "phase_two_boost": 1.4,
+                "phase_three_hp": 0.3,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Martelo do Colapso",
+                    "amount": 100
+                },
+                {
+                    "type": "armor",
+                    "name": "Forja Reforçada",
+                    "percent": 45,
+                    "duration": 7.0
+                }
+            ]
+        },
+        "archer": {
+            "mechanic_name": "Mira Perfeita",
+            "mechanic_text": "Ataca rápido com flechas que quebram blocos e envenenam. Abaixo de 60% acelera.",
+            "mechanics": {
+                "enrage_hp": 0.6,
+                "enrage_factor": 0.65,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "strike",
+                    "name": "Tiro Perfurante",
+                    "amount": 130
+                },
+                {
+                    "type": "poison",
+                    "name": "Flecha Venenosa",
+                    "amount": 2.0,
+                    "duration": 6.0
+                }
+            ]
+        },
+        "monk": {
+            "mechanic_name": "Fluxo do Caos",
+            "mechanic_text": "Embaralha, silencia e drena energia sem parar. Abaixo de 50% fica mais rápido.",
+            "mechanics": {
+                "enrage_hp": 0.5,
+                "enrage_factor": 0.65,
+                "phase_three_hp": 0.25,
+                "phase_three_factor": 0.75,
+                "phase_three_boost": 1.8
+            },
+            "abilities": [
+                {
+                    "type": "shuffle",
+                    "name": "Fluxo do Caos",
+                    "amount": 12
+                },
+                {
+                    "type": "drain",
+                    "name": "Palma da Exaustão",
+                    "amount": 16
+                }
+            ]
+        }
     }
 }

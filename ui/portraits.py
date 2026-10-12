@@ -199,8 +199,11 @@ def _art_location(entity):
     """Pasta e nome do arquivo de arte: characters/<id>, enemies/<id> ou bosses/<id>."""
     if hasattr(entity, "char_id"):
         return "characters", [getattr(entity, "image_id", None) or entity.char_id, entity.char_id]
-    if getattr(entity, "art_folder", None):                     # inimigo que é um personagem jogável
-        return entity.art_folder, [entity.image_id, getattr(entity, "character_id", None) or entity.image_id]
+    if getattr(entity, "art_folder", None):                     # inimigo que é um personagem jogável (ex.: Tali como chefe)
+        # nomes possíveis: arte própria de inimigo (<nome>_enemy, opcional) e depois a arte do personagem
+        # (pelo nome da imagem, pelo id do personagem e pela família); assim o Bestiário e a batalha acham o mesmo arquivo
+        names = [n for n in (entity.image_id, getattr(entity, "character_id", None), getattr(entity, "family", None)) if n]
+        return entity.art_folder, [f"{n}_enemy" for n in names] + names
     if getattr(entity, "is_boss", False):
         return "bosses", [entity.image_id, entity.id]          # ex.: boss_10
     # inimigo comum: arte própria (ex.: goblin_archer) e, se não existir, a da família (goblin)

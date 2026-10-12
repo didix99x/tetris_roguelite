@@ -13,10 +13,7 @@ class VFX:
         self.particles = []   # [x, y, vx, vy, vida, cor]
         self.shake_time = 0.0
         self.shake_power = 0.0
-<<<<<<< HEAD
         self.shake_enabled = True
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.flash_color = None
         self.flash_time = 0.0
         self.flash_strength = 1.0
@@ -32,11 +29,8 @@ class VFX:
                                    random.uniform(0.35, 0.7), color])
 
     def add_shake(self, power=6.0, time=0.25):
-<<<<<<< HEAD
         if not self.shake_enabled:             # Opções > TREMOR DE TELA: desligado
             return
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.shake_power = max(self.shake_power, power)
         self.shake_time = max(self.shake_time, time)
 

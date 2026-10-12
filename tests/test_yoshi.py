@@ -280,6 +280,11 @@ class Reward(Base):
         self.assertTrue(game.progress.is_unlocked("yoshi"))                 # desbloqueado
         self.assertTrue(any("YOSHI" in line for line in game.unlock_notice))
         self.assertEqual((game.bonus_picks_left, game.bonus_picks_total), (3, 3))
+        # o desbloqueio tem tela PRÓPRIA (antes das cartas): UNLOCK -> REWARD
+        self.assertEqual(game.state, "UNLOCK")
+        self.assertEqual(game.pending_unlocks, ["yoshi"])
+        game.state, game.state_args = game.state_args["next_state"], game.state_args["next_kwargs"]
+        self.assertEqual(game.state, "REWARD")
         taken = []
         for n in range(3):
             opts = game.state_args["rewards"]
@@ -291,6 +296,9 @@ class Reward(Base):
         self.assertEqual(len(taken), 3)
         self.assertEqual(game.bonus_picks_left, 0)
         self.assertTrue(all(r["id"] in {x["id"] for x in game.run.taken_rewards} for r in taken))
+        self.assertEqual(game.state, "VOID_FURY")                            # andar 100 concluído: "O VAZIO ESTÁ FURIOSO..."
+        self.assertEqual(game.run.floor_number, 100)                         # e o jogo NÃO avança sozinho
+        game.on_void_fury_choice(True)
         self.assertEqual(game.run.floor_number, 101)                         # a run continua (Infinito)
         self.assertEqual(sum(1 for r in game.run.taken_rewards if r["rarity"] == "legendary"), 3)
 
@@ -318,7 +326,8 @@ class Reward(Base):
         game.run.start_floor()
         game.run.floor.enemy.hp = 0
         game.on_battle_won()
-        RewardScreen(game, game.state_args["rewards"]).draw(new_surface())
+        self.assertEqual(game.state, "UNLOCK")
+        RewardScreen(game, game.state_args["next_kwargs"]["rewards"]).draw(new_surface())
 
 
 class PlayableYoshi(Base):
@@ -361,10 +370,7 @@ class PlayableYoshi(Base):
         c.enemy.is_boss = True
         c.enemy.hp = 10 ** 6
         run.player.energy = run.player.energy_max
-<<<<<<< HEAD
         c.ability_cd = 0.0                          # (passaram os 3 s de recarga)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         c.use_ability()
         self.assertEqual(10 ** 6 - c.enemy.hp, round(42 * 1.25))
 
@@ -455,6 +461,7 @@ def _game(data, char, mode="infinite", floor=1):
             self.settings = type("S", (), {"get": lambda s, k: 0.5})()
             self.rng = random.Random(1)
             self.unlock_notice = []
+            self.pending_unlocks = []
             self.special_reward_pending = False
             self.special_active = False
             self.bonus_picks_left = self.bonus_picks_total = 0

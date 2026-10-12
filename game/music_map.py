@@ -100,8 +100,10 @@ def situation_for(state, run=None, enemy_is_boss=False):
         if infinite:
             return "infinite_boss" if enemy_is_boss else "infinite"
         return "boss" if enemy_is_boss else "battle"
-    if state in (GameState.REWARD, GameState.BOSS_OFFER):
+    if state in (GameState.REWARD, GameState.BOSS_OFFER, GameState.UNLOCK):
         return "reward"
+    if state == GameState.VOID_FURY:
+        return "infinite_boss"
     if state == GameState.VICTORY:
         return "victory"
     if state == GameState.GAME_OVER:

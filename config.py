@@ -48,12 +48,9 @@ CLEAR_TIME = 0.30         # tempo que um match "pisca" antes de sumir
 FALL_SETTLE_TIME = 0.08   # pequena pausa depois da queda
 MAX_STONES = 12           # máximo de pedras no tabuleiro ao mesmo tempo
 
-<<<<<<< HEAD
 # ---------------- HABILIDADE DO PERSONAGEM ----------------
 ABILITY_COOLDOWN = 3.0    # segundos de recarga depois de usar a habilidade (3000 ms), contados pelo tempo real do jogo (dt)
 
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 # ---------------- ENERGIA ----------------
 ENERGY_PER_BLOCK = 2.0          # energia ganha por bloco destruído
 ENERGY_PER_CHAIN_LEVEL = 2.0    # energia extra por nível de chain

@@ -24,11 +24,7 @@ from run.run_manager import RunManager
 def load_data():
     base = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
     out = {}
-<<<<<<< HEAD
     for name in ("characters", "enemies", "floors", "rewards", "shop"):
-=======
-    for name in ("characters", "enemies", "floors", "rewards"):
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         with open(os.path.join(base, name + ".json"), encoding="utf-8") as f:
             out[name] = json.load(f)
     return out

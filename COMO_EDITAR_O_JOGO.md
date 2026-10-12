@@ -488,7 +488,6 @@ O jogo decide pelo campo `character_id`: só o Yoshi do andar 100 tem `"characte
 
 ### Garantias
 Os 9 personagens, os bosses, cartas, passivas e dados antigos não foram alterados (o único boss que "perde" lugar é o do andar 50 do Modo Normal, por pedido). O Yoshi do andar 50 não desbloqueia, o do andar 100 desbloqueia, ele nunca aparece em outro andar, e a cegueira não altera a lógica (testado).
-<<<<<<< HEAD
 
 
 ---
@@ -597,5 +596,26 @@ Tudo continua em **um** arquivo (`progress.json`, pasta de dados do usuário): `
 - **Conquistas** (o Bestiário e o Histórico de runs já existem e são salvos).
 - **Tooltips** de informações dos inimigos (a HUD já mostra passiva, habilidades em efeitos ativos e status).
 - Arte das cartas e fundos são gerados por código (estilo vetorial); para arte feita à mão, basta substituir os arquivos.
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
+
+---
+
+## Como trocar a arte de um inimigo ou chefe
+
+1. Cada arte é um arquivo em `assets/images/enemies/<id>.png` (inimigos) ou `assets/images/bosses/` (chefes: `boss_10.png`, `boss_20.png`, `boss_30.png`, `boss_40.png`, `boss_inf_<chave>.png`). O `<id>` é o que está em `data/enemies.json`.
+2. Para trocar: coloque a nova imagem com o MESMO nome (PNG, GIF, WEBP ou JPG; se existir `.gif` com o mesmo nome, ele tem prioridade).
+3. Se o inimigo não tiver arquivo próprio, o jogo usa o da "family" (ex.: `mage_warlock` usa `mage.png`) e, se não houver nenhum, o desenho provisório.
+4. Lote de imagens novas: `python tools/aplicar_novas_artes.py "pasta_com_as_imagens"` (usa `tools/mapa_artes_inimigos.json`; guarda a arte antiga em `arte_antiga_backup/`).
+5. Depois do build: `ATUALIZAR_ASSETS_NO_RELEASE.bat` copia `assets/` para `release\Game` sem gerar o .exe de novo.
+6. Conferência: `python -m unittest tests.test_enemy_art -v`.
+
+---
+
+## Modo Infinito depois do andar 100 (Fúria do Vazio e super chefes)
+
+Tudo em `data/floors.json > infinite` (e `data/enemies.json > super_character_bosses`):
+
+- `void_fury`: dificuldade a partir do andar 100. Vida/dano = base x `start_*_mult` x (1 + `*_per_floor`)^(andares depois do 100) x `tier_*_mult`^(centenas já concluídas). `min_common_hp` (10000) é a vida mínima dos inimigos comuns; chefes usam `min_boss_hp_factor` vezes isso. Para facilitar/dificultar mude `hp_per_floor`, `damage_per_floor`, `tier_hp_mult`, `tier_damage_mult`. O Yoshi do andar 100 NÃO usa isto.
+- `super_boss_schedule`: andar 105 = super chefe que já existia (Rei Lich, Dragão das Cinzas, Titã da Ruína, Imperatriz do Vazio, Serpente do Fim dos Tempos); do 110 em diante, um personagem jogável como super chefe a cada 5 andares, em rodízio (sem repetir até todos aparecerem; nunca o personagem que você está usando).
+- `super_character_bosses`: mecânicas e habilidades extras de cada personagem como super chefe (somadas ao kit normal de `character_bosses`).
+- Tela "O VAZIO ESTÁ FURIOSO..." (`ui/void_fury_screen.py`): aparece depois de concluir o andar 100, 200, 300... (nunca antes do combate). Tela de personagem desbloqueado: `ui/unlock_screen.py`.
+- Arte de um personagem usado como inimigo: se existir `assets/images/characters/<nome>_enemy.gif/png` (ex.: `tali_enemy.png`), ela é usada no lugar da arte jogável.

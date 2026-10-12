@@ -46,12 +46,8 @@ class Base(unittest.TestCase):
         self.floors = self.data["floors"]
 
     def infinite(self, floor, seed, own="warrior", **kw):
-<<<<<<< HEAD
         return build_infinite_floor(floor, self.enemies, self.floors, random.Random(seed), own, self.data["characters"],
                                     list(self.data["characters"]), **kw)
-=======
-        return build_infinite_floor(floor, self.enemies, self.floors, random.Random(seed), own, self.data["characters"], [], **kw)
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     def fresh_combat(self, char="warrior", floor=1, seed=1):
         run = RunManager(char, self.data, random.Random(seed), mode="infinite")
@@ -480,12 +476,8 @@ class NewCards(Base):
         self.assertGreaterEqual(len(multi), 30)
 
     def test_legendaries_have_unique_effects(self):
-<<<<<<< HEAD
         old_types = {e["type"] for r in self.data["rewards"]["rewards"]
                      if not r["id"].startswith("i_") and not r.get("shop") for e in r["effects"]}
-=======
-        old_types = {e["type"] for r in self.data["rewards"]["rewards"] if not r["id"].startswith("i_") for e in r["effects"]}
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         legends = [c for c in self.cards() if c["rarity"] == "legendary"]
         unique = [c["id"] for c in legends if {e["type"] for e in c["effects"]} - old_types]
         self.assertGreaterEqual(len(unique), 7)
@@ -715,21 +707,22 @@ def make_board_with_match(combat):
 # 5) SPRITES
 # ======================================================================
 class Sprites(Base):
-    def test_every_new_entity_has_a_distinct_animated_sprite(self):
-        from PIL import Image, ImageSequence
+    def test_every_new_entity_has_a_distinct_sprite(self):
+        # Artes NOVAS (2026-10-12): imagens estáticas, opacas, em arquivos .png de 256 ou 512 px.
+        # (o contrato antigo - 4 quadros animados e fundo transparente - era da arte gerada por código,
+        #  guardada em arte_antiga_backup/)
+        from PIL import Image
         files = [os.path.join(ROOT, "assets", "images", "enemies", i + ".png") for i in new_enemy_ids(self.data)]
         files += [os.path.join(ROOT, "assets", "images", "bosses", f"boss_inf_{k}.png") for k in self.enemies["infinite_bosses"]]
         self.assertEqual(len(files), 45)
         digests = set()
         for path in files:
             with Image.open(path) as im:
-                frames = [f.convert("RGBA") for f in ImageSequence.Iterator(im)]
-            self.assertEqual(len(frames), 4, path)
-            self.assertIsNotNone(frames[0].getbbox(), path)
-            self.assertNotEqual(frames[0].tobytes(), frames[2].tobytes(), f"{path} não está animado")
-            alpha = frames[0].getchannel("A")
-            self.assertLess(alpha.getpixel((0, 0)), 40, "fundo deve ser transparente")
-            digests.add(frames[0].tobytes())
+                im.load()
+                self.assertGreaterEqual(min(im.size), 128, path)
+                rgba = im.convert("RGBA")
+            self.assertIsNotNone(rgba.getbbox(), path)
+            digests.add(rgba.tobytes())
         self.assertEqual(len(digests), 45)
 
     def test_art_lookup_names_match_what_the_game_loads(self):
@@ -774,12 +767,8 @@ class Compatibility(Base):
     def test_no_economy_or_shop_added(self):
         text = open(os.path.join(ROOT, "data", "rewards.json"), encoding="utf-8").read().lower()
         import re
-<<<<<<< HEAD
         # Loja de PONTOS permanentes existe (fora da run); o que continua proibido é ouro/moeda/inventário DENTRO da run
         for banned in (r"\bgold\b", r"\bouro\b", r"\bmoedas?\b", r"inventári"):
-=======
-        for banned in (r"\bgold\b", r"\bouro\b", r"\bmoedas?\b", r"\bloja\b", r"\bshop\b", r"inventári"):
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             self.assertIsNone(re.search(banned, text), banned)
         self.assertFalse({"gold", "coins", "shop"} & set(DEFAULT_MODS))
 

@@ -1,12 +1,8 @@
 """
 game/audio.py - ÁUDIO (música, efeitos, volume).
 
-<<<<<<< HEAD
 Os efeitos são SINTETIZADOS no código (sem arquivos). Para usar seus próprios sons, coloque
 assets/sounds/sfx/<nome>.wav (ou .ogg); os nomes estão em SOUND_DEFS.
-=======
-Os efeitos são PLACEHOLDERS: bipes gerados no código, sem arquivos.
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 A MÚSICA de cada situação (menu, batalha, chefe...) é escolhida em game/music_map.py:
 coloque os arquivos em assets/sounds/bgm/ (veja os nomes lá).
 Se o computador não tiver áudio, o jogo continua normalmente, mudo.
@@ -14,16 +10,12 @@ Se o computador não tiver áudio, o jogo continua normalmente, mudo.
 import array
 import logging
 import math
-<<<<<<< HEAD
 import os
 import random
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 import pygame
 
 from game import music_map
-<<<<<<< HEAD
 from paths import base_dir
 
 log = logging.getLogger(__name__)
@@ -104,26 +96,6 @@ def synth(notes, rate, channels=1, volume=0.35):
             for _ in range(channels):
                 samples.append(value)
     return samples
-=======
-
-log = logging.getLogger(__name__)
-
-# nome -> lista de (frequência em Hz, duração em segundos)
-SOUND_DEFS = {
-    "swap": [(300, 0.03)],
-    "match": [(660, 0.07), (880, 0.09)],
-    "chain": [(523, 0.06), (659, 0.06), (784, 0.06), (1047, 0.14)],
-    "hit": [(220, 0.08), (160, 0.06)],
-    "hurt": [(140, 0.12), (100, 0.14)],
-    "ability": [(440, 0.05), (660, 0.05), (990, 0.14)],
-    "enemy_ability": [(200, 0.10), (150, 0.10), (120, 0.14)],
-    "select": [(600, 0.04)],
-    "fail": [(150, 0.08)],
-    "reward": [(523, 0.08), (659, 0.08), (784, 0.16)],
-    "win": [(523, 0.1), (659, 0.1), (784, 0.1), (1047, 0.25)],
-    "lose": [(400, 0.15), (300, 0.15), (200, 0.3)],
-}
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 class AudioManager:
@@ -148,7 +120,6 @@ class AudioManager:
         self.apply_volumes()
 
     def _make_tone(self, notes, volume=0.35):
-<<<<<<< HEAD
         return pygame.mixer.Sound(buffer=synth(notes, self.rate, self.channels, volume).tobytes())
 
     def _build_sounds(self):
@@ -169,27 +140,6 @@ class AudioManager:
                     log.exception("Não foi possível carregar o som %s", path)
         return None
 
-=======
-        samples = array.array("h")
-        for freq, duration in notes:
-            total = int(self.rate * duration)
-            for i in range(total):
-                t = i / self.rate
-                wave = 1.0 if math.sin(2 * math.pi * freq * t) >= 0 else -1.0  # onda quadrada
-                envelope = 1.0 - i / total
-                value = int(32767 * volume * wave * envelope)
-                for _ in range(self.channels):
-                    samples.append(value)
-        return pygame.mixer.Sound(buffer=samples.tobytes())
-
-    def _build_sounds(self):
-        for name, notes in SOUND_DEFS.items():
-            try:
-                self.sounds[name] = self._make_tone(notes)
-            except Exception:
-                log.exception("Falha ao criar o som %s", name)
-
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     def play_situation(self, situation):
         """Toca a música da situação (\"menu\", \"battle\", \"boss\"...). Se já é a que está
         tocando, não reinicia. Se um arquivo não carregar (codec/arquivo ruim), tenta o próximo

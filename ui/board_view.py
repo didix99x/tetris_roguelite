@@ -9,10 +9,7 @@ import math
 import pygame
 
 import config
-<<<<<<< HEAD
 from ui import theme
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
 
 def _lighter(color, amount=45):
@@ -94,11 +91,8 @@ class BoardView:
         shine = pygame.Rect(rect.x + 7, rect.y + 6, side // 2, side // 5)
         pygame.draw.rect(surface, _lighter(base), shine, border_radius=4)
 
-<<<<<<< HEAD
         if theme.PIECE_SYMBOLS:
             self._draw_symbol(surface, block.color_id, rect, base)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if block.is_webbed:
             white = (235, 235, 245)
             pygame.draw.line(surface, white, rect.topleft, rect.bottomright, 2)
@@ -107,7 +101,6 @@ class BoardView:
             pygame.draw.line(surface, white, (rect.left, rect.centery), (rect.right, rect.centery), 2)
             pygame.draw.circle(surface, white, rect.center, side // 4, 2)
 
-<<<<<<< HEAD
     @staticmethod
     def _draw_symbol(surface, color_id, rect, base):
         """Símbolo de cada cor (ajuda quem não distingue cores). SÓ visual: a lógica usa o color_id, como sempre."""
@@ -129,8 +122,6 @@ class BoardView:
             pygame.draw.rect(surface, ink, (cx - w // 2, cy + 3 - r, w, r * 2))
             pygame.draw.rect(surface, ink, (cx - r, cy + 3 - w // 2, r * 2, w))
 
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
     def _draw_cursor(self, surface, board, ox, oy, time):
         size = config.BLOCK_SIZE
         pulse = 0.5 + 0.5 * math.sin(time * 8)

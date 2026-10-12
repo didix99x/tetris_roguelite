@@ -135,10 +135,7 @@ class Abilities(unittest.TestCase):
         for i in range(6):
             c.player.energy = 100
             c.player.hp = 50.0
-<<<<<<< HEAD
             c.ability_cd = 0.0                      # (passaram os 3 s de recarga entre um uso e outro)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
             self.use(c)
         self.assertAlmostEqual(c.player.mods["damage_reduction_pct"], 0.12 + 4 * 0.06)   # limite de 4 usos
         self.assertGreater(c.player.hp, 50)
@@ -168,10 +165,7 @@ class Abilities(unittest.TestCase):
         run_until_idle(c)
         c.chain.best = 3
         c.player.energy = 100
-<<<<<<< HEAD
         c.ability_cd = 0.0                          # (passaram os 3 s de recarga)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         hp = c.enemy.hp
         c.use_ability()
         self.assertEqual(hp - c.enemy.hp, 20 + 10 * 3)
@@ -248,11 +242,8 @@ class InfiniteContent(unittest.TestCase):
         self.data = load_data()
 
     def build(self, floor, seed, own="judge", locked=None):
-<<<<<<< HEAD
         if locked is None:                          # padrão: todos bloqueados (só os bloqueados são chefes de desbloqueio)
             locked = list(self.data["characters"])
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         return build_infinite_floor(floor, self.data["enemies"], self.data["floors"], random.Random(seed), own,
                                     self.data["characters"], locked)
 
@@ -300,11 +291,7 @@ class InfiniteContent(unittest.TestCase):
                 return
         self.fail("Tulipa nunca apareceu como chefe")
 
-<<<<<<< HEAD
     def _boss_pick_pool(self, floor, roll, locked="all", weight=2, own="judge", chance=0.3, after=20):
-=======
-    def _boss_pick_pool(self, floor, roll, locked=None, weight=2, own="judge", chance=0.3, after=20):
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         """Lista EXATA de onde o chefe é sorteado, dado o resultado `roll` (0..1) da etapa 'é personagem?'.
         Sem aleatoriedade e sem depender do seu balanceamento."""
         import copy
@@ -318,7 +305,6 @@ class InfiniteContent(unittest.TestCase):
                 self.seq = list(seq)
                 return self.seq[0]
 
-<<<<<<< HEAD
         if locked == "all":
             locked = list(self.data["characters"])
         floors = copy.deepcopy(self.data["floors"])
@@ -326,12 +312,6 @@ class InfiniteContent(unittest.TestCase):
                                                   "locked_character_boss_weight": weight,
                                                   "character_boss_chance": chance, "locked_character_boss_chance": chance,
                                                   "character_boss_after_floor": after})
-=======
-        floors = copy.deepcopy(self.data["floors"])
-        floors.setdefault("infinite", {}).update({"include_character_bosses": True, "exclude_own_character": True,
-                                                  "locked_character_boss_weight": weight,
-                                                  "character_boss_chance": chance, "character_boss_after_floor": after})
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         rng = Capture()
         _pick_infinite_boss(floor, self.data["enemies"], floors, rng, own, self.data["characters"], locked)
         return [entry[0] for entry in rng.seq]
@@ -345,19 +325,11 @@ class InfiniteContent(unittest.TestCase):
             self.assertTrue(all(not i.startswith("boss_char_") for i in self._boss_pick_pool(floor, roll=0.30)), floor)
             self.assertTrue(all(not i.startswith("boss_char_") for i in self._boss_pick_pool(floor, roll=0.99)), floor)
 
-<<<<<<< HEAD
     def test_character_boss_rate_is_about_50_percent_in_real_draws(self):
         # chance configurada em data/floors.json > infinite > locked_character_boss_chance (50% enquanto há bloqueados)
         for floor in (30, 70):
             hits = sum(1 for seed in range(5000) if self.build(floor, seed).enemy.character_id)
             self.assertAlmostEqual(hits / 5000, 0.50, delta=0.04, msg=floor)
-=======
-    def test_character_boss_rate_is_about_30_percent_in_real_draws(self):
-        for floor in (30, 70):
-            hits = sum(1 for seed in range(5000) if self.build(floor, seed).is_boss
-                       and self.build(floor, seed).enemy.character_id)
-            self.assertAlmostEqual(hits / 5000, 0.30, delta=0.04, msg=floor)
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         for floor in (10, 20):
             self.assertFalse(any(self.build(floor, seed).enemy.character_id for seed in range(3000)))
 
@@ -373,7 +345,6 @@ class InfiniteContent(unittest.TestCase):
         self.assertTrue(all(i.startswith("boss_char_") for i in self._boss_pick_pool(10, 0.0, chance=1.0, after=0)))
         self.assertTrue(all(not i.startswith("boss_char_") for i in self._boss_pick_pool(60, 0.0, chance=0.0)))
 
-<<<<<<< HEAD
     def test_only_locked_characters_are_unlock_bosses_and_own_never(self):
         ids = self._boss_pick_pool(60, 0.0, locked=["bard", "cleric"])
         self.assertEqual(sorted(ids), ["boss_char_bard", "boss_char_cleric"])        # só os bloqueados entram no sorteio
@@ -381,14 +352,6 @@ class InfiniteContent(unittest.TestCase):
         self.assertEqual(ids, ["boss_char_bard"])                                    # o próprio nunca
         ids = self._boss_pick_pool(60, 0.0, locked=[])                               # todos desbloqueados: nenhum personagem-chefe
         self.assertTrue(all(not i.startswith("boss_char_") for i in ids), ids)
-=======
-    def test_locked_character_is_more_likely_as_boss_and_own_never(self):
-        for weight in (1, 2, 3):
-            ids = self._boss_pick_pool(60, 0.0, locked=["bard"], weight=weight)
-            self.assertEqual(ids.count("boss_char_bard"), weight, (weight, ids))      # bloqueado: N fichas
-            self.assertEqual(ids.count("boss_char_cleric"), 1, (weight, ids))         # não bloqueado: 1 ficha
-            self.assertNotIn("boss_char_judge", ids)                                  # o próprio nunca
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         # e, na prática, o sorteio real nunca devolve o próprio personagem
         for seed in range(500):
             self.assertNotEqual(self.build(60, seed, own="judge", locked=["bard"]).enemy.character_id, "judge")

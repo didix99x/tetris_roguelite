@@ -42,7 +42,6 @@ class GameOverScreen:
         if run:
             draw_text(surface, f"{run.player.name}  -  {len(run.taken_rewards)} recompensas coletadas",
                       26, config.MUTED_TEXT_COLOR, (640, 580))
-<<<<<<< HEAD
         self._draw_points(surface, 612)
         draw_text(surface, "Pressione Enter para voltar ao menu", 30, config.ACCENT_COLOR, (640, 664))
 
@@ -51,9 +50,6 @@ class GameOverScreen:
         earned = getattr(self.game, "run_points", 0)
         total = self.game.progress.points
         draw_text(surface, f"+{earned} PONTOS   (total: {total})   -   gaste na LOJA", 28, (255, 215, 90), (640, y))
-=======
-        draw_text(surface, "Pressione Enter para voltar ao menu", 30, config.ACCENT_COLOR, (640, 650))
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     # ---------------------------------------------------------------- derrota
     def _draw_defeat(self, surface):
@@ -70,8 +66,5 @@ class GameOverScreen:
                       config.MUTED_TEXT_COLOR, (640, 480))
         else:
             draw_text(surface, f"Melhor andar de todos: {progress.best_floor}", 28, config.MUTED_TEXT_COLOR, (640, 480))
-<<<<<<< HEAD
         self._draw_points(surface, 540)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         draw_text(surface, "Pressione Enter para voltar ao menu", 30, config.ACCENT_COLOR, (640, 600))

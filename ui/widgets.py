@@ -5,10 +5,7 @@ import os
 import pygame
 
 import config
-<<<<<<< HEAD
 from paths import base_dir
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 from ui import theme
 
 _fonts = {}
@@ -24,11 +21,7 @@ def get_font(size):
     if font is None:
         path = theme.FONT_PATH
         if path and not os.path.isabs(path):
-<<<<<<< HEAD
             path = os.path.join(str(base_dir()), path)
-=======
-            path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), path)
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         px = max(8, int(size * theme.FONT_SCALE))
         try:
             font = pygame.font.Font(path if path and os.path.exists(path) else None, px)
@@ -298,7 +291,6 @@ def draw_tooltip(surface, mouse_pos, title, text, locked=True, width=320):
     draw_text(surface, title, 26, config.ACCENT_COLOR, (tx, y + 12), "topleft")
     for i, line in enumerate(lines):
         draw_text(surface, line, 24, config.TEXT_COLOR, (x + 12, y + 46 + i * 26), "topleft")
-<<<<<<< HEAD
 
 
 def controller_hint(game, keyboard_text, items):
@@ -314,5 +306,3 @@ def controller_hint(game, keyboard_text, items):
         name = f"{labels['tab_prev']} / {labels['tab_next']}" if key == "tabs" else labels[key]
         parts.append(f"{name}: {text}")
     return "    ".join(parts)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f

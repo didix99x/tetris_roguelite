@@ -69,10 +69,7 @@ class Player:
         self.ability_cost = data.get("ability_cost", 50)
         self.ability_params = data.get("ability_params", {})
         self.mods = dict(DEFAULT_MODS)
-<<<<<<< HEAD
         self.synergies = []                        # nomes das sinergias de cartas ativas (mostradas na HUD)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
 
     # ----- ganchos que cada personagem sobrescreve -----
     def damage_multiplier(self, chain_level, quick):
@@ -166,11 +163,8 @@ class Player:
             lines.append(f"Chain x3+: cura {m['chain3_heal']}")
         if m["floor_heal_pct"]:
             lines.append(f"Cura de andar +{round(m['floor_heal_pct'] * 100)}%")
-<<<<<<< HEAD
         for name in self.synergies:
             lines.append(f"Sinergia: {name}")
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         pct = lambda key: f"{round(m[key] * 100)}%"
         extra = (("big_match_damage_pct", "Match 4+: dano +"), ("quick_damage_pct", "Jogada rápida: dano +"),
                  ("execute_damage_pct", "Finalizar (<30%): dano +"), ("opener_damage_pct", "Abertura (>70%): dano +"),

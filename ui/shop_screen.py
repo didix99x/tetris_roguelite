@@ -295,7 +295,9 @@ class ShopScreen:
             return e["yoshi"]["infinite"]
         if eid.startswith("boss_char_"):
             c = self.data["characters"].get(eid[len("boss_char_"):])
-            return {"name": c["name"], "color": c.get("color", (150, 150, 150)), "image": c.get("image"), "art_folder": "characters"} if c else None
+            cid = eid[len("boss_char_"):]       # character_id/family: sem eles a arte de quem tem outro nome de imagem (Tali -> assassin.gif) não era achada
+            return {"name": c["name"], "color": c.get("color", (150, 150, 150)), "image": c.get("image"), "art_folder": "characters",
+                    "character_id": cid, "family": cid} if c else None
         if eid.startswith("boss_"):
             return e["bosses"].get(eid[len("boss_"):])
         return None
@@ -321,7 +323,7 @@ class ShopScreen:
             pygame.draw.rect(surface, (110, 110, 160) if active else (70, 70, 100), rect, width=2, border_radius=10)
             ent = types.SimpleNamespace(id=eid, color=tuple(data.get("color", (150, 150, 150))), name=data["name"], image_id=data.get("image", eid),
                                         art_folder=data.get("art_folder"), family=data.get("family", eid), portrait=data.get("portrait"),
-                                        is_boss=eid.startswith("boss_"), is_super=bool(data.get("super")), character_id=None)
+                                        is_boss=eid.startswith("boss_"), is_super=bool(data.get("super")), character_id=data.get("character_id"))
             draw_portrait(surface, (rect.x + 6, rect.y + 5), 64, ent)
             draw_text(surface, data["name"], 26, config.TEXT_COLOR, (rect.x + 84, rect.y + 18), "midleft")
             draw_text(surface, f"Derrotado {count}x", 20, (255, 215, 90), (rect.x + 84, rect.y + 48), "midleft")

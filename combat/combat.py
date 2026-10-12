@@ -51,10 +51,7 @@ class Combat:
         self.poison_time = 0.0
         self.poison_dps = 0.0
         self.silence_time = 0.0
-<<<<<<< HEAD
         self.ability_cd = 0.0         # recarga da habilidade do jogador (segundos restantes; config.ABILITY_COOLDOWN)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         self.blind_time = 0.0         # cegueira (só visual): segundos restantes
         self.blind_total = 0.0
         self.enemy_armor_time = 0.0
@@ -100,16 +97,10 @@ class Combat:
     def use_ability(self):
         if self.result or self.phase != IDLE:
             return False
-<<<<<<< HEAD
         if self.ability_cd > 0 or self.silence_time > 0 or not self.player.can_use_ability():
             self.emit("ability_fail")            # em recarga (ou sem energia / silenciado): não ativa, não gasta energia
             return False
         self.ability_cd = config.ABILITY_COOLDOWN
-=======
-        if self.silence_time > 0 or not self.player.can_use_ability():
-            self.emit("ability_fail")
-            return False
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         cost = self.player.current_ability_cost()
         self.player.spend_ability()
         mods = self.player.mods
@@ -342,11 +333,8 @@ class Combat:
         if self.result:
             return
         self.elapsed += dt
-<<<<<<< HEAD
         if self.ability_cd > 0:
             self.ability_cd = max(0.0, self.ability_cd - dt)
-=======
->>>>>>> 04f156348c1ca60f01179e24fd224faa5e8fad3f
         if self.chain_display_time > 0:
             self.chain_display_time -= dt
         self.player.update(dt)

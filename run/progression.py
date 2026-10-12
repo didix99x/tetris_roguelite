@@ -2,6 +2,8 @@
 run/progression.py - como os inimigos ficam mais fortes a cada andar.
 Os números ficam em data/floors.json (seção "scaling").
 """
+import math
+
 from combat import damage
 
 
@@ -93,3 +95,54 @@ def scale_stats_infinite(enemy_data, floor_number, scaling, infinite_settings=No
         "cooldown": cooldown,
         "ability_bonus": bonus,
     }
+
+
+# ======================================================================
+# FÚRIA DO VAZIO: dificuldade extrema do Modo Infinito a partir do andar 100.
+# Números em data/floors.json > infinite > void_fury. Tudo calculado em escala logarítmica e com tetos,
+# para nunca gerar inf/NaN nem números gigantes demais para a tela.
+# ======================================================================
+def void_fury_tier(floor_number, cfg):
+    """Quantas centenas de andares (marcos) já foram alcançadas: 100-199 -> 1, 200-299 -> 2 ..."""
+    return max(0, int(floor_number) // max(1, int(cfg.get("milestone_every", 100))))
+
+
+def void_fury_active(floor_number, cfg):
+    return bool(cfg) and int(floor_number) >= int(cfg.get("start_floor", 100))
+
+
+def _grow(base, start_mult, rate, steps, tier_mult, tiers_done, cap):
+    """base * start_mult * (1+rate)^steps * tier_mult^tiers_done, em logaritmo, limitado a `cap`."""
+    base = max(1.0, float(base))
+    log_value = math.log(base) + math.log(max(1e-9, float(start_mult))) \
+        + max(0, steps) * math.log1p(max(0.0, float(rate))) + max(0, tiers_done) * math.log(max(1.0, float(tier_mult)))
+    return min(float(cap), math.exp(min(log_value, math.log(float(cap)))))
+
+
+def apply_void_fury(stats, floor_number, cfg, enemy_data=None, is_boss=False, is_super=False):
+    """Recebe os atributos já calculados para o andar (scale_stats_infinite) e devolve os atributos da Fúria do Vazio.
+
+    - vida: nunca menos que `min_common_hp` (10.000) para inimigos comuns (`min_boss_hp_factor` x isso para chefes);
+      depois cresce `hp_per_floor` por andar e `tier_hp_mult` a cada centena de andares concluída;
+    - dano: mesma ideia (`damage_per_floor`, `tier_damage_mult`);
+    - super chefes: `super_hp_mult` / `super_damage_mult` a mais;
+    - ataques ficam um pouco mais rápidos e as habilidades mais fortes a cada marco.
+    Antes do andar `start_floor` devolve `stats` sem mudar nada."""
+    if not void_fury_active(floor_number, cfg):
+        return stats
+    steps = int(floor_number) - int(cfg.get("start_floor", 100))
+    tiers_done = max(0, void_fury_tier(floor_number, cfg) - 1)
+    hp_floor = float(cfg.get("min_common_hp", 10000)) * (float(cfg.get("min_boss_hp_factor", 2.5)) if (is_boss or is_super) else 1.0)
+    start_hp = max(hp_floor, float(stats["hp"]) * float(cfg.get("start_hp_mult", 1.0))
+                   * (float(cfg.get("super_hp_mult", 1.0)) if is_super else 1.0))
+    hp = _grow(start_hp, 1.0, cfg.get("hp_per_floor", 0.03), steps, cfg.get("tier_hp_mult", 5.0), tiers_done,
+               cfg.get("hp_cap", 10 ** 12))
+    dmg_start = float(stats["damage"]) * (float(cfg.get("super_damage_mult", 1.0)) if is_super else 1.0)
+    damage = _grow(dmg_start, cfg.get("start_damage_mult", 1.0), cfg.get("damage_per_floor", 0.015), steps,
+                   cfg.get("tier_damage_mult", 2.0), tiers_done, cfg.get("damage_cap", 10 ** 8))
+    tier = void_fury_tier(floor_number, cfg)
+    speed = max(float(cfg.get("cooldown_factor_floor", 0.6)), 1.0 - float(cfg.get("cooldown_per_tier", 0.04)) * tier)
+    base_cd = float(enemy_data["cooldown"]) if enemy_data else float(stats["cooldown"])
+    cooldown = max(float(stats["cooldown"]) * speed, min(2.5, base_cd))
+    bonus = min(int(cfg.get("ability_bonus_cap", 10)), int(stats.get("ability_bonus", 0)) + int(cfg.get("ability_bonus_per_tier", 2)) * tier)
+    return {"hp": max(1, int(round(hp))), "damage": max(1, int(round(damage))), "cooldown": cooldown, "ability_bonus": bonus}
